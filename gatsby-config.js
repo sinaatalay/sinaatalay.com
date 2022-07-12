@@ -7,6 +7,13 @@
 module.exports = {
   /* Your site config here */
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `projects`,
+        path: `${__dirname}/src/projects/`,
+      },
+    },
     "gatsby-plugin-postcss",
   ],
 }
