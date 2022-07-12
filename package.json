@@ -15,9 +15,10 @@
   },
   "dependencies": {
     "gatsby": "^4.18.0",
-    "gatsby-remark-mathjax": "^1.0.0",
+    "gatsby-remark-katex": "^6.18.0",
     "gatsby-source-filesystem": "^4.18.0",
     "gatsby-transformer-remark": "^5.18.0",
+    "katex": "^0.13.24",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   },
@@ -27,12 +28,5 @@
     "postcss": "^8.4.14",
     "prettier": "^2.7.1",
     "tailwindcss": "^3.1.6"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }
