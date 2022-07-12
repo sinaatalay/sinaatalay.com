@@ -15,7 +15,9 @@
   },
   "dependencies": {
     "gatsby": "^4.18.0",
+    "gatsby-remark-mathjax": "^1.0.0",
     "gatsby-source-filesystem": "^4.18.0",
+    "gatsby-transformer-remark": "^5.18.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   },
