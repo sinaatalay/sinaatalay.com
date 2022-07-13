@@ -3,19 +3,37 @@ import { Link } from "gatsby"
 
 export default function Navbar() {
   return (
-    <nav>
-      <ul>
+    <nav className="mainNav">
+      <ul className="flex justify-between font-primary">
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/" className="navItem" activeClassName="activeNavItemLeft">
+            Home
+          </Link>
         </li>
         <li>
-          <Link to="/projects">Projects</Link>
+        <Link
+            to="/projects"
+            className="navItem"
+            activeClassName="activeNavItemCenter"
+          >Projects</Link>
         </li>
         <li>
-          <Link to="/resume">Resume</Link>
+          <Link
+            to="/resume"
+            className="navItem"
+            activeClassName="activeNavItemCenter"
+          >
+            Resume
+          </Link>
         </li>
         <li>
-          <Link to="/contact">Contact</Link>
+          <Link
+            to="/contact"
+            className="navItem"
+            activeClassName="activeNavItemRight"
+          >
+            Contact
+          </Link>
         </li>
       </ul>
     </nav>

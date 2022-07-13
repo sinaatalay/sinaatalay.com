@@ -1,3 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Signika+Negative:wght@300;400;500;600;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply max-w-3xl overflow-x-hidden my-0 mx-auto text-neutral-900 bg-neutral-200 leading-[1.8] text-base font-body;
+}
+.container {
+  @apply min-h-screen flex flex-col justify-between;
+}
+.layout {
+  @apply bg-neutral-50 px-8 pt-4 rounded-t-md flex-grow;
+}
+.activeNavItemLeft {
+  @apply p-4 border-b-4 border-secondary-500 text-primary-800 rounded-bl-sm;
+}
+.activeNavItemCenter {
+  @apply p-4 border-b-4 border-secondary-500 text-primary-800;
+}
+.activeNavItemRight {
+  @apply p-4 border-b-4 border-secondary-500 text-primary-800 rounded-br-sm;
+}
+.navItem {
+  @apply p-2;
+}
+.mainNav {
+  @apply text-xl py-6;
+}
+footer {
+  @apply bg-primary-500 mb-6 rounded-b-md p-3;
+}
+footer p {
+  @apply p-0 m-0;
+}
+.indexParagraphs {
+    @apply font-light my-2 text-left text-xl;
+}
+/* ============ */
+/* ============ */
+/* ============ */
+
+p {
+  @apply text-justify mt-4;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+}
+a {
+  @apply text-primary-500 hover:text-primary-900 transition duration-200 ease-out;
+}
+
+/* ============ */
+/* ============ */
+/* ============ */
+
+img {
+  @apply max-w-[70%] h-auto block mx-auto;
+}
+figcaption {
+  @apply text-center;
+  counter-increment: figcaption;
+}
+figcaption::before {
+  content: "Figure " counter(figcaption) ":\0000a0\0000a0";
+}
+
+/* ============ */
+/* ============ */
+/* ============ */
+
+.toc ul {
+  @apply pl-8;
+  counter-reset: item;
+}
+.toc li {
+  @apply block;
+}
+.toc li p {
+  @apply inline-block text-left mt-0;
+}
+.toc li:before {
+  @apply pr-3;
+  content: counters(item, ".") "\0000a0";
+  counter-increment: item;
+}
+
+/* ============ */
+/* ============ */
+/* ============ */
+h1 {
+  @apply text-center text-4xl leading-[3rem] mt-14 mb-4;
+  counter-reset: h2counter;
+  counter-reset: figcaption;
+}
+.author {
+  @apply my-4 text-center;
+}
+.date {
+  @apply my-4 text-center;
+}
+.abstract,
+.abstract p {
+  @apply text-center mt-0 font-normal;
+}
+.abstract {
+  @apply my-9 font-bold;
+}
+.abstract > h2 {
+  @apply text-base;
+}
+h2:before {
+  content: counter(h2counter) "\0000a0\0000a0\0000a0";
+}
+h2.nocount:before {
+  content: none;
+  counter-increment: none;
+}
+h2 {
+  @apply text-3xl leading-8 mt-12;
+  counter-increment: h2counter;
+  counter-reset: h3counter;
+}
+h3:before {
+  content: counter(h2counter) "." counter(h3counter) "\0000a0\0000a0\0000a0";
+  counter-increment: h3counter;
+}
+h3 {
+  @apply text-2xl leading-7 mt-10;
+}
+h2 + h3 {
+  @apply mt-3;
+}
+h2,
+h3 {
+  @apply mb-3;
+}

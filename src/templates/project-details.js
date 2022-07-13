@@ -4,19 +4,32 @@ import Layout from "../components/Layout"
 require(`katex/dist/katex.min.css`)
 
 export default function ProjectDetails({ data }) {
-  const { html } = data.markdownRemark
+  const { html, tableOfContents } = data.markdownRemark
   const { abstract, author, date, title } = data.markdownRemark.frontmatter
+
+  console.log(tableOfContents)
 
   return (
     <Layout>
-      <main className="mt-10">
-        <header>
-          <h1>{title}</h1>
-          <p>{author}</p>
-          <p>{date}</p>
-        </header>
-        <article dangerouslySetInnerHTML={{ __html: html }} />
-        <aside></aside>
+      <header>
+        <h1>{title}</h1>
+        <p className="author">by {author}</p>
+        <p className="date">{date}</p>
+      </header>
+
+  
+      <div className="abstract">
+        <h2 className="nocount">Abstract</h2>
+        <p>{abstract}</p>
+      </div>
+
+      <nav role="navigation">
+        <h2 className="nocount">Contents</h2>
+        <div className="toc" dangerouslySetInnerHTML={{ __html: tableOfContents }}></div>
+      </nav>
+
+      <main>
+      <article dangerouslySetInnerHTML={{ __html: html }} />
       </main>
     </Layout>
   )
@@ -32,6 +45,7 @@ export const query = graphql`
         date
         title
       }
+      tableOfContents
     }
   }
 `

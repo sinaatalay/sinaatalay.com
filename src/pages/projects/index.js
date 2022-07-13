@@ -16,7 +16,7 @@ export default function Projects({ data }) {
         <div>
           {projects.map(project => (
             <Link to={"/projects/" + project.frontmatter.slug} key={project.id}>
-              <h2>{project.frontmatter.title}</h2>
+              <h2 className="nocount">{project.frontmatter.title}</h2>
             </Link>
           ))}
         </div>
