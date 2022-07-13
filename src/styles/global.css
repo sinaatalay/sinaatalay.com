@@ -34,7 +34,7 @@ footer p {
   @apply p-0 m-0;
 }
 .indexParagraphs {
-    @apply font-light my-2 text-left text-xl;
+    @apply font-light my-4 text-left text-xl text-neutral-900;
 }
 /* ============ */
 /* ============ */
