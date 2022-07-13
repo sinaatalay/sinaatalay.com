@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <Layout>
       <header>
-        <h1>Contact</h1>
+        <h1 className="h1Pages">Contact</h1>
       </header>
       <main>
         <p>Welcome to my website!</p>

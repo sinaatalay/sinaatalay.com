@@ -3,34 +3,28 @@ import { Link } from "gatsby"
 
 export default function Navbar() {
   return (
-    <nav className="mainNav">
+    <nav className="text-xl my-6">
       <ul className="flex justify-between font-primary">
         <li>
-          <Link to="/" className="navItem" activeClassName="activeNavItemLeft">
+          <Link to="/" className="p-2" activeClassName="p-2 border-b-4 border-secondary-500 text-primary-800 md:rounded-bl-sm">
             Home
           </Link>
         </li>
         <li>
-        <Link
-            to="/projects"
-            className="navItem"
-            activeClassName="activeNavItemCenter"
-          >Projects</Link>
+          <Link to="/projects" className="p-2" activeClassName="p-2 border-b-4 border-secondary-500 text-primary-800">
+            Projects
+          </Link>
         </li>
         <li>
-          <Link
-            to="/resume"
-            className="navItem"
-            activeClassName="activeNavItemCenter"
-          >
+          <Link to="/resume" className="p-2" activeClassName="p-2 border-b-4 border-secondary-500 text-primary-800">
             Resume
           </Link>
         </li>
         <li>
           <Link
             to="/contact"
-            className="navItem"
-            activeClassName="activeNavItemRight"
+            className="p-2"
+            activeClassName="p-2 border-b-4 border-secondary-500 text-primary-800 md:rounded-br-sm"
           >
             Contact
           </Link>

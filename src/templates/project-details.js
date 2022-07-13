@@ -11,25 +11,26 @@ export default function ProjectDetails({ data }) {
 
   return (
     <Layout>
-      <header>
-        <h1>{title}</h1>
-        <p className="author">by {author}</p>
-        <p className="date">{date}</p>
-      </header>
-
-  
-      <div className="abstract">
-        <h2 className="nocount">Abstract</h2>
-        <p>{abstract}</p>
-      </div>
-
-      <nav role="navigation">
-        <h2 className="nocount">Contents</h2>
-        <div className="toc" dangerouslySetInnerHTML={{ __html: tableOfContents }}></div>
-      </nav>
-
       <main>
-      <article dangerouslySetInnerHTML={{ __html: html }} />
+        <article>
+          <header>
+            <h1>{title}</h1>
+            <p className="author">by {author}</p>
+            <p className="date">{date}</p>
+          </header>
+
+          <div className="abstract">
+            <h2 className="nocount">Abstract</h2>
+            <p>{abstract}</p>
+          </div>
+
+          <nav role="navigation">
+            <h2 className="nocount">Contents</h2>
+            <div className="toc" dangerouslySetInnerHTML={{ __html: tableOfContents }}></div>
+          </nav>
+
+          <div dangerouslySetInnerHTML={{ __html: html }} />
+        </article>
       </main>
     </Layout>
   )

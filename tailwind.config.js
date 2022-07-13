@@ -3,7 +3,7 @@
 const colors = require("tailwindcss/colors")
 
 module.exports = {
-  content: ["./src/pages/*.js", "./src/components/*.js"],
+  content: ["./src/pages/*.js", "./src/components/*.js", "./src/pages/projects/*.js"],
   theme: {
     extend: {
       fontFamily: {
@@ -11,7 +11,7 @@ module.exports = {
         primary: ["Signika Negative"],
       },
       colors: {
-        primary: colors.indigo,
+        primary: colors.blue,
         secondary: colors.yellow,
         neutral: colors.slate,
       }

@@ -9,15 +9,26 @@ export default function Projects({ data }) {
   return (
     <Layout>
       <header>
-        <h1>Projects</h1>
+        <h1 className="h1Pages">Projects</h1>
       </header>
-      <main>
-        <p>Welcome to my website!</p>
+      <main className="font-primary">
+        <p className="pPages">Below is a list of all projects that I have posted to the site.</p>
         <div>
           {projects.map(project => (
-            <Link to={"/projects/" + project.frontmatter.slug} key={project.id}>
-              <h2 className="nocount">{project.frontmatter.title}</h2>
-            </Link>
+            <div className="mt-8 flex flex-row w-[80%] mx-auto">
+              <div className="flex-grow">
+                <Link to={"/projects/" + project.frontmatter.slug} key={project.id}>
+                  <h2 className="font-light my-1 text-left text-xl text-primary-500 font-primary">{project.frontmatter.title}</h2>
+                </Link>
+                <p className="font-light my-1 text-left text-xl text-neutral-900 font-primary">
+                  {project.frontmatter.shortAbstract}
+                </p>
+              </div>
+              <div>
+                {" "}
+                <p className="font-light my-1 text-left text-xl text-neutral-900 font-primary">{project.frontmatter.date}</p>
+              </div>
+            </div>
           ))}
         </div>
       </main>
@@ -35,6 +46,7 @@ export const query = graphql`
           title
           slug
           author
+          shortAbstract
         }
         id
       }

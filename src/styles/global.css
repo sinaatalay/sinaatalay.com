@@ -4,43 +4,27 @@
 @tailwind utilities;
 
 body {
-  @apply max-w-3xl overflow-x-hidden my-0 mx-auto text-neutral-900 bg-neutral-200 leading-[1.8] text-base font-body;
+  @apply max-w-3xl my-0 mx-auto bg-neutral-200 overflow-x-hidden;
 }
-.container {
-  @apply min-h-screen flex flex-col justify-between;
+.pPages {
+  @apply font-light my-4 text-left text-xl text-neutral-900 font-primary;
 }
-.layout {
-  @apply bg-neutral-50 px-8 pt-4 rounded-t-md flex-grow;
+.h1Pages {
+  @apply text-left text-6xl font-thin ml-[-4px] text-neutral-900 my-4 font-primary;
 }
-.activeNavItemLeft {
-  @apply p-4 border-b-4 border-secondary-500 text-primary-800 rounded-bl-sm;
+.h2Pages {
+  @apply my-0 text-left text-4xl font-thin nocount font-primary;
 }
-.activeNavItemCenter {
-  @apply p-4 border-b-4 border-secondary-500 text-primary-800;
-}
-.activeNavItemRight {
-  @apply p-4 border-b-4 border-secondary-500 text-primary-800 rounded-br-sm;
-}
-.navItem {
-  @apply p-2;
-}
-.mainNav {
-  @apply text-xl py-6;
-}
-footer {
-  @apply bg-primary-500 mb-6 rounded-b-md p-3;
-}
-footer p {
-  @apply p-0 m-0;
-}
-.indexParagraphs {
-    @apply font-light my-4 text-left text-xl text-neutral-900;
-}
-/* ============ */
-/* ============ */
-/* ============ */
 
-p {
+/* Reports */
+/* Reports */
+/* Reports */
+article {
+  @apply text-base font-body leading-[1.8] pb-4;
+  counter-reset: figcaptioncounter;
+}
+
+article p {
   @apply text-justify mt-4;
   hyphens: auto;
   -webkit-hyphens: auto;
@@ -54,15 +38,18 @@ a {
 /* ============ */
 /* ============ */
 
-img {
+article img {
   @apply max-w-[70%] h-auto block mx-auto;
 }
-figcaption {
-  @apply text-center;
-  counter-increment: figcaption;
+article figcaption::before {
+  content: "Figure " counter(figcaptioncounter) ":\0000a0\0000a0";
 }
-figcaption::before {
-  content: "Figure " counter(figcaption) ":\0000a0\0000a0";
+article figcaption {
+  @apply text-center mt-1;
+  counter-increment: figcaptioncounter;
+}
+article figure {
+  @apply mt-4;
 }
 
 /* ============ */
@@ -88,10 +75,9 @@ figcaption::before {
 /* ============ */
 /* ============ */
 /* ============ */
-h1 {
-  @apply text-center text-4xl leading-[3rem] mt-14 mb-4;
+article h1 {
+  @apply text-center text-4xl leading-[3rem] mt-14;
   counter-reset: h2counter;
-  counter-reset: figcaption;
 }
 .author {
   @apply my-4 text-center;
@@ -109,29 +95,29 @@ h1 {
 .abstract > h2 {
   @apply text-base;
 }
-h2:before {
+article h2:before {
   content: counter(h2counter) "\0000a0\0000a0\0000a0";
 }
-h2.nocount:before {
+article h2.nocount:before {
   content: none;
   counter-increment: none;
 }
-h2 {
+article h2 {
   @apply text-3xl leading-8 mt-12;
   counter-increment: h2counter;
   counter-reset: h3counter;
 }
-h3:before {
+article h3:before {
   content: counter(h2counter) "." counter(h3counter) "\0000a0\0000a0\0000a0";
+}
+article h3 {
+  @apply text-2xl leading-7 mt-10;
   counter-increment: h3counter;
 }
-h3 {
-  @apply text-2xl leading-7 mt-10;
-}
-h2 + h3 {
+article h2 + h3 {
   @apply mt-3;
 }
-h2,
-h3 {
+article h2,
+article h3 {
   @apply mb-3;
 }

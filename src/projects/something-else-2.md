@@ -1,9 +1,9 @@
 ---
-title: Automatic Guitar Tuner
+title: Design of a Dynamometer
 author: Sina Atalay
 slug: automatic-guitar-tuner
-order: 1
-date: Fall 2020
+order: 2
+date: Spring 2022
 shortAbstract: This project contains this.
 abstract: Lorem ninja ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut ninja wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit ninja lobortis nisl ut aliquip ex ea commodo consequat. Duis ninja autem vel eum iriure dolor in hendrerit in vulputate ninja velit esse molestie consequat, vel illum dolore.
 ---
