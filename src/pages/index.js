@@ -33,15 +33,15 @@ export default function Home() {
         </p>
         <p className="pPages">
           It's a tricky simulation because the applicability of the continuum assumption is questionable since the operating
-          pressures are pretty low. Therefore, moleculat theory has to be employed.
+          pressures are pretty low. Therefore, the molecular theory has to be employed.
         </p>
         <p className="pPages">
-          Ionizer is written in C++, and its goal is to solve the 3D{" "}
+          Ionizer is being written in C++, and its goal is to solve the 3D{" "}
           <a href="https://en.wikipedia.org/wiki/Poisson%27s_equation">Poisson's equation</a> to calculate the electrostatic field
           inside the thruster and move the ions accordingly with the well-established molecular approach, PIC-DSMC.
         </p>
-        <p className="pPages">Currently, it solves 3D Poisson's equation for the potential field, and this is how it looks:</p>
-        <div className="relative w-full md:w-[90%] mx-auto">
+        <p className="pPages">Currently, it solves 3D Poisson's equation for the potential field, which is how it looks:</p>
+        <div className="relative w-full md:w-11/12 mx-auto">
           <StaticImage src="../images/IonizerPreview.png" alt="Ionizer" placeholder="blurred" />
         </div>
         <p className="pPages">

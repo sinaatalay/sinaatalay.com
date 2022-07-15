@@ -12,7 +12,7 @@ export default function Projects({ data }) {
         <h1 className="h1Pages">Projects</h1>
       </header>
       <main className="font-primary">
-        <p className="pPages">Below is a list of all projects that I have posted to the site.</p>
+        <p className="pPages">Below is a list of all my projects posted on this site.</p>
         <div className="mt-8">
           {projects.map(project => (
             <div>
