@@ -12,14 +12,14 @@ export default function Layout({ children }) {
 
       <div className="bg-neutral-50 px-4 md:px-8 py-4 md:rounded-t-md flex-grow">{children}</div>
 
-      <footer className="bg-primary-500 md:mb-6 md:rounded-b-md p-3 flex flex-row">
+      <footer className="bg-primary-500 md:mb-6 md:rounded-b-md px-2 py-3 md:p-3 flex flex-row">
         <p className="p-0 m-0 flex-grow ml-2 text-secondary-500">
-          Copyright © {new Date().getFullYear()}
-          <Link to="/resume" className=" text-secondary-500 mx-2 hover:text-secondary-600 transition ease-out duration-200">
+          Copyright © {new Date().getFullYear()}{" "}
+          <Link to="/resume" className=" text-secondary-500 hover:text-secondary-600 transition ease-out duration-200">
             Sina Atalay
           </Link>
         </p>
-        <a href="https://github.com/sinaatalay" className="mx-2 my-auto">
+        <a href="https://github.com/sinaatalay" className="mr-2 my-auto">
           <FaGithub className="text-2xl text-secondary-500 hover:text-secondary-600 transition ease-out duration-200" />
         </a>
         <a href="https://www.linkedin.com/in/sina-atalay/" className="mx-2 my-auto">

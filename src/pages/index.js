@@ -32,13 +32,13 @@ export default function Home() {
           <a href="http://bustlab.boun.edu.tr/">Bogazici University Space Technologies Laboratory</a> with Professor Murat Çelik.
         </p>
         <p className="pPages">
-          It's a tricky simulation because the applicability of the continuum assumption becomes questionable since the operating
-          pressures are pretty low.
+          It's a tricky simulation because the applicability of the continuum assumption is questionable since the operating
+          pressures are pretty low. Therefore, moleculat theory has to be employed.
         </p>
         <p className="pPages">
           Ionizer is written in C++, and its goal is to solve the 3D{" "}
           <a href="https://en.wikipedia.org/wiki/Poisson%27s_equation">Poisson's equation</a> to calculate the electrostatic field
-          and move the ions accordingly with the well-established particle approach, PIC-DSMC.
+          inside the thruster and move the ions accordingly with the well-established molecular approach, PIC-DSMC.
         </p>
         <p className="pPages">Currently, it solves 3D Poisson's equation for the potential field, and this is how it looks:</p>
         <div className="relative w-full md:w-[90%] mx-auto">
@@ -54,8 +54,8 @@ export default function Home() {
           About <strong>My YouTube Channel</strong>
         </h2>
         <p className="pPages">
-          In June 2020, I instructed the entire <em>Engineering Mechanics: Dynamics</em> course on YouTube, which has so far received
-          more than 200,000 views. You can see two of my videos below.
+          In June 2020, I instructed the entire <em>Engineering Mechanics: Dynamics</em> course on YouTube, which has so far
+          received more than 200,000 views. You can see two of my videos below.
         </p>
         <div className="flex flex-col mb-3">
           <div className="relative w-full pt-[56.25%] md:w-[70%] md:pt-[39.375%] mx-auto">

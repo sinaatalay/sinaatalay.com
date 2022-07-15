@@ -13,20 +13,27 @@ export default function Projects({ data }) {
       </header>
       <main className="font-primary">
         <p className="pPages">Below is a list of all projects that I have posted to the site.</p>
-        <div>
+        <div className="mt-8">
           {projects.map(project => (
-            <div className="mt-8 flex flex-row md:w-[80%] mx-auto">
-              <div className="flex-grow">
-                <Link to={"/projects/" + project.frontmatter.slug} key={project.id}>
-                  <h2 className="font-light my-1 text-left text-xl text-primary-500 font-primary">{project.frontmatter.title}</h2>
-                </Link>
-                <p className="font-light my-1 text-left text-xl text-neutral-900 font-primary">
-                  {project.frontmatter.shortAbstract}
-                </p>
+            <div>
+              <div className="flex flex-row mx-auto">
+                <div className="flex-grow">
+                  <Link to={"/projects/" + project.frontmatter.slug} key={project.id}>
+                    <h2 className="font-light text-left text-xl text-primary-500 font-primary">
+                      {project.frontmatter.title}
+                    </h2>
+                  </Link>
+                  <p className="font-light text-left text-xl text-neutral-900 font-primary">
+                    {project.frontmatter.shortAbstract}
+                  </p>
+                </div>
+                <div>
+                  {" "}
+                  <p className="font-light text-left text-xl text-neutral-900 font-primary">{project.frontmatter.date}</p>
+                </div>
               </div>
-              <div>
-                {" "}
-                <p className="font-light my-1 text-left text-xl text-neutral-900 font-primary">{project.frontmatter.date}</p>
+              <div className="py-2">
+                <div className="w-full border-t-[1px] border-neutral-300"></div>
               </div>
             </div>
           ))}
