@@ -5,10 +5,10 @@ export default function Resume() {
   return (
     <Layout>
       <header>
-        <h1>Resume</h1>
+        <h1 className="h1Pages">Resume</h1>
       </header>
       <main>
-        <p>Welcome to my website!</p>
+        <p className="pPages">Welcome to my website!</p>
       </main>
     </Layout>
   )

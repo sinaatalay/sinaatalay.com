@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/Layout"
 import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
 export default function Home() {
   return (
@@ -14,43 +15,46 @@ export default function Home() {
       <main>
         <p className="pPages">I'm a senior mechanical engineering student at Bogazici University.</p>
         <p className="pPages">
-          As a fun exercise, I decided to do this webpage with <a href="https://tailwindcss.com/">Tailwindcss</a> and{" "}
-          <a href="https://www.gatsbyjs.com/">Gatsby</a>. In this website, you can find notes on what I had worked on.
+          As a fun exercise, I decided to build this webpage with <a href="https://tailwindcss.com/">Tailwindcss</a> and{" "}
+          <a href="https://www.gatsbyjs.com/">Gatsby</a>.
         </p>
         <p className="pPages">
-          In <Link to="/projects">Projects</Link> section, you can find brief reports of projects I have been involved in.
+          In the <Link to="/projects">Projects</Link> section, you can find brief reports of projects I have been involved in.
         </p>
-
         <div className="py-4">
           <div className="w-full border-t-2 border-neutral-300"></div>
         </div>
-
         <h2 className="h2Pages">
-          About{" "}
-          <em>
-            <strong>Ionizer</strong>
-          </em>
+          About <strong>Ionizer</strong>
         </h2>
         <p className="pPages">
-          In Spring 2022, I have started to work on an ion truster simulation program at{" "}
-          <a href="http://bustlab.boun.edu.tr/">Bogazici University Space Technologies Laboratory</a>, with Professor Murat Çelik.
+          In Spring 2022, I started to work on an ion truster simulation program (<strong>Ionizer</strong>) at{" "}
+          <a href="http://bustlab.boun.edu.tr/">Bogazici University Space Technologies Laboratory</a> with Professor Murat Çelik.
         </p>
         <p className="pPages">
-          It's a C++ program which solves 3D <a href="https://en.wikipedia.org/wiki/Poisson%27s_equation">Poisson's equation</a>{" "}
-          to calculate electrostatic field, and then accelerates and moves the ions for a short time step with PIC-DSMC method.
-          And then solves the poisson's equation again at it goes on. Currently, only the poisson's
+          It's a tricky simulation because the applicability of the continuum assumption becomes questionable since the operating
+          pressures are pretty low.
         </p>
         <p className="pPages">
-          To check out the Ionizer repository in Github, click <a href="https://github.com/sinaatalay/Ionizer">here</a>.
+          Ionizer is written in C++, and its goal is to solve the 3D{" "}
+          <a href="https://en.wikipedia.org/wiki/Poisson%27s_equation">Poisson's equation</a> to calculate the electrostatic field
+          and move the ions accordingly with the well-established particle approach, PIC-DSMC.
         </p>
-
+        <p className="pPages">Currently, it solves 3D Poisson's equation for the potential field, and this is how it looks:</p>
+        <div className="relative w-full md:w-[90%] mx-auto">
+          <StaticImage src="../images/IonizerPreview.png" alt="Ionizer" placeholder="blurred" />
+        </div>
+        <p className="pPages">
+          To check out the repository and contribute on Github, click <a href="https://github.com/sinaatalay/Ionizer">here</a>.
+        </p>
         <div className="py-4">
           <div className="w-full border-t-2 border-neutral-300"></div>
         </div>
-
-        <h2 className="h2Pages">About My YouTube Channel</h2>
+        <h2 className="h2Pages">
+          About <strong>My YouTube Channel</strong>
+        </h2>
         <p className="pPages">
-          In June 2020, I instructed the entire "Engineering Mechanics: Dynamics" course on YouTube, which has so far received
+          In June 2020, I instructed the entire <em>Engineering Mechanics: Dynamics</em> course on YouTube, which has so far received
           more than 200,000 views. You can see two of my videos below.
         </p>
         <div className="flex flex-col mb-3">

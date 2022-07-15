@@ -15,7 +15,7 @@ export default function Projects({ data }) {
         <p className="pPages">Below is a list of all projects that I have posted to the site.</p>
         <div>
           {projects.map(project => (
-            <div className="mt-8 flex flex-row w-[80%] mx-auto">
+            <div className="mt-8 flex flex-row md:w-[80%] mx-auto">
               <div className="flex-grow">
                 <Link to={"/projects/" + project.frontmatter.slug} key={project.id}>
                   <h2 className="font-light my-1 text-left text-xl text-primary-500 font-primary">{project.frontmatter.title}</h2>

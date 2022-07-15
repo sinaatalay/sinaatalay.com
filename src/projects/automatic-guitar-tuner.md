@@ -17,7 +17,7 @@ $$
 Nam ninja ipsum liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi ninja non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes ninja demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas ninja est etiam processus dynamicus, qui ninja sequitur mutationem consuetudium lectorum. Mirum ninja est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem ninja ipsum modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in ninja futurum.
 
 <figure>
-  <img src="https://cdn.britannica.com/95/171195-131-42DB3CAA/Suleymaniye-Mosque-River-Bosporus-Istanbul-Turkey.jpg" alt="Trulli" style="width:100%">
+  <img src="https://placekitten.com/800/600" alt="A kitten" />
   <figcaption>Trulli, Puglia, Italy.</figcaption>
 </figure>
 
