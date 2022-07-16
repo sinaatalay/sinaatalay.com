@@ -70,7 +70,7 @@ article figure {
 /* ============ */
 
 .toc ul {
-  @apply pl-8;
+  @apply pl-3 md:pl-8;
   counter-reset: item;
 }
 .toc li {
