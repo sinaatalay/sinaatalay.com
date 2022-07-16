@@ -21,7 +21,7 @@ export default function Resume() {
           {JSONData.education.map(data => (
             <div className="resumeEntry">
               <p className="w-12 flex-none hidden md:block">
-                <strong>BS</strong>
+                <strong>{data.studyType}</strong>
               </p>
               <div className="resumeEntryCenter">
                 <p>

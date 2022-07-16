@@ -21,7 +21,15 @@ module.exports = {
           {
             resolve: `gatsby-remark-autolink-headers`,
             options: {
-              icon: false
+              icon: false,
+            },
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              showCaptions: true,
+              withWebp: true,
+              quality: 100,
             },
           },
         ],
@@ -32,6 +40,13 @@ module.exports = {
       options: {
         name: `projects`,
         path: `${__dirname}/src/projects/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
       },
     },
     "gatsby-plugin-postcss",
