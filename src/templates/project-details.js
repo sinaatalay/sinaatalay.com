@@ -7,8 +7,6 @@ export default function ProjectDetails({ data }) {
   const { html, tableOfContents } = data.markdownRemark
   const { abstract, author, date, title } = data.markdownRemark.frontmatter
 
-  console.log(tableOfContents)
-
   return (
     <Layout>
       <main>

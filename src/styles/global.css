@@ -52,7 +52,7 @@ a {
 /* ============ */
 
 article img {
-  @apply w-full md:w-9/12 h-auto block mx-auto print:w-9/12 print:grayscale;
+  @apply block print:grayscale;
 }
 article figcaption::before {
   content: "Figure " counter(figcaptioncounter) ":\0000a0\0000a0";
@@ -62,7 +62,7 @@ article figcaption {
   counter-increment: figcaptioncounter;
 }
 article figure {
-  @apply mt-4;
+  @apply mt-4 mx-auto max-w-full md:max-w-xl print:max-w-xl;
 }
 
 /* ============ */
@@ -88,8 +88,19 @@ article figure {
 /* ============ */
 /* ============ */
 /* ============ */
+
+article ul{
+  @apply list-inside list-disc;
+}
+article ol{
+  @apply list-inside list-decimal;
+}
+
+/* ============ */
+/* ============ */
+/* ============ */
 article {
-  @apply text-neutral-900
+  @apply text-neutral-900 overflow-hidden;
 }
 article h1 {
   @apply text-center text-4xl leading-[3rem] mt-14;
