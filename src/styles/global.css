@@ -7,13 +7,13 @@ body {
   @apply max-w-3xl my-0 mx-auto bg-neutral-200 print:bg-white overflow-x-hidden;
 }
 .pPages {
-  @apply font-light my-4 text-left text-xl text-neutral-900 font-primary;
+  @apply font-light my-4 text-left text-xl text-neutral-900 font-primary print:text-black;
 }
 .h1Pages {
-  @apply text-left text-6xl font-thin ml-[-4px] text-neutral-900 my-4 font-primary;
+  @apply text-left text-6xl font-thin ml-[-4px] text-neutral-900 my-4 font-primary print:text-black;
 }
 .h2Pages {
-  @apply my-0 text-left text-4xl font-thin nocount font-primary;
+  @apply my-0 text-left text-4xl font-thin nocount font-primary text-neutral-900 print:text-black;
 }
 
 .h2Resume {
@@ -100,7 +100,7 @@ article ol{
 /* ============ */
 /* ============ */
 article {
-  @apply text-neutral-900 overflow-hidden;
+  @apply text-neutral-900 overflow-hidden print:text-black;
 }
 article h1 {
   @apply text-center text-4xl leading-[3rem] mt-14;

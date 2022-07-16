@@ -3,12 +3,12 @@ import Layout from "../components/Layout"
 
 export default function NotFound() {
   return (
-    <Layout>
+    <Layout title="404">
       <header>
-        <h1>404</h1>
+        <h1 className="h1Pages">404</h1>
       </header>
       <main>
-        <p>Sorry, that page doesn't exist.</p>
+        <p className="pPages">Sorry, that page doesn't exist.</p>
       </main>
     </Layout>
   )

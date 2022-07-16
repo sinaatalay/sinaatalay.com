@@ -5,7 +5,7 @@ import { StaticImage } from "gatsby-plugin-image"
 
 export default function Home() {
   return (
-    <Layout>
+    <Layout title="Home">
       <header>
         <p className="h1Pages">Hello!</p>
         <h1 className="pPages">
@@ -25,7 +25,7 @@ export default function Home() {
           <div className="w-full border-t-2 border-neutral-300"></div>
         </div>
         <h2 className="h2Pages">
-          About <strong>Ionizer</strong>
+          About Ionizer
         </h2>
         <p className="pPages">
           In Spring 2022, I started to work on an ion truster simulation program (<strong>Ionizer</strong>) at{" "}
@@ -51,7 +51,7 @@ export default function Home() {
           <div className="w-full border-t-2 border-neutral-300"></div>
         </div>
         <h2 className="h2Pages">
-          About <strong>My YouTube Channel</strong>
+          About My YouTube Channel
         </h2>
         <p className="pPages">
           In June 2020, I instructed the entire <em>Engineering Mechanics: Dynamics</em> course on YouTube, which has so far

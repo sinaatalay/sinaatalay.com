@@ -4,7 +4,7 @@ import JSONData from "../resume/resume.json"
 
 export default function Resume() {
   return (
-    <Layout>
+    <Layout title="Resume">
       <header>
         <h1 className="font-body text-3xl mt-6 text-center">Sina Atalay</h1>
       </header>

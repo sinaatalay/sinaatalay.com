@@ -8,7 +8,7 @@ export default function ProjectDetails({ data }) {
   const { abstract, author, date, title } = data.markdownRemark.frontmatter
 
   return (
-    <Layout>
+    <Layout title={title}>
       <main>
         <article>
           <header>
