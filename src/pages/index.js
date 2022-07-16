@@ -29,7 +29,7 @@ export default function Home() {
         </h2>
         <p className="pPages">
           In Spring 2022, I started to work on an ion truster simulation program (<strong>Ionizer</strong>) at{" "}
-          <a href="http://bustlab.boun.edu.tr/">Bogazici University Space Technologies Laboratory</a> with Professor Murat Çelik.
+          <a href="http://bustlab.boun.edu.tr/">Bogazici University Space Technologies Laboratory</a>.
         </p>
         <p className="pPages">
           It's a tricky simulation because the applicability of the continuum assumption is questionable since the operating
