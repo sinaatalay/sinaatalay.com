@@ -6,12 +6,13 @@ export default function Contact() {
     <Layout title="Contact">
       <header>
         <h1 className="h1Pages">Contact</h1>
+        <p className="pPages">Feel free to contact me!</p>
       </header>
       <main>
         <form className="mt-8" action="https://getform.io/f/156b4f25-b9bb-4e5c-88f1-20c4b106a9d2" method="POST">
           <div className="mb-6 w-full">
             <label className="pPages mb-2" for="name">
-              Name
+              Your Name
               <input
                 className="appearance-none block w-full bg-neutral-200 text-neutral-700 border rounded py-3 px-4 mb-3 leading-tight focus:bg-neutral-50"
                 name="name"
@@ -25,7 +26,7 @@ export default function Contact() {
 
           <div className="mb-6 w-full">
             <label className="pPages mb-2" for="email">
-              E-mail
+              Your E-mail
               <input
                 className="appearance-none block w-full bg-neutral-200 text-neutral-700 border rounded py-3 px-4 mb-3 leading-tight focus:bg-neutral-50"
                 name="email"
