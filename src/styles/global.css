@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Signika+Negative:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Signika+Negative:wght@300;400;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -19,13 +19,13 @@ body {
 .h2Resume {
   @apply text-xl mb-1 font-bold;
 }
-.resumeEntry{
+.resumeEntry {
   @apply flex flex-row mt-2;
 }
-.resumeEntryCenter{
+.resumeEntryCenter {
   @apply flex-grow;
 }
-.resumeEntryRight{
+.resumeEntryRight {
   @apply w-32 md:w-44 flex-none text-right;
 }
 
@@ -89,10 +89,10 @@ article figure {
 /* ============ */
 /* ============ */
 
-article ul{
+article ul {
   @apply list-inside list-disc;
 }
-article ol{
+article ol {
   @apply list-inside list-decimal;
 }
 

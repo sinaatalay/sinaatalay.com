@@ -18,14 +18,19 @@ export default function Projects({ data }) {
             <div>
               <div className="flex flex-row mx-auto">
                 <div className="flex-grow">
-                  <Link to={"/projects/" + project.frontmatter.slug} key={project.id}>
-                    <h2 className="font-light text-left text-xl text-primary-500 font-primary">{project.frontmatter.title}</h2>
-                  </Link>
+                  <h2 className="font-light text-left text-xl text-primary-500 font-primary">
+                    <Link to={"/projects/" + project.frontmatter.slug} key={project.id}>
+                      {project.frontmatter.title}{" "}
+                    </Link>
+                  </h2>
+
                   <p className="font-light text-left text-lg text-neutral-900 font-primary">
                     {project.frontmatter.shortAbstract}
                   </p>
                 </div>
-                <p className="flex-none w-32 font-light text-right text-xl text-neutral-900 font-primary">{project.frontmatter.date}</p>
+                <p className="flex-none w-32 font-light text-right text-xl text-neutral-900 font-primary">
+                  {project.frontmatter.date}
+                </p>
               </div>
               <div className="py-2">
                 <div className="w-full border-t-[1px] border-neutral-300"></div>

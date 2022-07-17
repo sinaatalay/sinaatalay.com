@@ -24,7 +24,7 @@
   },
   "education": [
     {
-      "institution": "Bogazici University",
+      "institution": "Boğaziçi University",
       "area": "Mechanical Engineering",
       "studyType": "BS",
       "location": "Istanbul, Turkey",
@@ -42,6 +42,16 @@
   ],
   "experience": [
     {
+      "name": "Simularge",
+      "position": "Mechanical Engineering Intern",
+      "location": "Istanbul, Turkey",
+      "date": "Jun. 2022 to present",
+      "highlights": [
+        "Simularge is a technology company that provides web-based engineering applications to simulate and optimize products and manufacturing tools.",
+        "Model, analyze, and simulate a metal-forming process called deep drawing using finite element analysis with CalculiX."
+      ]
+    },
+    {
       "name": "ASELSAN",
       "position": "Mechanical Engineering Intern",
       "location": "Ankara, Turkey",
@@ -54,11 +64,31 @@
   ],
   "projects": [
     {
+      "name": "An Ion Thruster Simulation Program: Ionizer",
+      "location": "Istanbul, Turkey",
+      "date": "Spring 2022 to present",
+      "highlights": [
+        "Write an ion thruster simulation program in C++ that solves the electrostatic field inside and moves the ions with the molecular PIC-DSMC approach under the supervision of Professor Murat Çelik."
+      ],
+      "href": "https://github.com/sinaatalay/Ionizer",
+      "url": "github.com/sinaatalay/Ionizer"
+    },
+    {
+      "name": "Senior Design Project: Design of a Dynamometer",
+      "location": "Istanbul, Turkey",
+      "date": "Spring 2022",
+      "highlights": [
+        "Designed, modeled, and simulated a dynamometer for small DC motors that will be constructed in Fall 2022 and used at Bogazici University's laboratories."
+      ],
+      "href": "/projects/design-of-a-dynamometer",
+      "url": "sinaatalay.com/projects/design-of-a-dynamometer"
+    },
+    {
       "name": "Mechatronics Term Project: Automatic Guitar Tuner",
       "location": "Istanbul, Turkey",
       "date": "Fall 2020",
       "highlights": [
-        "Designed, built, and programmed a microcontroller-based guitar tuner device that consists of an amplifier circuit, signal processing algorithms, a decoder, H-bridges, pick-up sensors, and DC motors"
+        "Designed, built, and programmed a microcontroller-based guitar tuner device that consists of an amplifier circuit, signal processing algorithms, a decoder, H-bridges, pick-up sensors, and DC motors."
       ],
       "href": "/projects/automatic-guitar-tuner",
       "url": "sinaatalay.com/projects/automatic-guitar-tuner"
@@ -85,7 +115,7 @@
     }
   ],
   "skills": {
-    "software": "MATLAB, CAD, Visual Studio",
+    "software": "Windows, Linux, Git, Premake, MATLAB, CAD, CalculiX, MS Office",
     "programming": "C++, C, Python, JavaScript, LaTeX",
     "languages": "English (Advanced), Turkish (Native)"
   },

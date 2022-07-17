@@ -11,7 +11,7 @@ export default function Layout({ children, title }) {
     <div className="min-h-screen flex flex-col justify-between">
       <Helmet>
         <meta charSet="utf-8" />
-        {title == 'Home'? <title>Sina Atalay</title>: <title>{title} - Sina Atalay</title> }
+        {title === 'Home'? <title>Sina Atalay</title>: <title>{title} - Sina Atalay</title> }
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
       <Navbar />

@@ -1,6 +1,7 @@
+import { Link } from "gatsby"
 import React from "react"
 import Layout from "../components/Layout"
-import JSONData from "../resume/resume.json"
+import JSONData from "../data/resume.json"
 
 export default function Resume() {
   return (
@@ -96,8 +97,10 @@ export default function Resume() {
                   {data.highlights.map(highlights => (
                     <li>{highlights}</li>
                   ))}
+
                   <li>
-                    Project link: <a href={data.href}>{data.url}</a>
+                    Project link:{" "}
+                    {data.href.charAt(0) === "/" ? <Link to={data.href}>{data.url}</Link> : <a href={data.href}>{data.url}</a>}
                   </li>
                 </ul>
               </div>
@@ -151,19 +154,48 @@ export default function Resume() {
         <div className="mb-3">
           <div className="resumeEntry">
             <div className="resumeEntryCenter">
-              <ul class="list-disc list-inside md:ml-2">
-                <li>
+                <p>
                   <strong>Software:</strong> {JSONData.skills.software}
-                </li>
-                <li>
+                </p>
+                <p>
                   <strong>Programming:</strong> {JSONData.skills.programming}
-                </li>
-                <li>
+                </p>
+                <p>
                   <strong>Languages:</strong> {JSONData.skills.languages}
-                </li>
-              </ul>
+                </p>
             </div>
           </div>
+        </div>
+        {/* ===========================
+        ===============================
+        ===============================
+        =============================== */}
+        <h2 className="h2Resume">Extracurricular Activities</h2>
+        <div>
+          <div className="w-full border-t-[2px] border-neutral-300"></div>
+        </div>
+        <div className="mb-3">
+          {JSONData.extracurricular.map(data => (
+            <div className="resumeEntry">
+              <div className="resumeEntryCenter">
+                <p>
+                  <strong>{data.position}</strong>, {data.name}
+                </p>
+                <p className="md:hidden text-neutral-600">
+                  {data.location} - {data.date}
+                </p>
+                <ul class="list-disc list-inside md:ml-2">
+                  {data.highlights.map(highlights => (
+                    <li className="pl-0 ml-0">{highlights}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="resumeEntryRight hidden md:block">
+                <p>{data.location}</p>
+                <p>{data.date}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </main>
     </Layout>
