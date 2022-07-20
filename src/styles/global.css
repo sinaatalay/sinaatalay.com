@@ -3,6 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  @apply mr-[calc(100%-100vw)];
+}
 body {
   @apply max-w-3xl my-0 mx-auto bg-neutral-200 print:bg-white overflow-x-hidden;
 }
@@ -15,28 +18,18 @@ body {
 .h2Pages {
   @apply my-0 text-left text-4xl font-thin nocount font-primary text-neutral-900 print:text-black;
 }
-
-.h2Resume {
-  @apply text-xl mb-1 font-bold;
+.resumeDateAndLocationPC {
+  @apply w-32 md:w-44 flex-none text-right hidden md:block;
 }
-.resumeEntry {
-  @apply flex flex-row mt-2;
-}
-.resumeEntryCenter {
-  @apply flex-grow;
-}
-.resumeEntryRight {
-  @apply w-32 md:w-44 flex-none text-right;
+.resumeDateAndLocationMobile {
+  @apply md:hidden text-neutral-600;
 }
 
-/* Reports */
-/* Reports */
-/* Reports */
+/* Project Reports: */
 article {
   @apply text-base font-body leading-[1.8] pb-4;
   counter-reset: figcaptioncounter;
 }
-
 article p {
   @apply text-justify mt-4;
   hyphens: auto;
@@ -46,11 +39,6 @@ article p {
 a {
   @apply text-primary-500 hover:text-primary-900 transition duration-200 ease-out print:text-black;
 }
-
-/* ============ */
-/* ============ */
-/* ============ */
-
 article img {
   @apply block print:grayscale;
 }
@@ -64,11 +52,6 @@ article figcaption {
 article figure {
   @apply mt-4 mx-auto max-w-full md:max-w-xl print:max-w-xl;
 }
-
-/* ============ */
-/* ============ */
-/* ============ */
-
 .toc ul {
   @apply pl-3 md:pl-8;
   counter-reset: item;
@@ -84,21 +67,12 @@ article figure {
   content: counters(item, ".") "\0000a0";
   counter-increment: item;
 }
-
-/* ============ */
-/* ============ */
-/* ============ */
-
 article ul {
   @apply list-inside list-disc;
 }
 article ol {
   @apply list-inside list-decimal;
 }
-
-/* ============ */
-/* ============ */
-/* ============ */
 article {
   @apply text-neutral-900 overflow-hidden print:text-black;
 }

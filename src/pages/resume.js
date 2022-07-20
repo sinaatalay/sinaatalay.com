@@ -1,6 +1,9 @@
 import { Link } from "gatsby"
 import React from "react"
 import Layout from "../components/Layout"
+import ResumeEntry from "../components/ResumeEntry"
+import ResumeHeading from "../components/ResumeHeading"
+import ResumeSection from "../components/ResumeSection"
 import JSONData from "../data/resume.json"
 
 export default function Resume() {
@@ -10,25 +13,18 @@ export default function Resume() {
         <h1 className="font-body text-3xl mt-6 text-center">Sina Atalay</h1>
       </header>
       <main className="font-body mt-6">
-        {/* ===========================
-        ===============================
-        ===============================
-        =============================== */}
-        <h2 className="h2Resume">Education</h2>
-        <div>
-          <div className="w-full border-t-[2px] border-neutral-300"></div>
-        </div>
-        <div className="mb-3">
+        <ResumeHeading>Education</ResumeHeading>
+        <ResumeSection>
           {JSONData.education.map(data => (
-            <div className="resumeEntry">
+            <ResumeEntry>
               <p className="w-12 flex-none hidden md:block">
                 <strong>{data.studyType}</strong>
               </p>
-              <div className="resumeEntryCenter">
+              <div className="flex-grow">
                 <p>
                   <strong>{data.institution}</strong>, {data.area}
                 </p>
-                <p className="md:hidden text-neutral-600">
+                <p className="resumeDateAndLocationMobile">
                   {data.location} - {data.date}
                 </p>
                 <ul class="list-disc list-inside md:ml-2">
@@ -37,29 +33,23 @@ export default function Resume() {
                   ))}
                 </ul>
               </div>
-              <div className="resumeEntryRight hidden md:block">
+              <div className="resumeDateAndLocationPC">
                 <p>{data.location}</p>
                 <p>{data.date}</p>
               </div>
-            </div>
+            </ResumeEntry>
           ))}
-        </div>
-        {/* ===========================
-        ===============================
-        ===============================
-        =============================== */}
-        <h2 className="h2Resume">Experience</h2>
-        <div>
-          <div className="w-full border-t-[2px] border-neutral-300"></div>
-        </div>
-        <div className="mb-3">
+        </ResumeSection>
+
+        <ResumeHeading>Experience</ResumeHeading>
+        <ResumeSection>
           {JSONData.experience.map(data => (
-            <div className="resumeEntry">
-              <div className="resumeEntryCenter">
+            <ResumeEntry>
+              <div className="flex-grow">
                 <p>
                   <strong>{data.position}</strong>, {data.name}
                 </p>
-                <p className="md:hidden text-neutral-600">
+                <p className="resumeDateAndLocationMobile">
                   {data.location} - {data.date}
                 </p>
                 <ul class="list-disc list-inside md:ml-2">
@@ -68,29 +58,23 @@ export default function Resume() {
                   ))}
                 </ul>
               </div>
-              <div className="resumeEntryRight hidden md:block">
+              <div className="resumeDateAndLocationPC">
                 <p>{data.location}</p>
                 <p>{data.date}</p>
               </div>
-            </div>
+            </ResumeEntry>
           ))}
-        </div>
-        {/* ===========================
-        ===============================
-        ===============================
-        =============================== */}
-        <h2 className="h2Resume">Projects</h2>
-        <div>
-          <div className="w-full border-t-[2px] border-neutral-300"></div>
-        </div>
-        <div className="mb-3">
+        </ResumeSection>
+
+        <ResumeHeading>Projects</ResumeHeading>
+        <ResumeSection>
           {JSONData.projects.map(data => (
-            <div className="resumeEntry">
-              <div className="resumeEntryCenter">
+            <ResumeEntry>
+              <div className="flex-grow">
                 <p>
                   <strong>{data.name}</strong>
                 </p>
-                <p className="md:hidden text-neutral-600">
+                <p className="resumeDateAndLocationMobile">
                   {data.location} - {data.date}
                 </p>
                 <ul class="list-disc list-inside md:ml-2">
@@ -104,29 +88,23 @@ export default function Resume() {
                   </li>
                 </ul>
               </div>
-              <div className="resumeEntryRight hidden md:block">
+              <div className="resumeDateAndLocationPC">
                 <p>{data.location}</p>
                 <p>{data.date}</p>
               </div>
-            </div>
+            </ResumeEntry>
           ))}
-        </div>
-        {/* ===========================
-        ===============================
-        ===============================
-        =============================== */}
-        <h2 className="h2Resume">Certificates</h2>
-        <div>
-          <div className="w-full border-t-[2px] border-neutral-300"></div>
-        </div>
-        <div className="mb-3">
+        </ResumeSection>
+
+        <ResumeHeading>Certificates</ResumeHeading>
+        <ResumeSection>
           {JSONData.certificates.map(data => (
-            <div className="resumeEntry">
-              <div className="resumeEntryCenter">
+            <ResumeEntry>
+              <div className="flex-grow">
                 <p>
                   <strong>{data.name}</strong>
                 </p>
-                <p className="md:hidden text-neutral-600">{data.date}</p>
+                <p className="resumeDateAndLocationMobile">{data.date}</p>
                 <ul class="list-disc list-inside md:ml-2">
                   {data.highlights.map(highlights => (
                     <li>{highlights}</li>
@@ -136,52 +114,40 @@ export default function Resume() {
                   </li>
                 </ul>
               </div>
-              <div className="resumeEntryRight hidden md:block">
+              <div className="resumeDateAndLocationPC">
                 <p>{data.location}</p>
                 <p>{data.date}</p>
               </div>
-            </div>
+            </ResumeEntry>
           ))}
-        </div>
-        {/* ===========================
-        ===============================
-        ===============================
-        =============================== */}
-        <h2 className="h2Resume">Skills</h2>
-        <div>
-          <div className="w-full border-t-[2px] border-neutral-300"></div>
-        </div>
-        <div className="mb-3">
-          <div className="resumeEntry">
-            <div className="resumeEntryCenter">
-                <p>
-                  <strong>Software:</strong> {JSONData.skills.software}
-                </p>
-                <p>
-                  <strong>Programming:</strong> {JSONData.skills.programming}
-                </p>
-                <p>
-                  <strong>Languages:</strong> {JSONData.skills.languages}
-                </p>
+        </ResumeSection>
+
+        <ResumeHeading>Skills</ResumeHeading>
+        <ResumeSection>
+          <ResumeEntry>
+            <div className="flex-grow">
+              <p>
+                <strong>Software:</strong> {JSONData.skills.software}
+              </p>
+              <p>
+                <strong>Programming:</strong> {JSONData.skills.programming}
+              </p>
+              <p>
+                <strong>Languages:</strong> {JSONData.skills.languages}
+              </p>
             </div>
-          </div>
-        </div>
-        {/* ===========================
-        ===============================
-        ===============================
-        =============================== */}
-        <h2 className="h2Resume">Extracurricular Activities</h2>
-        <div>
-          <div className="w-full border-t-[2px] border-neutral-300"></div>
-        </div>
-        <div className="mb-3">
+          </ResumeEntry>
+        </ResumeSection>
+
+        <ResumeHeading>Extracurricular Activities</ResumeHeading>
+        <ResumeSection>
           {JSONData.extracurricular.map(data => (
-            <div className="resumeEntry">
-              <div className="resumeEntryCenter">
+            <ResumeEntry>
+              <div className="flex-grow">
                 <p>
                   <strong>{data.position}</strong>, {data.name}
                 </p>
-                <p className="md:hidden text-neutral-600">
+                <p className="resumeDateAndLocationMobile">
                   {data.location} - {data.date}
                 </p>
                 <ul class="list-disc list-inside md:ml-2">
@@ -190,13 +156,13 @@ export default function Resume() {
                   ))}
                 </ul>
               </div>
-              <div className="resumeEntryRight hidden md:block">
+              <div className="resumeDateAndLocationPC">
                 <p>{data.location}</p>
                 <p>{data.date}</p>
               </div>
-            </div>
+            </ResumeEntry>
           ))}
-        </div>
+        </ResumeSection>
       </main>
     </Layout>
   )

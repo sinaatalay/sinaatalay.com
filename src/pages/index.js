@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
+import Seperator from "../components/Seperator"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
@@ -21,12 +22,8 @@ export default function Home() {
         <p className="pPages">
           In the <Link to="/projects">Projects</Link> section, you can find brief reports of projects I have been involved in.
         </p>
-        <div className="py-4">
-          <div className="w-full border-t-2 border-neutral-300"></div>
-        </div>
-        <h2 className="h2Pages">
-          About Ionizer
-        </h2>
+        <Seperator />
+        <h2 className="h2Pages">About Ionizer</h2>
         <p className="pPages">
           In Spring 2022, I started to work on an ion truster simulation program (<strong>Ionizer</strong>) at{" "}
           <a href="http://bustlab.boun.edu.tr/">Bogazici University Space Technologies Laboratory</a>.
@@ -47,12 +44,8 @@ export default function Home() {
         <p className="pPages">
           To check out the repository and contribute on Github, click <a href="https://github.com/sinaatalay/Ionizer">here</a>.
         </p>
-        <div className="py-4">
-          <div className="w-full border-t-2 border-neutral-300"></div>
-        </div>
-        <h2 className="h2Pages">
-          About My YouTube Channel
-        </h2>
+        <Seperator />
+        <h2 className="h2Pages">About My YouTube Channel</h2>
         <p className="pPages">
           In June 2020, I instructed the entire <em>Engineering Mechanics: Dynamics</em> course on YouTube, which has so far
           received more than 200,000 views. You can see two of my videos below.
@@ -63,10 +56,9 @@ export default function Home() {
               width="100%"
               height="100%"
               className="absolute top-0 left-0"
-              src="https://www.youtube.com/embed/KWa4V1s4yug"
+              src="https://www.youtube-nocookie.com/embed/KWa4V1s4yug"
               title="YouTube video player"
               frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe>
           </div>
@@ -75,10 +67,9 @@ export default function Home() {
               width="100%"
               height="100%"
               className="absolute top-0 left-0"
-              src="https://www.youtube.com/embed/perz7qJG7qc"
+              src="https://www.youtube-nocookie.com/embed/perz7qJG7qc"
               title="YouTube video player"
               frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe>
           </div>
