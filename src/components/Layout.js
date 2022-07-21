@@ -5,6 +5,7 @@ import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin"
 import { FaYoutube } from "@react-icons/all-files/fa/FaYoutube"
 import { Link } from "gatsby"
 import { Helmet } from "react-helmet"
+import { OutboundLink } from "gatsby-plugin-google-gtag"
 
 export default function Layout({ children, title }) {
   return (
@@ -28,15 +29,15 @@ export default function Layout({ children, title }) {
             Sina Atalay
           </Link>
         </p>
-        <a href="https://github.com/sinaatalay" className="mr-2 my-auto print:hidden">
+        <OutboundLink href="https://github.com/sinaatalay" className="mr-2 my-auto print:hidden">
           <FaGithub className="text-2xl text-secondary-500 hover:text-secondary-600 transition ease-out duration-200" />
-        </a>
-        <a href="https://www.linkedin.com/in/sina-atalay/" className="mx-2 my-auto print:hidden">
+        </OutboundLink>
+        <OutboundLink href="https://www.linkedin.com/in/sina-atalay/" className="mx-2 my-auto print:hidden">
           <FaLinkedin className="text-2xl text-secondary-500 hover:text-secondary-600 transition ease-out duration-200" />
-        </a>
-        <a href="https://www.youtube.com/c/SinaAtalay" className="mx-2 my-auto print:hidden">
+        </OutboundLink>
+        <OutboundLink href="https://www.youtube.com/c/SinaAtalay" className="mx-2 my-auto print:hidden">
           <FaYoutube className="text-2xl text-secondary-500 hover:text-secondary-600 transition ease-out duration-200" />
-        </a>
+        </OutboundLink>
       </footer>
     </div>
   )

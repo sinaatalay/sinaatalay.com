@@ -3,6 +3,7 @@ import Layout from "../components/Layout"
 import Seperator from "../components/Seperator"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+import { OutboundLink } from "gatsby-plugin-google-gtag"
 
 export default function Home() {
   return (
@@ -16,8 +17,9 @@ export default function Home() {
       <main>
         <p className="pPages">I'm a senior mechanical engineering student at Bogazici University.</p>
         <p className="pPages">
-          As a fun exercise, I decided to build this webpage with <a href="https://tailwindcss.com/">Tailwindcss</a> and{" "}
-          <a href="https://www.gatsbyjs.com/">Gatsby</a>.
+          As a fun exercise, I decided to build this webpage with{" "}
+          <OutboundLink href="https://tailwindcss.com/">Tailwindcss</OutboundLink> and{" "}
+          <OutboundLink href="https://www.gatsbyjs.com/">Gatsby</OutboundLink>.
         </p>
         <p className="pPages">
           In the <Link to="/projects">Projects</Link> section, you can find brief reports of projects I have been involved in.
@@ -26,7 +28,7 @@ export default function Home() {
         <h2 className="h2Pages">About Ionizer</h2>
         <p className="pPages">
           In Spring 2022, I started to work on an ion truster simulation program (<strong>Ionizer</strong>) at{" "}
-          <a href="http://bustlab.boun.edu.tr/">Bogazici University Space Technologies Laboratory</a>.
+          <OutboundLink href="http://bustlab.boun.edu.tr/">Bogazici University Space Technologies Laboratory</OutboundLink>.
         </p>
         <p className="pPages">
           It's a tricky simulation because the applicability of the continuum assumption is questionable since the operating
@@ -34,15 +36,17 @@ export default function Home() {
         </p>
         <p className="pPages">
           Ionizer is being written in C++, and its goal is to solve the 3D{" "}
-          <a href="https://en.wikipedia.org/wiki/Poisson%27s_equation">Poisson's equation</a> to calculate the electrostatic field
-          inside the thruster and move the ions accordingly with the well-established molecular approach, PIC-DSMC.
+          <OutboundLink href="https://en.wikipedia.org/wiki/Poisson%27s_equation">Poisson's equation</OutboundLink> to calculate
+          the electrostatic field inside the thruster and move the ions accordingly with the well-established molecular approach,
+          PIC-DSMC.
         </p>
         <p className="pPages">Currently, it solves 3D Poisson's equation for the potential field, which is how it looks:</p>
         <div className="relative w-full md:w-11/12 mx-auto">
           <StaticImage src="../images/IonizerPreview.png" alt="Ionizer" placeholder="blurred" />
         </div>
         <p className="pPages">
-          To check out the repository and contribute on Github, click <a href="https://github.com/sinaatalay/Ionizer">here</a>.
+          To check out the repository and contribute on Github, click{" "}
+          <OutboundLink href="https://github.com/sinaatalay/Ionizer">here</OutboundLink>.
         </p>
         <Seperator />
         <h2 className="h2Pages">About My YouTube Channel</h2>

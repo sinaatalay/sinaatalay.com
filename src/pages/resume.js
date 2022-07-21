@@ -5,6 +5,7 @@ import ResumeEntry from "../components/ResumeEntry"
 import ResumeHeading from "../components/ResumeHeading"
 import ResumeSection from "../components/ResumeSection"
 import JSONData from "../data/resume.json"
+import { OutboundLink } from "gatsby-plugin-google-gtag"
 
 export default function Resume() {
   return (
@@ -84,7 +85,11 @@ export default function Resume() {
 
                   <li>
                     Project link:{" "}
-                    {data.href.charAt(0) === "/" ? <Link to={data.href}>{data.url}</Link> : <a href={data.href}>{data.url}</a>}
+                    {data.href.charAt(0) === "/" ? (
+                      <Link to={data.href}>{data.url}</Link>
+                    ) : (
+                      <OutboundLink href={data.href}>{data.url}</OutboundLink>
+                    )}
                   </li>
                 </ul>
               </div>
@@ -110,7 +115,7 @@ export default function Resume() {
                     <li>{highlights}</li>
                   ))}
                   <li>
-                    Course Certificate: <a href={data.href}>{data.url}</a>
+                    Course Certificate: <OutboundLink href={data.href}>{data.url}</OutboundLink>
                   </li>
                 </ul>
               </div>

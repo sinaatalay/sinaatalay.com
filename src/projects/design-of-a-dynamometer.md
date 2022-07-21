@@ -423,4 +423,4 @@ Firstly, we researched and learned how a dynamometer works. Then we selected an 
 7. N. S. Nise, Control Systems Engineering. USA: Wiley, 2019, ISBN: 9781119474210.
 8. Nagwa. “Lesson explainer: Direct current motors.”, [Online]. Available: [Click here](https://www.nagwa.com/en/explainers/246108560531) (visited on 05/08/2022).
 9. J. W. Nilsson and S. A. Riedel, Electric Circuits. USA: Pearson Education, 2014, ISBN: 9780133594812.
-10. A. B. Downey, Physical Modeling in MATLAB. USA, 2022. [Online]. Available: [Click here](https://greenteapress.com/wp/physical-modeling-inmatlab/).
+10. A. B. Downey, Physical Modeling in MATLAB. USA, 2022. [Online]. Available: [Click here](https://greenteapress.com/wp/physical-modeling-inmatlab/) (visited on 05/27/2022).
