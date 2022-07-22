@@ -26,8 +26,11 @@ body {
 }
 
 /* Project Reports: */
+@page {
+  margin: 20mm;
+}
 article {
-  @apply text-base font-body leading-[1.8] pb-4;
+  @apply text-base font-body leading-[1.8] pb-4 print:break-inside-auto;
   counter-reset: figcaptioncounter;
 }
 article p {
@@ -50,7 +53,7 @@ article figcaption {
   counter-increment: figcaptioncounter;
 }
 article figure {
-  @apply mt-4 mx-auto max-w-full md:max-w-xl print:max-w-xl;
+  @apply mt-4 mx-auto max-w-full md:max-w-xl print:max-w-xl print:break-inside-avoid;
 }
 .toc ul {
   @apply pl-3 md:pl-8;
@@ -76,8 +79,11 @@ article ol {
 article {
   @apply text-neutral-900 overflow-hidden print:text-black;
 }
+article header {
+  @apply print:flex print:flex-col print:h-screen print:justify-center;
+}
 article h1 {
-  @apply text-center text-4xl leading-[3rem] mt-14;
+  @apply text-center text-4xl leading-[3rem] mt-14 print:mt-0;
   counter-reset: h2counter;
 }
 .author {
@@ -107,6 +113,9 @@ article h2 {
   @apply text-3xl leading-8 mt-12;
   counter-increment: h2counter;
   counter-reset: h3counter;
+}
+.mdHtml h2 {
+  @apply print:break-before-page;
 }
 article h3:before {
   content: counter(h2counter) "." counter(h3counter) "\0000a0\0000a0\0000a0";
