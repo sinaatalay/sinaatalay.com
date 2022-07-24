@@ -27,7 +27,7 @@ export default function Home() {
         <Seperator />
         <h2 className="h2Pages">About Ionizer</h2>
         <p className="pPages">
-          In Spring 2022, I started to work on an ion truster simulation program (<strong>Ionizer</strong>) at{" "}
+          In the spring of 2022, I started to work on an ion truster simulation program (<strong>Ionizer</strong>) at{" "}
           <OutboundLink href="http://bustlab.boun.edu.tr/">Bogazici University Space Technologies Laboratory</OutboundLink>.
         </p>
         <p className="pPages">
