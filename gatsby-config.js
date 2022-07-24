@@ -1,7 +1,7 @@
 /**
  * Configure your Gatsby site with this file.
  *
- * See: https://www.gatsbyjs.com/docs/gatsby-config/
+ * See: https://www.gatsbyjs.co/m/docs/gatsby-config/
  */
 
 module.exports = {
