@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "build": "gatsby build",
+    "postbuild": "rm -r docs && mkdir docs && touch docs/CNAME && printf 'sinaatalay.com' > docs/CNAME && mv -v public/* docs && rm -d public",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "gatsby develop",
