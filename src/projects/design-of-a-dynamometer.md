@@ -31,7 +31,7 @@ A low-cost small dynamometer will be designed to use in engineering labs. A spec
 
   
 
-![Performance curves of BOSCH GPG (3 137 230 306) [1]](../images/2MotorCurves.png)
+![Performance curves of BOSCH GPG (3 137 230 306) [1]](../images/design-of-a-dynamometer/MotorCurves.png)
 
   
 
@@ -39,7 +39,7 @@ The design criteria dictate that the dynamometer should operate in the region sh
 
   
 
-![The dynamometer's operation region.](../images/2OperationRegion.png)
+![The dynamometer's operation region.](../images/design-of-a-dynamometer/OperationRegion.png)
 
   
 
@@ -64,7 +64,7 @@ Some dynamometers absorb energy in a mechanical friction brake. The easiest way 
 
   
 
-![Schmetic diagram of a prony brake [3].](../images/2PronyBrake.png)
+![Schmetic diagram of a prony brake [3].](../images/design-of-a-dynamometer/PronyBrake.png)
 
   
 
@@ -84,7 +84,7 @@ In its simplest form, an eddy current dynamometer uses a metal disk attached to 
 
   
 
-![Schematic diagram of a eddy current brake [3].](../images/2EddyCurrentBrake.png)
+![Schematic diagram of a eddy current brake [3].](../images/design-of-a-dynamometer/EddyCurrentBrake.png)
 
   
 
@@ -117,7 +117,7 @@ We collected more detailed information about prony brakes and dynamic brakes. Th
 
   
 
-![A small prony brake dynamometer [6].](../images/2PronyBrakeYoutube.png)
+![A small prony brake dynamometer [6].](../images/design-of-a-dynamometer/PronyBrakeYoutube.png)
 
   
 
@@ -145,7 +145,7 @@ where $K_\text{emf}$ is the emf constant of the motor, $\omega$ is the angular s
 
   
 
-![Schmetic diagram of a DC motor [8].](../images/2DCMotor.png)
+![Schmetic diagram of a DC motor [8].](../images/design-of-a-dynamometer/DCMotor.png)
 
   
 
@@ -173,7 +173,7 @@ To further understand the dynamometer's design, its schematic is shown in Figure
 
   
 
-![The graphical representation of the dynamometer.](../images/2TheSchematic.png)
+![The graphical representation of the dynamometer.](../images/design-of-a-dynamometer/TheSchematic.png)
 
   
 
@@ -282,7 +282,7 @@ In Figure 8, Equation 8 is plotted.
 
   
 
-![Equation 8's plot.](../images/2selectionplot.png)
+![Equation 8's plot.](../images/design-of-a-dynamometer/SelectionPlot.png)
 
   
 
@@ -302,7 +302,7 @@ and performance curves are shown in Figure 9 [1].
 
   
 
-![Performance curves of BOSCH AHC1 (0 390 203 386) [1].](../images/2LoadMotorCurves.png)
+![Performance curves of BOSCH AHC1 (0 390 203 386) [1].](../images/design-of-a-dynamometer/LoadMotorCurves.png)
 
 ### Selecting the Potentiometer
 
@@ -320,7 +320,7 @@ The load can be controlled because $i_l$ can be controlled with a digital potent
 
   
 
-![The dynamometer in block diagram form.](../images/2BlockDiagram.png)
+![The dynamometer in block diagram form.](../images/design-of-a-dynamometer/BlockDiagram.png)
 
 ### Measuring the Speed
 
@@ -344,7 +344,7 @@ A good presentation of the modeling process and its outcomes is shown in Figure 
 
   
 
-![The modeling process [10].](../images/2model.png)
+![The modeling process [10].](../images/design-of-a-dynamometer/Model.png)
 
 ### Modeling the Dynamometer
 
@@ -404,7 +404,7 @@ In the simulation, at $t=0$, the test motor starts running and $R_l$ is kept $\i
 
   
 
-![Closed-loop responses.](../images/2SimulationFigures.png)
+![Closed-loop responses.](../images/design-of-a-dynamometer/SimulationFigures.png)
 
 ## Conclusion
 
@@ -416,9 +416,9 @@ Firstly, we researched and learned how a dynamometer works. Then we selected an 
 
 1. BOSCH, Electric Motors Catalogue, 2021-2022.
 2. W. W. Pulkrabek, Engineering Fundamentals of the Internal Combustion Engine. USA: Prentice Hall, 1997, ISBN: 9780135708545.
-3. MatthiasDD. “Schematic of a prony brake.”, [Online]. Available: [Click here](https://commons.wikimedia.org/wiki/File:Prony_brake.svg) (visited on 05/07/2022).
+3. MatthiasDD. “Schematic of a prony brake.”, [Online]. Available: [Click here](https://commons.wikimedia.org/wiki/File:Prony_brake.svg) (visited on 05/07/design-of-a-dynamometer/022).
 4. R. A. Serway and J. John W. Jewett, Physics for Scientists and Engineers with Modern Physics. USA: Cengage Learning, 2014, ISBN: 9781133954057.
-5. Chetvorno. “Eddy current brake diagram.”, [Online]. Available: [Click here](https://en.wikipedia.org/wiki/File:Eddy_current_brake_diagram.svg) (visited on 05/07/2022).
+5. Chetvorno. “Eddy current brake diagram.”, [Online]. Available: [Click here](https://en.wikipedia.org/wiki/File:Eddy_current_brake_diagram.svg) (visited on 05/07/design-of-a-dynamometer/022).
 6. JohnnyQ90. “Simplest dyno for rc engines! - prony brake dynamometer!”, [Online]. Available: [Click here](https://youtu.be/0ESOYhOh28c) (visited on 05/19/2022).
 7. N. S. Nise, Control Systems Engineering. USA: Wiley, 2019, ISBN: 9781119474210.
 8. Nagwa. “Lesson explainer: Direct current motors.”, [Online]. Available: [Click here](https://www.nagwa.com/en/explainers/246108560531) (visited on 05/08/2022).
