@@ -9,6 +9,9 @@ html {
 body {
   @apply max-w-3xl my-0 mx-auto bg-neutral-200 print:bg-white overflow-x-hidden;
 }
+a {
+  @apply text-primary-500 hover:text-primary-900 transition duration-200 ease-out print:text-black;
+}
 .pPages {
   @apply font-light my-4 text-left text-xl text-neutral-900 font-primary print:text-black;
 }
@@ -29,32 +32,11 @@ body {
 @page {
   margin: 20mm;
 }
-article {
-  @apply text-base font-body leading-[1.8] pb-4 print:break-inside-auto;
-  counter-reset: figcaptioncounter;
+
+.markdownHtml{
+  counter-reset: h2counter figcaptioncounter
 }
-article p {
-  @apply text-justify mt-4;
-  hyphens: auto;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-}
-a {
-  @apply text-primary-500 hover:text-primary-900 transition duration-200 ease-out print:text-black;
-}
-article img {
-  @apply block print:grayscale;
-}
-article figcaption::before {
-  content: "Figure " counter(figcaptioncounter) ":\0000a0\0000a0";
-}
-article figcaption {
-  @apply text-center mt-1;
-  counter-increment: figcaptioncounter;
-}
-article figure {
-  @apply mt-4 mx-auto max-w-full md:max-w-xl print:max-w-xl print:break-inside-avoid;
-}
+
 .toc ul {
   @apply pl-3 md:pl-8;
   counter-reset: item;
@@ -70,64 +52,59 @@ article figure {
   content: counters(item, ".") "\0000a0";
   counter-increment: item;
 }
-article ul {
-  @apply list-inside list-disc;
+
+.markdownHtml p {
+  @apply text-justify mt-4;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
 }
-article ol {
+
+.markdownHtml img {
+  @apply block print:grayscale;
+}
+.markdownHtml figcaption::before {
+  content: "Figure " counter(figcaptioncounter) ":\0000a0\0000a0";
+}
+.markdownHtml figcaption {
+  @apply text-center mt-1;
+  counter-increment: figcaptioncounter;
+}
+.markdownHtml figure {
+  @apply mt-4 mx-auto max-w-full md:max-w-xl print:max-w-xl print:break-inside-avoid;
+}
+
+.markdownHtml ul {
+  @apply list-inside list-disc text-justify;
+}
+.markdownHtml ol {
   @apply list-inside list-decimal;
 }
-article {
-  @apply text-neutral-900 overflow-hidden print:text-black;
-}
-article header {
-  @apply print:flex print:flex-col print:h-screen print:justify-center;
-}
-article h1 {
-  @apply text-center text-4xl leading-[3rem] mt-14 print:mt-0;
-  counter-reset: h2counter;
-}
-.author {
-  @apply my-4 text-center;
-}
-.date {
-  @apply my-4 text-center;
-}
-.abstract,
-.abstract p {
-  @apply text-center mt-0 font-normal;
-}
-.abstract {
-  @apply my-9 font-bold;
-}
-.abstract > h2 {
-  @apply text-base;
-}
-article h2:before {
+
+.markdownHtml h2:before {
   content: counter(h2counter) "\0000a0\0000a0\0000a0";
 }
-article h2.nocount:before {
+.markdownHtml h2.nocount:before {
   content: none;
   counter-increment: none;
 }
-article h2 {
-  @apply text-3xl leading-8 mt-12;
+.markdownHtml h2 {
+  @apply text-3xl leading-8 mt-12 print:break-before-page;
   counter-increment: h2counter;
   counter-reset: h3counter;
 }
-.mdHtml h2 {
-  @apply print:break-before-page;
-}
-article h3:before {
+.markdownHtml h3:before {
   content: counter(h2counter) "." counter(h3counter) "\0000a0\0000a0\0000a0";
 }
-article h3 {
+.markdownHtml h3 {
   @apply text-2xl leading-7 mt-10;
   counter-increment: h3counter;
 }
-article h2 + h3 {
+.markdownHtml h2 + h3 {
   @apply mt-3;
 }
-article h2,
-article h3 {
+.markdownHtml h2,
+.markdownHtml h3 {
   @apply mb-3;
 }

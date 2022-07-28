@@ -10,23 +10,22 @@ export default function ProjectDetails({ data }) {
   return (
     <Layout title={title}>
       <main>
-        <article>
-          <header>
-            <h1>{title}</h1>
-            <p className="author">by {author}</p>
-            <p className="date">{date}</p>
-
-            <div className="abstract">
-              <h2 className="nocount">Abstract</h2>
-              <p>{abstract}</p>
+        <article className="text-base font-body leading-[1.8] pb-4 print:break-inside-auto text-neutral-900 print:text-black">
+          <header className="print:flex print:flex-col print:h-screen print:justify-center">
+            <h1 className="text-center text-4xl leading-[3rem] mt-14 print:mt-0">{title}</h1>
+            <p className="my-4 text-center">by {author}</p>
+            <p className="my-4 text-center">{date}</p>
+            <div className="my-14 text-center">
+              <h2 className="text-base font-bold">Abstract</h2>
+              <p className="mt-4 font-normal">{abstract}</p>
             </div>
           </header>
           <nav role="navigation">
-            <h2 className="nocount">Contents</h2>
-            <div className="toc" dangerouslySetInnerHTML={{ __html: tableOfContents }}></div>
+            <h2 className="text-3xl leading-8 mt-12 print:break-before-page">Contents</h2>
+            <div className="toc mt-4" dangerouslySetInnerHTML={{ __html: tableOfContents }}></div>
           </nav>
 
-          <div className="mdHtml" dangerouslySetInnerHTML={{ __html: html }} />
+          <div className="markdownHtml" dangerouslySetInnerHTML={{ __html: html }} />
         </article>
       </main>
     </Layout>
