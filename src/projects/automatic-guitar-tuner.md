@@ -49,6 +49,6 @@ A video of the tuner can be seen below. Even though the video is in Turkish, Eng
 ></iframe>
 </div>
 
-## References
+<h2 class="nocount">References</h2>
 1. ...
 2. ...
