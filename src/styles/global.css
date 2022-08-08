@@ -22,7 +22,7 @@ a {
   @apply my-0 text-left text-4xl font-thin nocount font-primary text-neutral-900 print:text-black;
 }
 .resumeDateAndLocationPC {
-  @apply w-32 md:w-44 flex-none text-right hidden md:block;
+  @apply md:w-48 flex-none text-right hidden md:block;
 }
 .resumeDateAndLocationMobile {
   @apply md:hidden text-neutral-600;

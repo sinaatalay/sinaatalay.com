@@ -68,7 +68,7 @@
       "location": "Istanbul, Turkey",
       "date": "Spring 2022 to present",
       "highlights": [
-        "Write an ion thruster simulation program in C++ that solves the electrostatic field inside and moves the ions with the molecular PIC-DSMC approach under the supervision of Professor Murat Çelik."
+        "Write an ion thruster simulation program using C++ that solves the electrostatic field inside and moves the ions with the molecular PIC-DSMC approach under the supervision of Professor Murat Çelik."
       ],
       "href": "https://github.com/sinaatalay/Ionizer",
       "url": "github.com/sinaatalay/Ionizer"
@@ -78,7 +78,7 @@
       "location": "Istanbul, Turkey",
       "date": "Spring 2022",
       "highlights": [
-        "Designed, modeled, and simulated a dynamometer for small DC motors that will be constructed in Fall 2022 and used at Bogazici University's laboratories."
+        "Designed, modeled, and simulated a dynamometer for small DC motors that will be constructed in the fall of 2022 and used at Bogazici University's laboratories."
       ],
       "href": "/projects/design-of-a-dynamometer",
       "url": "sinaatalay.com/projects/design-of-a-dynamometer"

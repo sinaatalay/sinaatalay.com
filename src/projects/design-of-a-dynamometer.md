@@ -4,8 +4,8 @@ author: Sina Atalay, Arda Gençgel, and Hümeyra Kayadibi
 slug: design-of-a-dynamometer
 order: 2
 date: Spring 2022
-shortAbstract: This report covers the design of an absorption dynamometer for a small DC motor that will be constructed in Fall 2022 and used at Bogazici University's mechanical engineering laboratories.
-abstract: This report covers the design of an absorption dynamometer for a small DC motor that will be constructed in Fall 2022 and used at Bogazici University's mechanical engineering laboratories. The constraints and targets of the design are specified precisely. The electric dynamometer with a dynamic braking system is chosen for the design, and alternative options are discussed. The system is formalized, and the design variables are adjusted to achieve our targets bound to our constraints. The reasons behind the decisions are explained. The measurement system is explained thoroughly. The dynamometer is modeled, and the PID control scheme's closed-loop response is simulated with MATLAB. The MATLAB codes are published to Github.
+shortAbstract: This report covers the design of an absorption dynamometer for a small DC motor that will be constructed in the fall of 2022 and used at Bogazici University's mechanical engineering laboratories.
+abstract: This report covers the design of an absorption dynamometer for a small DC motor that will be constructed in the fall of 2022 and used at Bogazici University's mechanical engineering laboratories. The constraints and targets of the design are specified precisely. The electric dynamometer with a dynamic braking system is chosen for the design, and alternative options are discussed. The system is formalized, and the design variables are adjusted to achieve our targets bound to our constraints. The reasons behind the decisions are explained. The measurement system is explained thoroughly. The dynamometer is modeled, and the PID control scheme's closed-loop response is simulated with MATLAB. The MATLAB codes are published to Github.
 ---
 ## Introduction
 
@@ -408,7 +408,7 @@ In the simulation, at $t=0$, the test motor starts running and $R_l$ is kept $\i
 
 ## Conclusion
 
-In this project, an electric absorption dynamometer is designed, modeled, and simulated to build in Fall 2022. The design will be used in the mechanical engineering laboratories of Boğaziç University for small DC motors.
+In this project, an electric absorption dynamometer is designed, modeled, and simulated to build in the fall of 2022. The design will be used in the mechanical engineering laboratories of Boğaziç University for small DC motors.
 
 Firstly, we researched and learned how a dynamometer works. Then we selected an absorption unit which is a DC generator. After the absorption unit selection, we formulated the dynamometer carefully and designed the system to achieve our targets bound to our constraints. Next, we modeled the system mathematically and simulated it to understand further if the design works fine. Finally, we designed the mechanical structure and analyzed the project's total cost (even though this part is not included on the site).
 
