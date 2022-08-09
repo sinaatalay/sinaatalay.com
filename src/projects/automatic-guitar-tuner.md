@@ -8,7 +8,7 @@ shortAbstract: This report briefly describes the design and construction of a mi
 abstract: This report briefly describes the design and construction of a microcontroller-based guitar tuner device that consists of an amplifier circuit, signal processing algorithms, a decoder, H-bridges, pick-up sensors, and DC motors. To be continued...
 ---
 ## Introduction
-During [Bogazici University Mechanical Engineering Department](https://www.me.boun.edu.tr/)'s Mechatronics (ME 331) class, we designed and built an automatic guitar tuner device with a team of six mechanical engineering students. It was a real team effort, and everyone contributed substantially to the project's success. In the end, the device was capable of tuning the guitar accurately with motors without the need for manually tuning each string. All the user had to do was play a string and wait for the machine to tune the string.
+During [Bogazici University Mechanical Engineering Department](https://www.me.boun.edu.tr/)'s Mechatronics (ME 331) class, we designed and built an automatic guitar tuner device with a team of six mechanical engineering students. It was a real team effort, and everyone contributed substantially to the project's success. In the end, the device was capable of tuning the guitar accurately with motors without the need for manually tuning each string. All the user had to do was play a string and wait for the device to tune the string.
 
 We put tremendous effort into this project. It required advanced knowledge of signal processing, electronics, and programming. Therefore, we spent over 80% of the time researching and discovering new things. Moreover, building the mechanical structure required using tools we had never tried before, like a drill press and a circular saw. We drew and 3D printed some parts as well. Furthermore, we learned a lot about planning project timelines, task distributions, and communication among the team members.
 
@@ -50,5 +50,6 @@ A video of the tuner can be seen below. Even though the video is in Turkish, Eng
 </div>
 
 <h2 class="nocount">References</h2>
+
 1. ...
 2. ...
