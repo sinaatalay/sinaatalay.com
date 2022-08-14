@@ -9,7 +9,11 @@ export default function Contact() {
         <p className="pPages">Feel free to contact me!</p>
       </header>
       <main>
-        <form className="mt-8" action="https://getform.io/f/156b4f25-b9bb-4e5c-88f1-20c4b106a9d2" method="POST">
+        <form
+          className="mt-8"
+          action="https://getform.io/f/156b4f25-b9bb-4e5c-88f1-20c4b106a9d2"
+          method="POST"
+        >
           <div className="mb-6 w-full">
             <label className="pPages mb-2" for="name">
               Your Name

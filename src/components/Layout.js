@@ -16,11 +16,7 @@ export default function Layout({ children, title }) {
         }}
       >
         <meta charSet="utf-8" />
-        {title === "Home" ? (
-          <title>Sina Atalay</title>
-        ) : (
-          <title>{title} - Sina Atalay</title>
-        )}
+        {title === "Home" ? <title>Sina Atalay</title> : <title>{title} - Sina Atalay</title>}
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
       <Navbar />
@@ -39,10 +35,7 @@ export default function Layout({ children, title }) {
             Sina Atalay
           </Link>
         </p>
-        <OutboundLink
-          href="https://github.com/sinaatalay"
-          className="mr-2 my-auto print:hidden"
-        >
+        <OutboundLink href="https://github.com/sinaatalay" className="mr-2 my-auto print:hidden">
           <FaGithub className="text-2xl text-secondary-500 hover:text-secondary-600 transition ease-out duration-200" />
         </OutboundLink>
         <OutboundLink

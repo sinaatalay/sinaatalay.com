@@ -97,7 +97,9 @@
       "name": "Teaching Videos",
       "location": "Istanbul, Turkey",
       "date": "Jun. 2020",
-      "highlights": ["Instructed the entire 'Engineering Mechanics: Dynamics' course on YouTube (200,000+ views)."],
+      "highlights": [
+        "Instructed the entire 'Engineering Mechanics: Dynamics' course on YouTube (200,000+ views)."
+      ],
       "href": "https://www.youtube.com/c/SinaAtalay",
       "url": "youtube.com/c/SinaAtalay"
     }
@@ -125,7 +127,9 @@
       "position": "Windsurfing Instructor",
       "location": "Izmir, Turkey",
       "date": "Summer 2019 and 2020",
-      "highlights": ["Taught windsurfing during the summer months as a Turkish Sailing Federation certified windsurf instructor."]
+      "highlights": [
+        "Taught windsurfing during the summer months as a Turkish Sailing Federation certified windsurf instructor."
+      ]
     }
   ]
 }

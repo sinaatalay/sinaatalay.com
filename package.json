@@ -5,8 +5,9 @@
   "description": "My personal website",
   "private": true,
   "scripts": {
+    "prebuild": "rm -rf public && npm run format",
     "build": "gatsby build",
-    "postbuild": "rm -r docs && mkdir docs && touch docs/CNAME && printf 'sinaatalay.com' > docs/CNAME && mv -v public/* docs && rm -d public",
+    "postbuild": "rm -rf docs && mkdir docs && touch docs/CNAME && printf 'sinaatalay.com' > docs/CNAME && mv -v public/* docs && rm -d public",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "gatsby develop",
@@ -17,10 +18,11 @@
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
     "gatsby": "^4.19.2",
-    "gatsby-plugin-google-gtag": "^4.19.0",
+    "gatsby-plugin-google-gtag": "^4.20.0",
     "gatsby-plugin-image": "^2.19.0",
     "gatsby-plugin-react-helmet": "^5.19.0",
     "gatsby-plugin-sharp": "^4.19.0",
+    "gatsby-plugin-sitemap": "^5.20.0",
     "gatsby-remark-autolink-headers": "^5.19.0",
     "gatsby-remark-images": "^6.19.0",
     "gatsby-remark-katex": "^6.19.0",
