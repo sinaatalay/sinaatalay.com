@@ -115,7 +115,8 @@ export default function Resume() {
                     <li>{highlights}</li>
                   ))}
                   <li>
-                    Course Certificate: <OutboundLink href={data.href}>{data.url}</OutboundLink>
+                    Course Certificate:{" "}
+                    <OutboundLink href={data.href}>{data.url}</OutboundLink>
                   </li>
                 </ul>
               </div>

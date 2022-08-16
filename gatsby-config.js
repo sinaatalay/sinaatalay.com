@@ -71,6 +71,6 @@ module.exports = {
           respectDNT: true,
         },
       },
-    }
+    },
   ],
 }
