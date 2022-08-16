@@ -10,7 +10,7 @@ export default function ProjectDetails({ data }) {
   return (
     <Layout title={title}>
       <main>
-        <article className="text-base font-body leading-[1.8] pb-4 print:break-inside-auto text-neutral-900 print:text-black">
+        <article className="md:px-14 text-base font-body leading-relaxed pb-4 print:break-inside-auto text-neutral-900 print:text-black">
           <header className="print:flex print:flex-col print:h-screen print:justify-center">
             <h1 className="text-center text-4xl leading-[3rem] mt-14 print:mt-0">{title}</h1>
             <p className="my-4 text-center whitespace-pre-wrap">by {author}</p>

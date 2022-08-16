@@ -33,8 +33,8 @@ a {
   margin: 20mm;
 }
 
-.markdownHtml{
-  counter-reset: h2counter figcaptioncounter
+.markdownHtml {
+  counter-reset: h2counter figcaptioncounter;
 }
 
 .toc ul {
@@ -54,11 +54,16 @@ a {
 }
 
 .markdownHtml p {
-  @apply text-justify mt-4;
-  hyphens: auto;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
+  @apply md:text-justify mt-5;
+}
+
+@media (min-width: 768px) {
+  .markdownHtml p {
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+  }
 }
 
 .markdownHtml img {
@@ -72,14 +77,17 @@ a {
   counter-increment: figcaptioncounter;
 }
 .markdownHtml figure {
-  @apply mt-4 mx-auto max-w-full md:max-w-xl print:max-w-xl print:break-inside-avoid;
+  @apply mt-5 mx-auto max-w-full md:max-w-xl print:max-w-xl print:break-inside-avoid;
 }
 
 .markdownHtml ul {
-  @apply list-inside list-disc text-justify;
+  @apply list-inside list-disc text-justify mt-5;
 }
 .markdownHtml ol {
-  @apply list-inside list-decimal;
+  @apply list-inside list-decimal mt-5;
+}
+.markdownHtml li {
+  @apply mt-1;
 }
 
 .markdownHtml h2:before {

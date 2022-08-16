@@ -21,7 +21,7 @@ export default function Layout({ children, title }) {
       </Helmet>
       <Navbar />
 
-      <div className="bg-neutral-50 px-4 md:px-8 py-4 md:rounded-t-md flex-grow print:bg-white">
+      <div className="bg-neutral-50 px-6 md:px-8 py-4 md:rounded-t-md flex-grow print:bg-white">
         {children}
       </div>
 
