@@ -38,7 +38,7 @@ a {
 }
 
 .toc ul {
-  @apply pl-3 md:pl-8;
+  @apply md:pl-8;
   counter-reset: item;
 }
 .toc li {
