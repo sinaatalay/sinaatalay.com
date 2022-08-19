@@ -61,7 +61,7 @@ module.exports = {
         // This object gets passed directly to the gtag config command
         // This config will be shared across all trackingIds
         gtagConfig: {
-          anonymize_ip: true,
+          anonymize_ip: false,
         },
         // This object is used for configuration specific to this plugin
         pluginConfig: {
