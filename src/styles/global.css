@@ -38,8 +38,11 @@ a {
 }
 
 .toc ul {
-  @apply pl-8;
+  @apply pl-0 md:pl-8;
   counter-reset: item;
+}
+.toc li > ul {
+  @apply pl-8
 }
 .toc li {
   @apply block;

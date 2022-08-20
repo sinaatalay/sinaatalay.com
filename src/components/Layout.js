@@ -42,18 +42,21 @@ export default function Layout({ children, title }) {
         <OutboundLink
           href="https://github.com/sinaatalay"
           className="mr-2 my-auto print:hidden"
+          title="GitHub"
         >
           <FaGithub className="text-2xl text-secondary-500 hover:text-secondary-600 transition ease-out duration-200" />
         </OutboundLink>
         <OutboundLink
           href="https://www.linkedin.com/in/sina-atalay/"
           className="mx-2 my-auto print:hidden"
+          title="LinkedIn"
         >
           <FaLinkedin className="text-2xl text-secondary-500 hover:text-secondary-600 transition ease-out duration-200" />
         </OutboundLink>
         <OutboundLink
           href="https://www.youtube.com/c/SinaAtalay"
           className="mx-2 my-auto print:hidden"
+          title="YouTube"
         >
           <FaYoutube className="text-2xl text-secondary-500 hover:text-secondary-600 transition ease-out duration-200" />
         </OutboundLink>
