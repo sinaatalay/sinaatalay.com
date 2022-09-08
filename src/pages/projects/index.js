@@ -49,7 +49,10 @@ export default function Projects({ data }) {
 
 export const query = graphql`
   query ProjectsPage {
-    allMarkdownRemark(sort: { order: DESC, fields: frontmatter___order }) {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: frontmatter___order }
+      filter: { fileAbsolutePath: { regex: "/(projects)/" } }
+    ) {
       nodes {
         frontmatter {
           abstract

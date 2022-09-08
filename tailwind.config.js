@@ -13,7 +13,6 @@ module.exports = {
     extend: {
       fontFamily: {
         body: ["Lora"],
-        primary: ["Signika Negative"],
       },
       colors: {
         primary: colors.blue,

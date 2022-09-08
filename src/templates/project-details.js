@@ -33,7 +33,7 @@ export default function ProjectDetails({ data }) {
           </nav>
 
           <div
-            className="markdownHtml"
+            className="markdownProjectDetails"
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </article>

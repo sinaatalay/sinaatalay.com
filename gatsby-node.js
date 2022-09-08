@@ -3,7 +3,7 @@ const path = require("path")
 exports.createPages = async ({ graphql, actions }) => {
   const { data } = await graphql(`
     query Projects {
-      allMarkdownRemark {
+      allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/projects/" } }) {
         nodes {
           frontmatter {
             slug

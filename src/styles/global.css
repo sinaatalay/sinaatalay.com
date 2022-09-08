@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Signika+Negative:wght@300;400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,15 +12,33 @@ body {
 a {
   @apply text-primary-500 hover:text-primary-900 transition duration-200 ease-out print:text-black;
 }
+hr {
+  @apply w-full border-t-[2px] border-neutral-300 mb-4;
+}
+
+.markdownPages p,
 .pPages {
-  @apply font-light my-4 text-left text-xl text-neutral-900 font-primary print:text-black;
+  @apply font-light leading-normal my-4 text-left text-xl text-neutral-900 print:text-black;
 }
+
+.markdownPages h1,
 .h1Pages {
-  @apply text-left text-6xl font-thin ml-[-4px] text-neutral-900 my-4 font-primary print:text-black;
+  @apply text-left text-6xl font-light ml-[-4px] text-neutral-900 my-4 print:text-black;
 }
+
+.markdownPages h2,
 .h2Pages {
-  @apply my-0 text-left text-4xl font-thin nocount font-primary text-neutral-900 print:text-black;
+  @apply my-0 text-left text-4xl font-light nocount text-neutral-900 print:text-black;
 }
+
+.iframeDiv {
+  @apply relative mt-3 w-full pt-[56.25%] md:w-[70%] md:pt-[39.375%] mx-auto z-50;
+}
+
+iframe {
+  @apply absolute top-0 left-0;
+}
+
 .resumeDateAndLocationPC {
   @apply md:w-48 flex-none text-right hidden md:block;
 }
@@ -33,7 +51,7 @@ a {
   margin: 20mm;
 }
 
-.markdownHtml {
+.markdownProjectDetails {
   counter-reset: h2counter figcaptioncounter;
 }
 
@@ -42,7 +60,7 @@ a {
   counter-reset: item;
 }
 .toc li > ul {
-  @apply pl-8
+  @apply pl-8;
 }
 .toc li {
   @apply block;
@@ -56,12 +74,12 @@ a {
   counter-increment: item;
 }
 
-.markdownHtml p {
+.markdownProjectDetails p {
   @apply md:text-justify mt-5;
 }
 
 @media (min-width: 768px) {
-  .markdownHtml p {
+  .markdownProjectDetails p {
     hyphens: auto;
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
@@ -69,53 +87,53 @@ a {
   }
 }
 
-.markdownHtml img {
+.markdownProjectDetails img {
   @apply block print:grayscale;
 }
-.markdownHtml figcaption::before {
+.markdownProjectDetails figcaption::before {
   content: "Figure " counter(figcaptioncounter) ":\0000a0\0000a0";
 }
-.markdownHtml figcaption {
+.markdownProjectDetails figcaption {
   @apply text-center mt-1;
   counter-increment: figcaptioncounter;
 }
-.markdownHtml figure {
+.markdownProjectDetails figure {
   @apply mt-5 mx-auto max-w-full md:max-w-xl print:max-w-xl print:break-inside-avoid;
 }
 
-.markdownHtml ul {
+.markdownProjectDetails ul {
   @apply list-inside list-disc text-justify mt-5;
 }
-.markdownHtml ol {
+.markdownProjectDetails ol {
   @apply list-inside list-decimal mt-5;
 }
-.markdownHtml li {
+.markdownProjectDetails li {
   @apply mt-1;
 }
 
-.markdownHtml h2:before {
+.markdownProjectDetails h2:before {
   content: counter(h2counter) "\0000a0\0000a0\0000a0";
 }
-.markdownHtml h2.nocount:before {
+.markdownProjectDetails h2.nocount:before {
   content: none;
   counter-increment: none;
 }
-.markdownHtml h2 {
+.markdownProjectDetails h2 {
   @apply text-3xl leading-8 mt-12 print:break-before-page;
   counter-increment: h2counter;
   counter-reset: h3counter;
 }
-.markdownHtml h3:before {
+.markdownProjectDetails h3:before {
   content: counter(h2counter) "." counter(h3counter) "\0000a0\0000a0\0000a0";
 }
-.markdownHtml h3 {
+.markdownProjectDetails h3 {
   @apply text-2xl leading-7 mt-10;
   counter-increment: h3counter;
 }
-.markdownHtml h2 + h3 {
+.markdownProjectDetails h2 + h3 {
   @apply mt-3;
 }
-.markdownHtml h2,
-.markdownHtml h3 {
+.markdownProjectDetails h2,
+.markdownProjectDetails h3 {
   @apply mb-3;
 }
