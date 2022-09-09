@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Ubuntu:ital,wght@0,300;0,400;1,300&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html {
-  @apply mr-[calc(100%-100vw)] overflow-x-hidden;
+  @apply mr-[calc(100%-100vw)] overflow-x-hidden font-light;
 }
 body {
   @apply max-w-3xl my-0 mx-auto bg-neutral-200 print:bg-white overflow-x-hidden;
@@ -18,17 +18,17 @@ hr {
 
 .markdownPages p,
 .pPages {
-  @apply font-light leading-normal my-4 text-left text-xl text-neutral-900 print:text-black;
+  @apply leading-normal my-4 text-left text-xl text-neutral-900 print:text-black;
 }
 
 .markdownPages h1,
 .h1Pages {
-  @apply text-left text-6xl font-light ml-[-4px] text-neutral-900 my-4 print:text-black;
+  @apply text-left text-6xl  ml-[-4px] text-neutral-900 my-4 print:text-black;
 }
 
 .markdownPages h2,
 .h2Pages {
-  @apply my-0 text-left text-4xl font-light nocount text-neutral-900 print:text-black;
+  @apply my-0 text-left text-4xl  nocount text-neutral-900 print:text-black;
 }
 
 .iframeDiv {

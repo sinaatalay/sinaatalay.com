@@ -3,8 +3,8 @@ import { Link } from "gatsby"
 
 export default function Navbar() {
   return (
-    <nav className="text-xl my-6 mx-3 md:mx-0 print:hidden">
-      <ul className="flex justify-between font-primary">
+    <nav className="text-xl my-6 mx-3 md:mx-0 print:hidden font-normal">
+      <ul className="flex justify-between">
         <li>
           <Link
             to="/"

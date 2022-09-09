@@ -29,7 +29,7 @@ export default function Layout({ children, title }) {
         {children}
       </div>
 
-      <footer className="bg-primary-500 md:mb-6 md:rounded-b-md px-2 py-3 md:p-3 flex flex-row">
+      <footer className="bg-primary-500 md:mb-6 md:rounded-b-md px-2 py-3 md:p-3 flex flex-row font-normal">
         <p className="p-0 m-0 flex-grow ml-2 text-secondary-500 print:text-black">
           Copyright © {new Date().getFullYear()}{" "}
           <Link

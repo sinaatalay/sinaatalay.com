@@ -2,7 +2,6 @@ import { Link } from "gatsby"
 import React from "react"
 import Layout from "../components/Layout"
 import ResumeEntry from "../components/ResumeEntry"
-import ResumeHeading from "../components/ResumeHeading"
 import ResumeSection from "../components/ResumeSection"
 import JSONData from "../data/resume.json"
 import { OutboundLink } from "gatsby-plugin-google-gtag"
@@ -11,11 +10,12 @@ export default function Resume() {
   return (
     <Layout title="Resume">
       <header>
-        <h1 className="font-body text-3xl mt-6 text-center">Sina Atalay</h1>
+        <h1 className="font-serif font-normal text-3xl mt-6 text-center">
+          Sina Atalay
+        </h1>
       </header>
-      <main className="font-body mt-6">
-        <ResumeHeading>Education</ResumeHeading>
-        <ResumeSection>
+      <main className="font-serif font-normal mt-6">
+        <ResumeSection title="Education">
           {JSONData.education.map(data => (
             <ResumeEntry>
               <p className="w-12 flex-none hidden md:block">
@@ -42,8 +42,7 @@ export default function Resume() {
           ))}
         </ResumeSection>
 
-        <ResumeHeading>Experience</ResumeHeading>
-        <ResumeSection>
+        <ResumeSection title="Experience">
           {JSONData.experience.map(data => (
             <ResumeEntry>
               <div className="flex-grow">
@@ -67,8 +66,7 @@ export default function Resume() {
           ))}
         </ResumeSection>
 
-        <ResumeHeading>Projects</ResumeHeading>
-        <ResumeSection>
+        <ResumeSection title="Projects">
           {JSONData.projects.map(data => (
             <ResumeEntry>
               <div className="flex-grow">
@@ -101,8 +99,7 @@ export default function Resume() {
           ))}
         </ResumeSection>
 
-        <ResumeHeading>Certificates</ResumeHeading>
-        <ResumeSection>
+        <ResumeSection title="Certificates">
           {JSONData.certificates.map(data => (
             <ResumeEntry>
               <div className="flex-grow">
@@ -128,8 +125,7 @@ export default function Resume() {
           ))}
         </ResumeSection>
 
-        <ResumeHeading>Skills</ResumeHeading>
-        <ResumeSection>
+        <ResumeSection title="Skills">
           <ResumeEntry>
             <div className="flex-grow">
               <p>
@@ -145,8 +141,7 @@ export default function Resume() {
           </ResumeEntry>
         </ResumeSection>
 
-        <ResumeHeading>Extracurricular Activities</ResumeHeading>
-        <ResumeSection>
+        <ResumeSection title="Extracurricular Activities">
           {JSONData.extracurricular.map(data => (
             <ResumeEntry>
               <div className="flex-grow">

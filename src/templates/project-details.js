@@ -10,7 +10,7 @@ export default function ProjectDetails({ data }) {
   return (
     <Layout title={title}>
       <main>
-        <article className="md:px-14 text-base font-body leading-relaxed pb-4 print:break-inside-auto text-neutral-900 print:text-black">
+        <article className="md:px-14 text-base font-serif font-normal leading-relaxed pb-4 print:break-inside-auto text-neutral-900 print:text-black">
           <header className="print:flex print:flex-col print:h-screen print:justify-center">
             <h1 className="text-center text-4xl leading-[3rem] mt-14 print:mt-0">
               {title}
@@ -18,8 +18,8 @@ export default function ProjectDetails({ data }) {
             <p className="my-4 text-center whitespace-pre-wrap">by {author}</p>
             <p className="my-4 text-center">{date}</p>
             <div className="my-14 text-center">
-              <h2 className="text-base font-bold">Abstract</h2>
-              <p className="mt-4 font-normal">{abstract}</p>
+              <h2 className="text-base font-semibold">Abstract</h2>
+              <p className="mt-4">{abstract}</p>
             </div>
           </header>
           <nav role="navigation">

@@ -11,7 +11,7 @@ export default function Projects({ data }) {
       <header>
         <h1 className="h1Pages">Projects</h1>
       </header>
-      <main className="font-primary">
+      <main>
         <p className="pPages">
           Below is a list of all my projects posted on this site.
         </p>
@@ -20,7 +20,7 @@ export default function Projects({ data }) {
             <div>
               <div className="flex flex-row mx-auto">
                 <div className="flex-grow">
-                  <h2 className="font-light text-left text-xl text-primary-500 font-primary">
+                  <h2 className=" text-left text-xl text-primary-500">
                     <Link
                       to={"/projects/" + project.frontmatter.slug}
                       key={project.id}
@@ -29,11 +29,11 @@ export default function Projects({ data }) {
                     </Link>
                   </h2>
                 </div>
-                <p className="flex-none w-32 font-light text-right text-xl text-neutral-900 font-primary">
+                <p className="flex-none w-32  text-right text-xl text-neutral-900">
                   {project.frontmatter.date}
                 </p>
               </div>
-              <p className="mt-1 md:mt-0 md:mr-32 font-light text-left text-lg text-neutral-900 font-primary">
+              <p className="mt-1 md:mt-0 md:mr-32  text-left text-lg text-neutral-900">
                 {project.frontmatter.shortAbstract}
               </p>
               <div className="py-2">
