@@ -2,9 +2,9 @@ import React from "react"
 import Layout from "../components/Layout"
 import ReCAPTCHA from "react-google-recaptcha"
 
-const recaptchaRef = React.createRef()
-
 export default function Contact() {
+  const recaptchaRef = React.useRef()
+
   return (
     <Layout title="Contact">
       <header>
@@ -14,11 +14,9 @@ export default function Contact() {
       <main>
         <form
           className="mt-8"
-          onSubmit={() => {
-            recaptchaRef.current.execute()
-          }}
           action="https://getform.io/f/156b4f25-b9bb-4e5c-88f1-20c4b106a9d2"
           method="POST"
+          id="form"
         >
           <div className="mb-6 w-full">
             <label className="pPages mb-2" for="name">
@@ -64,11 +62,17 @@ export default function Contact() {
             <ReCAPTCHA
               ref={recaptchaRef}
               size="invisible"
+              onChange={() => {
+                document.getElementById("form").submit()
+              }}
               sitekey="6LfD6uohAAAAAJOUdUH99Eqd-WtbUMZOOeSRWL6k"
             />
             <button
               className="font-normal shadow bg-primary-500 hover:bg-primary-900 transition duration-200 ease-out focus:shadow-outline focus:outline-none text-secondary-500 hover:text-secondary-400 py-2 px-4 rounded"
-              type="submit"
+              onClick={event => {
+                event.preventDefault()
+                recaptchaRef.current.execute()
+              }}
             >
               Send
             </button>
