@@ -23,7 +23,7 @@ export default function Home({ data }) {
 
 export const query = graphql`
   query IndexPage {
-    markdownRemark(frontmatter: { title: { eq: "index" } }) {
+    markdownRemark(frontmatter: { title: { eq: "Home" } }) {
       html
     }
   }

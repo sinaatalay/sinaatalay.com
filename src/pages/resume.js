@@ -3,7 +3,7 @@ import React from "react"
 import Layout from "../components/Layout"
 import ResumeEntry from "../components/ResumeEntry"
 import ResumeSection from "../components/ResumeSection"
-import JSONData from "../data/resume.json"
+import JSONData from "../contents/pages/resume/resume.json"
 import { OutboundLink } from "gatsby-plugin-google-gtag"
 
 export default function Resume() {

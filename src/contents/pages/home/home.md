@@ -1,5 +1,5 @@
 ---
-title: index
+title: Home
 ---
 
 I'm a senior mechanical engineering student at Bogazici University.
