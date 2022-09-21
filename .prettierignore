@@ -1,3 +1,7 @@
 .cache
 public
 docs
+static
+node_modules
+.vscode
+.idea
