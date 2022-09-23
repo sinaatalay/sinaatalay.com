@@ -43,7 +43,7 @@ module.exports = {
               description: `My personal website.`,
               lang: `en`,
               display: `standalone`,
-              icon: `static/favicon.ico`,
+              icon: `src/contents/icon.png`,
               start_url: `/`,
               background_color: `#e2e8f0`,
               theme_color: `#1e40af`,

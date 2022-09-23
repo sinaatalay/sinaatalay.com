@@ -1,9 +1,9 @@
-import React from "react"
-import Layout from "../components/Layout"
-import ReCAPTCHA from "react-google-recaptcha"
+import React from "react";
+import Layout from "../components/Layout";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function Contact() {
-  const recaptchaRef = React.useRef()
+  const recaptchaRef = React.useRef();
 
   return (
     <Layout title="Contact">
@@ -63,15 +63,15 @@ export default function Contact() {
               ref={recaptchaRef}
               size="invisible"
               onChange={() => {
-                document.getElementById("form").submit()
+                document.getElementById("form").submit();
               }}
               sitekey="6LfD6uohAAAAAJOUdUH99Eqd-WtbUMZOOeSRWL6k"
             />
             <button
               className="font-normal shadow bg-primary-500 hover:bg-primary-900 transition duration-200 ease-out focus:shadow-outline focus:outline-none text-secondary-500 hover:text-secondary-400 py-2 px-4 rounded"
-              onClick={event => {
-                event.preventDefault()
-                recaptchaRef.current.execute()
+              onClick={(event) => {
+                event.preventDefault();
+                recaptchaRef.current.execute();
               }}
             >
               Send
@@ -80,5 +80,5 @@ export default function Contact() {
         </form>
       </main>
     </Layout>
-  )
+  );
 }

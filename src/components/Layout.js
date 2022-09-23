@@ -1,11 +1,11 @@
-import React from "react"
-import Navbar from "./Navbar"
-import { FaGithub } from "@react-icons/all-files/fa/FaGithub"
-import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin"
-import { FaYoutube } from "@react-icons/all-files/fa/FaYoutube"
-import { Link } from "gatsby"
-import { Helmet } from "react-helmet"
-import { OutboundLink } from "gatsby-plugin-google-gtag"
+import React from "react";
+import Navbar from "./Navbar";
+import { FaGithub } from "@react-icons/all-files/fa/FaGithub";
+import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin";
+import { FaYoutube } from "@react-icons/all-files/fa/FaYoutube";
+import { Link } from "gatsby";
+import { Helmet } from "react-helmet";
+import { OutboundLink } from "gatsby-plugin-google-gtag";
 
 export default function Layout({ children, title }) {
   return (
@@ -62,5 +62,5 @@ export default function Layout({ children, title }) {
         </OutboundLink>
       </footer>
     </div>
-  )
+  );
 }

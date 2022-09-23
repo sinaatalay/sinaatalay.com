@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 export default function ResumeSection({ title, children }) {
   return (
@@ -9,5 +9,5 @@ export default function ResumeSection({ title, children }) {
       </div>
       <div className="mb-3">{children}</div>
     </>
-  )
+  );
 }

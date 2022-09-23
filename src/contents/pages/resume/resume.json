@@ -1,34 +1,33 @@
 {
   "basics": {
     "name": "Sina Atalay",
-    "label": "Mechanical Engineering Student",
+    "label": "Mechanical Engineering Student at Bogazici University",
     "image": "",
     "email": "",
     "phone": "",
     "url": "https://sinaatalay.com",
-    "summary": "A summary of me...",
-    "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
-      "countryCode": "US",
-      "region": "California"
-    },
+    "summary": "",
+    "location": "Istanbul, Turkey",
     "profiles": [
       {
-        "network": "Twitter",
-        "username": "",
-        "url": ""
+        "network": "LinkedIn",
+        "url": "https://www.linkedin.com/in/sina-atalay/"
+      },
+      {
+        "network": "Github",
+        "url": "https://github.com/sinaatalay"
       }
     ]
   },
   "education": [
     {
       "institution": "Bogazici University",
+      "url": "https://www.boun.edu.tr/",
       "area": "Mechanical Engineering",
       "studyType": "BS",
       "location": "Istanbul, Turkey",
-      "date": "Sep. 2017 to present",
+      "startDate": "2017-09-01",
+      "endDate": "present",
       "highlights": [
         "GPA: 3.86/4.00",
         "Co-Captain of Bogazici University Ski Team (2018-2022)"
@@ -36,10 +35,12 @@
     },
     {
       "institution": "The University of Texas at Austin",
+      "url": "https://www.utexas.edu/",
       "area": "Mechanical Engineering, Student Exchange Program",
       "studyType": "",
       "location": "Austin, TX, USA",
-      "date": "Aug. 2021 to Jan. 2022",
+      "startDate": "2021-08-24",
+      "endDate": "2022-01-15",
       "highlights": ["GPA: 4.00/4.00"]
     }
   ],
@@ -48,17 +49,21 @@
       "name": "Simularge",
       "position": "Mechanical Engineering Intern",
       "location": "Istanbul, Turkey",
-      "date": "Jun. 2022 to present",
+      "url": "https://www.simularge.com/",
+      "startDate": "2022-06-15",
+      "endDate": "2022-08-01",
       "highlights": [
         "Simularge is a technology company that provides web-based engineering applications to simulate and optimize products and manufacturing tools.",
-        "Model, analyze, and simulate a metal-forming process called deep drawing using finite element analysis with CalculiX."
+        "Modeled, analyzed, and simulated a metal-forming process called deep drawing using finite element analysis with CalculiX."
       ]
     },
     {
       "name": "ASELSAN",
       "position": "Mechanical Engineering Intern",
       "location": "Ankara, Turkey",
-      "date": "Jul. 2021 to Aug. 2021",
+      "url": "https://www.aselsan.com.tr/",
+      "startDate": "2021-07-26",
+      "endDate": "2021-08-20",
       "highlights": [
         "ASELSAN is the largest defense electronics company in Turkey and is listed as one of the top 100 defense companies in the world (Defense News Top 100).",
         "Designed and analyzed a truss structure to ensure excellent dynamic and static performance for an optical measurement system using ANSYS and Siemens NX."
@@ -73,8 +78,8 @@
       "highlights": [
         "Write an ion thruster simulation program using C++ that solves the electrostatic field inside and moves the ions with the molecular PIC-DSMC approach under the supervision of Professor Murat Çelik."
       ],
-      "href": "https://github.com/sinaatalay/Ionizer",
-      "url": "github.com/sinaatalay/Ionizer"
+      "url": "https://github.com/sinaatalay/Ionizer",
+      "texturl": "github.com/sinaatalay/Ionizer"
     },
     {
       "name": "Senior Design Project: Design of a Dynamometer",
@@ -83,8 +88,9 @@
       "highlights": [
         "Designed, modeled, and simulated a dynamometer for small DC motors that will be constructed in the fall of 2022 and used at Bogazici University's laboratories."
       ],
-      "href": "/projects/design-of-a-dynamometer",
-      "url": "sinaatalay.com/projects/design-of-a-dynamometer"
+      "url": "https://sinaatalay.com/projects/design-of-a-dynamometer",
+      "localurl": "/projects/design-of-a-dynamometer",
+      "texturl": "sinaatalay.com/projects/design-of-a-dynamometer"
     },
     {
       "name": "Mechatronics Term Project: Automatic Guitar Tuner",
@@ -93,36 +99,38 @@
       "highlights": [
         "Designed, built, and programmed a microcontroller-based guitar tuner device that consists of an amplifier circuit, signal processing algorithms, a decoder, H-bridges, pick-up sensors, and DC motors."
       ],
-      "href": "/projects/automatic-guitar-tuner",
-      "url": "sinaatalay.com/projects/automatic-guitar-tuner"
+      "url": "https://sinaatalay.com/projects/automatic-guitar-tuner",
+      "localurl": "/projects/automatic-guitar-tuner",
+      "texturl": "sinaatalay.com/projects/automatic-guitar-tuner"
     },
     {
       "name": "Teaching Videos",
       "location": "Istanbul, Turkey",
-      "date": "Jun. 2020",
+      "date": "Summer 2020",
       "highlights": [
         "Instructed the entire 'Engineering Mechanics: Dynamics' course on YouTube (200,000+ views)."
       ],
-      "href": "https://www.youtube.com/c/SinaAtalay",
-      "url": "youtube.com/c/SinaAtalay"
+      "url": "https://www.youtube.com/c/SinaAtalay",
+      "texturl": "youtube.com/c/SinaAtalay"
     }
   ],
   "certificates": [
     {
       "name": "Machine Learning by Stanford University",
-      "date": "Sep. 2021",
+      "date": "2022-09-01",
       "highlights": [
-        "Supervised learning: Parametric/non-parametric algorithms, support vector machines, kernels, neural networks.",
-        "Unsupervised learning: Clustering, dimensionality reduction, recommender systems, deep learning."
+        "Supervised learning: Parametric/non-parametric algorithms, support vector machines, kernels, neural networks. Unsupervised learning: Clustering, dimensionality reduction, recommender systems, deep learning."
       ],
-      "href": "https://coursera.org/verify/MZDLHBUQSULA",
-      "url": "coursera.org/verify/MZDLHBUQSULA"
+      "url": "https://coursera.org/verify/MZDLHBUQSULA",
+      "texturl": "coursera.org/verify/MZDLHBUQSULA"
     }
   ],
   "skills": {
     "software": "Windows, Linux, Git, Premake, MATLAB, CAD, CalculiX, MS Office",
     "programming": "C++, C, Python, JavaScript, LaTeX",
-    "languages": "English (Advanced), Turkish (Native)"
+    "languages": "English (Advanced), Turkish (Native)",
+    "githuburl": "https://github.com/sinaatalay",
+    "githubtexturl": "github.com/sinaatalay"
   },
   "extracurricular": [
     {
