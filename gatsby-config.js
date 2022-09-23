@@ -35,6 +35,20 @@ module.exports = {
               quality: 100,
             },
           },
+          {
+            resolve: `gatsby-plugin-manifest`,
+            options: {
+              name: `Sina Atalay`,
+              short_name: `Sina Atalay`,
+              description: `My personal website.`,
+              lang: `en`,
+              display: `standalone`,
+              icon: `static/favicon.ico`,
+              start_url: `/`,
+              background_color: `#e2e8f0`,
+              theme_color: `#1e40af`,
+            },
+          },
         ],
       },
     },
@@ -67,4 +81,4 @@ module.exports = {
       },
     },
   ],
-}
+};
