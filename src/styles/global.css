@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 html {
-  @apply mr-[calc(100%-100vw)] overflow-x-hidden font-light;
+  @apply mr-[calc(100%-100vw)] overflow-x-hidden font-light scroll-smooth;
 }
 body {
   @apply max-w-3xl my-0 mx-auto bg-neutral-200 print:bg-white overflow-x-hidden;

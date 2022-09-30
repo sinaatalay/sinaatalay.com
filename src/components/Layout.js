@@ -21,7 +21,6 @@ export default function Layout({ children, title }) {
         ) : (
           <title>{title} - Sina Atalay</title>
         )}
-        <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
       <Navbar />
 
