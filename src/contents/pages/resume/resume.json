@@ -46,6 +46,18 @@
   ],
   "experience": [
     {
+      "name": "Turkish Aerospace",
+      "position": "Mechanical Engineering Intern",
+      "location": "Ankara, Turkey",
+      "url": "https://www.tusas.com/",
+      "startDate": "2022-08-01",
+      "endDate": "2022-09-01",
+      "highlights": [
+        "Turkish Aerospace is the largest aviation and space company in Turkey that designs, develops, and manufactures aircraft, aerospace systems, and aerostructures.",
+        "Observed the final assembly process of a single-engine, supersonic, advanced trainer, and light combat aircraft called TAI Hürjet and wrote a report for possible design improvements for the installation process."
+      ]
+    },
+    {
       "name": "Simularge",
       "position": "Mechanical Engineering Intern",
       "location": "Istanbul, Turkey",
@@ -93,7 +105,7 @@
       "texturl": "sinaatalay.com/projects/design-of-a-dynamometer"
     },
     {
-      "name": "Mechatronics Term Project: Automatic Guitar Tuner",
+      "name": "Design and Construction of an Automatic Guitar Tuner",
       "location": "Istanbul, Turkey",
       "date": "Fall 2020",
       "highlights": [
@@ -108,7 +120,7 @@
       "location": "Istanbul, Turkey",
       "date": "Summer 2020",
       "highlights": [
-        "Instructed the entire 'Engineering Mechanics: Dynamics' course on YouTube (200,000+ views)."
+        "Instructed the entire \"Engineering Mechanics: Dynamics\" course on YouTube (200,000+ views)."
       ],
       "url": "https://www.youtube.com/c/SinaAtalay",
       "texturl": "youtube.com/c/SinaAtalay"
@@ -126,9 +138,9 @@
     }
   ],
   "skills": {
-    "software": "Windows, Linux, Git, Premake, MATLAB, CAD, CalculiX, MS Office",
-    "programming": "C++, C, Python, JavaScript, LaTeX",
-    "languages": "English (Advanced), Turkish (Native)",
+    "software": "Windows, Linux, Git, Premake, CAD, CalculiX, Abaqus, MS Office",
+    "programming": "C++, C, Python, JavaScript, MATLAB, LaTeX",
+    "languages": "English (Advanced, TOEFL IBT: 113/120), Turkish (Native)",
     "githuburl": "https://github.com/sinaatalay",
     "githubtexturl": "github.com/sinaatalay"
   },
