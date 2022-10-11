@@ -7,7 +7,7 @@
     "phone": "",
     "url": "https://sinaatalay.com",
     "summary": "",
-    "location": "Istanbul, Turkey",
+    "location": "",
     "profiles": [
       {
         "network": "LinkedIn",
@@ -46,14 +46,14 @@
   ],
   "experience": [
     {
-      "name": "Turkish Aerospace",
+      "name": "Turkish Aerospace Industries",
       "position": "Mechanical Engineering Intern",
       "location": "Ankara, Turkey",
       "url": "https://www.tusas.com/",
       "startDate": "2022-08-01",
       "endDate": "2022-09-01",
       "highlights": [
-        "Turkish Aerospace is the largest aviation and space company in Turkey that designs, develops, and manufactures aircraft, aerospace systems, and aerostructures.",
+        "Turkish Aerospace Industries is the largest aviation and space company in Turkey that designs, develops, and manufactures aircraft, aerospace systems, and aerostructures.",
         "Observed the final assembly process of a single-engine, supersonic, advanced trainer, and light combat aircraft called TAI Hürjet and wrote a report for possible design improvements for the installation process."
       ]
     },
@@ -70,14 +70,14 @@
       ]
     },
     {
-      "name": "ASELSAN",
+      "name": "Aselsan",
       "position": "Mechanical Engineering Intern",
       "location": "Ankara, Turkey",
       "url": "https://www.aselsan.com.tr/",
       "startDate": "2021-07-26",
       "endDate": "2021-08-20",
       "highlights": [
-        "ASELSAN is the largest defense electronics company in Turkey and is listed as one of the top 100 defense companies in the world (Defense News Top 100).",
+        "Aselsan is the largest defense electronics company in Turkey and is listed as one of the top 100 defense companies in the world (Defense News Top 100).",
         "Designed and analyzed a truss structure to ensure excellent dynamic and static performance for an optical measurement system using ANSYS and Siemens NX."
       ]
     }
