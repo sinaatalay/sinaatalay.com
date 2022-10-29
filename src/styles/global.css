@@ -102,10 +102,10 @@ iframe {
 }
 
 .markdownProjectDetails ul {
-  @apply ml-8 list-disc text-justify mt-5;
+  @apply md:ml-8 ml-4 list-disc text-justify mt-5;
 }
 .markdownProjectDetails ol {
-  @apply ml-8 list-decimal mt-5;
+  @apply md:ml-8 ml-4 list-decimal mt-5;
 }
 .markdownProjectDetails li {
   @apply mt-1;

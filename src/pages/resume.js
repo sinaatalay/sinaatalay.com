@@ -34,7 +34,7 @@ export default function Resume() {
                     ? "present"
                     : moment(data.endDate).format("MMM. YYYY")}
                 </p>
-                <ul class="list-disc md:ml-8">
+                <ul class="list-disc md:ml-8 ml-5">
                   {data.highlights.map((highlights) => (
                     <li>
                       <span className="relative -left-1">{highlights}</span>
@@ -69,7 +69,7 @@ export default function Resume() {
                     ? "present"
                     : moment(data.endDate).format("MMM. YYYY")}
                 </p>
-                <ul class="list-disc md:ml-8">
+                <ul class="list-disc md:ml-8 ml-5">
                   {data.highlights.map((highlights) => (
                     <li>
                       <span className="relative -left-1">{highlights}</span>
@@ -100,7 +100,7 @@ export default function Resume() {
                 <p className="resumeDateAndLocationMobile">
                   {data.location} - {data.date}
                 </p>
-                <ul class="list-disc md:ml-8">
+                <ul class="list-disc md:ml-8 ml-5">
                   {data.highlights.map((highlights) => (
                     <li>
                       <span className="relative -left-1">{highlights}</span>
@@ -139,7 +139,7 @@ export default function Resume() {
                 <p className="resumeDateAndLocationMobile">
                   {moment(data.date).format("MMM. YYYY")}
                 </p>
-                <ul class="list-disc md:ml-8">
+                <ul class="list-disc md:ml-8 ml-5">
                   {data.highlights.map((highlights) => (
                     <li>
                       <span className="relative -left-1">{highlights}</span>
@@ -189,7 +189,7 @@ export default function Resume() {
                 <p className="resumeDateAndLocationMobile">
                   {data.location} - {data.date}
                 </p>
-                <ul class="list-disc md:ml-8">
+                <ul class="list-disc md:ml-8 ml-5">
                   {data.highlights.map((highlights) => (
                     <li>
                       <span className="relative -left-1">{highlights}</span>
