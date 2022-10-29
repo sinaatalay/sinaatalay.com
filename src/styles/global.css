@@ -102,10 +102,10 @@ iframe {
 }
 
 .markdownProjectDetails ul {
-  @apply list-inside list-disc text-justify mt-5;
+  @apply ml-8 list-disc text-justify mt-5;
 }
 .markdownProjectDetails ol {
-  @apply list-inside list-decimal mt-5;
+  @apply ml-8 list-decimal mt-5;
 }
 .markdownProjectDetails li {
   @apply mt-1;
@@ -136,10 +136,4 @@ iframe {
 .markdownProjectDetails h2,
 .markdownProjectDetails h3 {
   @apply mb-3;
-}
-
-/* Resume: */
-
-li span {
-  @apply relative -left-1;
 }

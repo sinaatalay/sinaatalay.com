@@ -37,7 +37,7 @@ export default function Resume() {
                 <ul class="list-disc md:ml-8">
                   {data.highlights.map((highlights) => (
                     <li>
-                      <span>{highlights}</span>
+                      <span className="relative -left-1">{highlights}</span>
                     </li>
                   ))}
                 </ul>
@@ -72,7 +72,7 @@ export default function Resume() {
                 <ul class="list-disc md:ml-8">
                   {data.highlights.map((highlights) => (
                     <li>
-                      <span>{highlights}</span>
+                      <span className="relative -left-1">{highlights}</span>
                     </li>
                   ))}
                 </ul>
@@ -103,12 +103,12 @@ export default function Resume() {
                 <ul class="list-disc md:ml-8">
                   {data.highlights.map((highlights) => (
                     <li>
-                      <span>{highlights}</span>
+                      <span className="relative -left-1">{highlights}</span>
                     </li>
                   ))}
 
                   <li>
-                    <span>
+                    <span className="relative -left-1">
                       Project link:{" "}
                       {data.localurl ? (
                         <Link to={data.localurl}>{data.texturl}</Link>
@@ -142,11 +142,11 @@ export default function Resume() {
                 <ul class="list-disc md:ml-8">
                   {data.highlights.map((highlights) => (
                     <li>
-                      <span>{highlights}</span>
+                      <span className="relative -left-1">{highlights}</span>
                     </li>
                   ))}
                   <li>
-                    <span>
+                    <span className="relative -left-1">
                       Course Certificate:{" "}
                       <OutboundLink href={data.url}>
                         {data.texturl}
@@ -192,7 +192,7 @@ export default function Resume() {
                 <ul class="list-disc md:ml-8">
                   {data.highlights.map((highlights) => (
                     <li>
-                      <span>{highlights}</span>
+                      <span className="relative -left-1">{highlights}</span>
                     </li>
                   ))}
                 </ul>
