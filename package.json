@@ -8,7 +8,8 @@
     "prebuild": "rm -rf public && npm run prettier",
     "build": "gatsby build",
     "postbuild": "rm -rf docs && mkdir docs && touch docs/CNAME && printf 'sinaatalay.com' > docs/CNAME && mv -v public/* docs && rm -d public",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "develop": "gatsby develop"
   },
   "repository": {
     "type": "git",

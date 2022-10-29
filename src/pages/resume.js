@@ -11,13 +11,16 @@ export default function Resume() {
   return (
     <Layout title="Resume">
       <header>
-        <h1 className="font-normal text-3xl mt-6 text-center">Sina Atalay</h1>
+        <h1 className="font-semibold text-3xl mt-6 text-center">Sina Atalay</h1>
+        <h2 className="font-light text-lg mt-2 text-center">
+          Mechanical Engineering Student at Bogazici University
+        </h2>
       </header>
-      <main className="font-normal mt-6">
+      <main className="font-normal text-[15px] mt-6">
         <ResumeSection title="Education">
           {JSONData.education.map((data) => (
             <ResumeEntry>
-              <p className="w-12 flex-none hidden md:block">
+              <p className="w-10 flex-none hidden md:block">
                 <strong>{data.studyType}</strong>
               </p>
               <div className="flex-grow">
@@ -31,9 +34,11 @@ export default function Resume() {
                     ? "present"
                     : moment(data.endDate).format("MMM. YYYY")}
                 </p>
-                <ul class="list-disc list-inside md:ml-2">
+                <ul class="list-disc md:ml-8">
                   {data.highlights.map((highlights) => (
-                    <li>{highlights}</li>
+                    <li>
+                      <span>{highlights}</span>
+                    </li>
                   ))}
                 </ul>
               </div>
@@ -64,9 +69,11 @@ export default function Resume() {
                     ? "present"
                     : moment(data.endDate).format("MMM. YYYY")}
                 </p>
-                <ul class="list-disc list-inside md:ml-2">
+                <ul class="list-disc md:ml-8">
                   {data.highlights.map((highlights) => (
-                    <li>{highlights}</li>
+                    <li>
+                      <span>{highlights}</span>
+                    </li>
                   ))}
                 </ul>
               </div>
@@ -93,20 +100,24 @@ export default function Resume() {
                 <p className="resumeDateAndLocationMobile">
                   {data.location} - {data.date}
                 </p>
-                <ul class="list-disc list-inside md:ml-2">
+                <ul class="list-disc md:ml-8">
                   {data.highlights.map((highlights) => (
-                    <li>{highlights}</li>
+                    <li>
+                      <span>{highlights}</span>
+                    </li>
                   ))}
 
                   <li>
-                    Project link:{" "}
-                    {data.localurl ? (
-                      <Link to={data.localurl}>{data.texturl}</Link>
-                    ) : (
-                      <OutboundLink href={data.url}>
-                        {data.texturl}
-                      </OutboundLink>
-                    )}
+                    <span>
+                      Project link:{" "}
+                      {data.localurl ? (
+                        <Link to={data.localurl}>{data.texturl}</Link>
+                      ) : (
+                        <OutboundLink href={data.url}>
+                          {data.texturl}
+                        </OutboundLink>
+                      )}
+                    </span>
                   </li>
                 </ul>
               </div>
@@ -128,13 +139,19 @@ export default function Resume() {
                 <p className="resumeDateAndLocationMobile">
                   {moment(data.date).format("MMM. YYYY")}
                 </p>
-                <ul class="list-disc list-inside md:ml-2">
+                <ul class="list-disc md:ml-8">
                   {data.highlights.map((highlights) => (
-                    <li>{highlights}</li>
+                    <li>
+                      <span>{highlights}</span>
+                    </li>
                   ))}
                   <li>
-                    Course Certificate:{" "}
-                    <OutboundLink href={data.url}>{data.texturl}</OutboundLink>
+                    <span>
+                      Course Certificate:{" "}
+                      <OutboundLink href={data.url}>
+                        {data.texturl}
+                      </OutboundLink>
+                    </span>
                   </li>
                 </ul>
               </div>
@@ -172,9 +189,11 @@ export default function Resume() {
                 <p className="resumeDateAndLocationMobile">
                   {data.location} - {data.date}
                 </p>
-                <ul class="list-disc list-inside md:ml-2">
+                <ul class="list-disc md:ml-8">
                   {data.highlights.map((highlights) => (
-                    <li className="pl-0 ml-0">{highlights}</li>
+                    <li>
+                      <span>{highlights}</span>
+                    </li>
                   ))}
                 </ul>
               </div>

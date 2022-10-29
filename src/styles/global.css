@@ -137,3 +137,9 @@ iframe {
 .markdownProjectDetails h3 {
   @apply mb-3;
 }
+
+/* Resume: */
+
+li span {
+  @apply relative -left-1;
+}
