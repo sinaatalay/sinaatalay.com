@@ -11,9 +11,11 @@ export default function Resume() {
   return (
     <Layout title="Resume">
       <header>
-        <h1 className="font-semibold text-3xl mt-6 text-center">Sina Atalay</h1>
+        <h1 className="font-semibold text-3xl mt-6 text-center">
+          {JSONData.basics.name}
+        </h1>
         <h2 className="font-light text-lg mt-2 text-center">
-          Mechanical Engineering Student at Bogazici University
+          {JSONData.basics.label}
         </h2>
       </header>
       <main className="font-normal text-[15px] mt-6">
