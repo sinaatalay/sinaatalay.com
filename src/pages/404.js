@@ -1,5 +1,5 @@
-import React from "react";
-import Layout from "../components/Layout";
+import React from "react"
+import Layout from "../components/Layout"
 
 export default function NotFound() {
   return (
@@ -11,5 +11,5 @@ export default function NotFound() {
         <p className="pPages">Sorry, that page doesn't exist.</p>
       </main>
     </Layout>
-  );
+  )
 }

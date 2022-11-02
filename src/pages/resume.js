@@ -1,11 +1,11 @@
-import { Link } from "gatsby";
-import React from "react";
-import Layout from "../components/Layout";
-import ResumeEntry from "../components/ResumeEntry";
-import ResumeSection from "../components/ResumeSection";
-import JSONData from "../contents/pages/resume/resume.json";
-import { OutboundLink } from "gatsby-plugin-google-gtag";
-import moment from "moment";
+import { Link } from "gatsby"
+import React from "react"
+import Layout from "../components/Layout"
+import ResumeEntry from "../components/ResumeEntry"
+import ResumeSection from "../components/ResumeSection"
+import JSONData from "../contents/pages/resume/resume.json"
+import { OutboundLink } from "gatsby-plugin-google-gtag"
+import moment from "moment"
 
 export default function Resume() {
   return (
@@ -208,5 +208,5 @@ export default function Resume() {
         </ResumeSection>
       </main>
     </Layout>
-  );
+  )
 }

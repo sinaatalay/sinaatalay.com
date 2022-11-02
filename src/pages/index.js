@@ -1,9 +1,9 @@
-import React from "react";
-import Layout from "../components/Layout";
-import { graphql } from "gatsby";
+import React from "react"
+import Layout from "../components/Layout"
+import { graphql } from "gatsby"
 
 export default function Home({ data }) {
-  const { html } = data.markdownRemark;
+  const { html } = data.markdownRemark
 
   return (
     <Layout title="Home">
@@ -18,7 +18,7 @@ export default function Home({ data }) {
         dangerouslySetInnerHTML={{ __html: html }}
       />
     </Layout>
-  );
+  )
 }
 
 export const query = graphql`
@@ -27,4 +27,4 @@ export const query = graphql`
       html
     }
   }
-`;
+`

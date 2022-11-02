@@ -1,10 +1,10 @@
-import { graphql } from "gatsby";
-import React from "react";
-import { Link } from "gatsby";
-import Layout from "../../components/Layout";
+import { graphql } from "gatsby"
+import React from "react"
+import { Link } from "gatsby"
+import Layout from "../../components/Layout"
 
 export default function Projects({ data }) {
-  const projects = data.allMarkdownRemark.nodes;
+  const projects = data.allMarkdownRemark.nodes
 
   return (
     <Layout title="Projects">
@@ -44,7 +44,7 @@ export default function Projects({ data }) {
         </div>
       </main>
     </Layout>
-  );
+  )
 }
 
 export const query = graphql`
@@ -66,4 +66,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`
