@@ -3,22 +3,19 @@ import React from "react"
 import Layout from "../components/Layout"
 import ResumeEntry from "../components/ResumeEntry"
 import ResumeSection from "../components/ResumeSection"
-import JSONData from "../contents/pages/resume/resume.json"
+import JSONData from "../contents/resume/resume.json"
 import { OutboundLink } from "gatsby-plugin-google-gtag"
 import moment from "moment"
 
 export default function Resume() {
   return (
     <Layout title="Resume">
-      <header>
-        <h1 className="font-semibold text-3xl mt-6 text-center">
-          {JSONData.basics.name}
-        </h1>
-        <h2 className="font-light text-lg mt-2 text-center">
-          {JSONData.basics.label}
-        </h2>
+      <header className="relative">
+        <h1 className="font-semibold text-3xl mt-7 text-center">{JSONData.basics.name}</h1>
+        <h2 className="font-light text-lg mt-3 text-center">{JSONData.basics.label}</h2>
+        <p className="absolute text-xs text-right top-0 -mt-6 w-full">Last updated in {moment(Date.now()).format("MMM. YYYY")}</p>
       </header>
-      <main className="font-normal text-[15px] mt-6">
+      <main className="font-normal text-[15px] mt-7">
         <ResumeSection title="Education">
           {JSONData.education.map((data) => (
             <ResumeEntry>
@@ -30,11 +27,8 @@ export default function Resume() {
                   <strong>{data.institution}</strong>, {data.area}
                 </p>
                 <p className="resumeDateAndLocationMobile">
-                  {data.location} - {moment(data.startDate).format("MMM. YYYY")}{" "}
-                  to{" "}
-                  {data.endDate == "present"
-                    ? "present"
-                    : moment(data.endDate).format("MMM. YYYY")}
+                  {data.location} - {moment(data.startDate).format("MMM. YYYY")} to{" "}
+                  {data.endDate === "present" ? "present" : moment(data.endDate).format("MMM. YYYY")}
                 </p>
                 <ul class="list-disc md:ml-8 ml-5">
                   {data.highlights.map((highlights) => (
@@ -47,10 +41,7 @@ export default function Resume() {
               <div className="resumeDateAndLocationPC">
                 <p>{data.location}</p>
                 <p>
-                  {moment(data.startDate).format("MMM. YYYY")} to{" "}
-                  {data.endDate == "present"
-                    ? "present"
-                    : moment(data.endDate).format("MMM. YYYY")}
+                  {moment(data.startDate).format("MMM. YYYY")} to {data.endDate === "present" ? "present" : moment(data.endDate).format("MMM. YYYY")}
                 </p>
               </div>
             </ResumeEntry>
@@ -58,18 +49,15 @@ export default function Resume() {
         </ResumeSection>
 
         <ResumeSection title="Experience">
-          {JSONData.experience.map((data) => (
+          {JSONData.workExperience.map((data) => (
             <ResumeEntry>
               <div className="flex-grow">
                 <p>
                   <strong>{data.name}</strong>, {data.position}
                 </p>
                 <p className="resumeDateAndLocationMobile">
-                  {data.location} - {moment(data.startDate).format("MMM. YYYY")}{" "}
-                  to{" "}
-                  {data.endDate == "present"
-                    ? "present"
-                    : moment(data.endDate).format("MMM. YYYY")}
+                  {data.location} - {moment(data.startDate).format("MMM. YYYY")} to{" "}
+                  {data.endDate === "present" ? "present" : moment(data.endDate).format("MMM. YYYY")}
                 </p>
                 <ul class="list-disc md:ml-8 ml-5">
                   {data.highlights.map((highlights) => (
@@ -82,10 +70,7 @@ export default function Resume() {
               <div className="resumeDateAndLocationPC">
                 <p>{data.location}</p>
                 <p>
-                  {moment(data.startDate).format("MMM. YYYY")} to{" "}
-                  {data.endDate == "present"
-                    ? "present"
-                    : moment(data.endDate).format("MMM. YYYY")}
+                  {moment(data.startDate).format("MMM. YYYY")} to {data.endDate === "present" ? "present" : moment(data.endDate).format("MMM. YYYY")}
                 </p>
               </div>
             </ResumeEntry>
@@ -100,7 +85,12 @@ export default function Resume() {
                   <strong>{data.name}</strong>
                 </p>
                 <p className="resumeDateAndLocationMobile">
-                  {data.location} - {data.date}
+                  {data.location} -{" "}
+                  {data.date
+                    ? data.date
+                    : moment(data.startDate)
+                        .format("MMM. YYYY")
+                        .concat(" to ", data.endDate === "present" ? "present" : moment(data.endDate).format("MMM.YYYY"))}
                 </p>
                 <ul class="list-disc md:ml-8 ml-5">
                   {data.highlights.map((highlights) => (
@@ -111,13 +101,11 @@ export default function Resume() {
 
                   <li>
                     <span className="relative -left-1">
-                      Project link:{" "}
-                      {data.localurl ? (
-                        <Link to={data.localurl}>{data.texturl}</Link>
+                      Project details:{" "}
+                      {data.url.includes("https://sinaatalay.com") ? (
+                        <Link to={data.url.replace("https://sinaatalay.com", "")}>{data.url.replace("https://", "")}</Link>
                       ) : (
-                        <OutboundLink href={data.url}>
-                          {data.texturl}
-                        </OutboundLink>
+                        <OutboundLink href={data.url}>{data.url.replace("https://", "")}</OutboundLink>
                       )}
                     </span>
                   </li>
@@ -125,7 +113,13 @@ export default function Resume() {
               </div>
               <div className="resumeDateAndLocationPC">
                 <p>{data.location}</p>
-                <p>{data.date}</p>
+                <p>
+                  {data.date
+                    ? data.date
+                    : moment(data.startDate)
+                        .format("MMM. YYYY")
+                        .concat(" to ", data.endDate === "present" ? "present" : moment(data.endDate).format("MMM.YYYY"))}
+                </p>
               </div>
             </ResumeEntry>
           ))}
@@ -138,9 +132,7 @@ export default function Resume() {
                 <p>
                   <strong>{data.name}</strong>
                 </p>
-                <p className="resumeDateAndLocationMobile">
-                  {moment(data.date).format("MMM. YYYY")}
-                </p>
+                <p className="resumeDateAndLocationMobile">{moment(data.date).format("MMM. YYYY")}</p>
                 <ul class="list-disc md:ml-8 ml-5">
                   {data.highlights.map((highlights) => (
                     <li>
@@ -149,10 +141,7 @@ export default function Resume() {
                   ))}
                   <li>
                     <span className="relative -left-1">
-                      Course Certificate:{" "}
-                      <OutboundLink href={data.url}>
-                        {data.texturl}
-                      </OutboundLink>
+                      Course Certificate: <OutboundLink href={data.url}>{data.url.replace("https://", "")}</OutboundLink>
                     </span>
                   </li>
                 </ul>
@@ -168,15 +157,11 @@ export default function Resume() {
         <ResumeSection title="Skills">
           <ResumeEntry>
             <div className="flex-grow">
-              <p>
-                <strong>Software:</strong> {JSONData.skills.software}
-              </p>
-              <p>
-                <strong>Programming:</strong> {JSONData.skills.programming}
-              </p>
-              <p>
-                <strong>Languages:</strong> {JSONData.skills.languages}
-              </p>
+              {JSONData.skills.map((data) => (
+                <p>
+                  <strong>{data.name}:</strong> {data.details}
+                </p>
+              ))}
             </div>
           </ResumeEntry>
         </ResumeSection>

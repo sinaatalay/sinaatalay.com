@@ -6,38 +6,22 @@ export default function Navbar() {
     <nav className="text-xl my-6 mx-3 md:mx-0 print:hidden font-normal">
       <ul className="flex justify-between">
         <li>
-          <Link
-            to="/"
-            className="p-2"
-            activeClassName="p-2 border-b-4 border-secondary-500 text-primary-800 md:rounded-bl-sm"
-          >
+          <Link to="/" className="p-2" activeClassName="p-2 border-b-4 border-secondary-500 text-primary-800 md:rounded-bl-sm">
             Home
           </Link>
         </li>
         <li>
-          <Link
-            to="/projects"
-            className="p-2"
-            activeClassName="p-2 border-b-4 border-secondary-500 text-primary-800"
-          >
+          <Link to="/projects" className="p-2" activeClassName="p-2 border-b-4 border-secondary-500 text-primary-800">
             Projects
           </Link>
         </li>
         <li>
-          <Link
-            to="/resume"
-            className="p-2"
-            activeClassName="p-2 border-b-4 border-secondary-500 text-primary-800"
-          >
+          <Link to="/resume" className="p-2" activeClassName="p-2 border-b-4 border-secondary-500 text-primary-800">
             Resume
           </Link>
         </li>
         <li>
-          <Link
-            to="/contact"
-            className="p-2"
-            activeClassName="p-2 border-b-4 border-secondary-500 text-primary-800 md:rounded-br-sm"
-          >
+          <Link to="/contact" className="p-2" activeClassName="p-2 border-b-4 border-secondary-500 text-primary-800 md:rounded-br-sm">
             Contact
           </Link>
         </li>

@@ -12,9 +12,7 @@ export default function ProjectDetails({ data }) {
       <main>
         <article className="md:px-14 text-base font-serif font-normal leading-relaxed pb-4 print:break-inside-auto text-neutral-900 print:text-black">
           <header className="print:flex print:flex-col print:h-screen print:justify-center">
-            <h1 className="text-center text-4xl leading-[3rem] mt-14 print:mt-0">
-              {title}
-            </h1>
+            <h1 className="text-center text-4xl leading-[3rem] mt-14 print:mt-0">{title}</h1>
             <p className="my-4 text-center whitespace-pre-wrap">by {author}</p>
             <p className="my-4 text-center">{date}</p>
             <div className="my-14 text-center">
@@ -23,9 +21,7 @@ export default function ProjectDetails({ data }) {
             </div>
           </header>
           <nav role="navigation">
-            <h2 className="text-3xl leading-8 mt-12 print:break-before-page">
-              Contents
-            </h2>
+            <h2 className="text-3xl leading-8 mt-12 print:break-before-page">Contents</h2>
             <div
               className="toc mt-4"
               dangerouslySetInnerHTML={{
@@ -34,10 +30,7 @@ export default function ProjectDetails({ data }) {
             ></div>
           </nav>
 
-          <div
-            className="markdownProjectDetails"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
+          <div className="markdownProjectDetails" dangerouslySetInnerHTML={{ __html: html }} />
         </article>
       </main>
     </Layout>

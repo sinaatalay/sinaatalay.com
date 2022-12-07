@@ -13,10 +13,7 @@ export default function Home({ data }) {
           I'm <strong>Sina Atalay</strong>.
         </h1>
       </header>
-      <main
-        className="markdownPages"
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
+      <main className="markdownPages" dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
   )
 }
