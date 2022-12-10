@@ -6,7 +6,7 @@ export default function Contact() {
   const recaptchaRef = React.useRef()
 
   return (
-    <Layout title="Contact">
+    <Layout Title="Contact">
       <header>
         <h1 className="h1Pages">Contact</h1>
         <p className="pPages">Feel free to contact me!</p>

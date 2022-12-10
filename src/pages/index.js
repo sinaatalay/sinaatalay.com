@@ -6,7 +6,7 @@ export default function Home({ data }) {
   const { html } = data.markdownRemark
 
   return (
-    <Layout title="Home">
+    <Layout Title="Home">
       <header>
         <p className="h1Pages">Hello!</p>
         <h1 className="pPages">

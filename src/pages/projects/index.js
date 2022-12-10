@@ -7,7 +7,7 @@ export default function Projects({ data }) {
   const projects = data.allMarkdownRemark.nodes
 
   return (
-    <Layout title="Projects">
+    <Layout Title="Projects">
       <header>
         <h1 className="h1Pages">Projects</h1>
       </header>

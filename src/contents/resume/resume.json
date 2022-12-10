@@ -43,7 +43,7 @@
   ],
   "workExperience": [
     {
-      "name": "Turkish Aerospace Industries",
+      "company": "Turkish Aerospace Industries",
       "position": "Mechanical Engineering Intern",
       "location": "Ankara, Turkey",
       "url": "https://tusas.com/",
@@ -55,7 +55,7 @@
       ]
     },
     {
-      "name": "Simularge",
+      "company": "Simularge",
       "position": "Mechanical Engineering Intern",
       "location": "Istanbul, Turkey",
       "url": "https://simularge.com/",
@@ -67,7 +67,7 @@
       ]
     },
     {
-      "name": "Aselsan",
+      "company": "Aselsan",
       "position": "Mechanical Engineering Intern",
       "location": "Ankara, Turkey",
       "url": "https://aselsan.com.tr/",
@@ -137,7 +137,7 @@
     },
     {
       "name": "OS",
-      "details": "Windows, Ubuntu, macOS"
+      "details": "Windows, Ubuntu"
     },
     {
       "name": "Other tools",
@@ -150,7 +150,7 @@
   ],
   "extracurricular": [
     {
-      "name": "Alacati Surf Paradise Club (ASPC)",
+      "company": "Alacati Surf Paradise Club (ASPC)",
       "position": "Windsurfing Instructor",
       "location": "Izmir, Turkey",
       "date": "Summer 2019 and 2020",

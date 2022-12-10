@@ -3,7 +3,7 @@ import Layout from "../components/Layout"
 
 export default function NotFound() {
   return (
-    <Layout title="404">
+    <Layout Title="404">
       <header>
         <h1 className="h1Pages">404</h1>
       </header>

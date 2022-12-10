@@ -3,11 +3,11 @@ import React from "react"
 export default function ResumeSection({ title, children }) {
   return (
     <>
-      <div>
-        <h2 className="text-lg font-semibold">{title}</h2>
-        <div className="w-full border-t-[2px] border-neutral-300"></div>
+      <div className="flex">
+        <h2 className="text-primary-800 text-xl font-semibold leading-[14px] whitespace-nowrap">{title}</h2>
+        <div className="w-full border-b-[2px] border-primary-800 ml-2"></div>
       </div>
-      <div className="mb-3">{children}</div>
+      <div className="my-5 mx-2">{children}</div>
     </>
   )
 }

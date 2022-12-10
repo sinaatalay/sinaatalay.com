@@ -7,7 +7,7 @@ import { Link } from "gatsby"
 import { Helmet } from "react-helmet"
 import { OutboundLink } from "gatsby-plugin-google-gtag"
 
-export default function Layout({ children, title }) {
+export default function Layout({ children, Title }) {
   return (
     <div className="min-h-screen flex flex-col justify-between">
       <Helmet
@@ -16,7 +16,7 @@ export default function Layout({ children, title }) {
         }}
       >
         <meta charSet="utf-8" />
-        {title === "Home" ? <title>Sina Atalay</title> : <title>{title} - Sina Atalay</title>}
+        {Title === "Home" ? <title>Sina Atalay</title> : <title>{Title} - Sina Atalay</title>}
       </Helmet>
       <Navbar />
 

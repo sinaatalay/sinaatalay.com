@@ -46,6 +46,14 @@ iframe {
   @apply md:hidden text-neutral-600;
 }
 
+.resumeHighlights {
+  @apply text-justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+}
+
 /* Project Reports: */
 @page {
   margin: 20mm;
