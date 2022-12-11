@@ -47,11 +47,16 @@ iframe {
 }
 
 .resumeHighlights {
-  @apply text-justify;
-  hyphens: auto;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
+  @apply text-left md:text-justify;
+}
+
+@media (min-width: 768px) {
+  .resumeHighlights {
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+  }
 }
 
 /* Project Reports: */

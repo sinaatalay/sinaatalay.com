@@ -17,7 +17,7 @@ function DateDataToText(StartDate, EndDate, Date) {
       return moment(Date).format("MMM. YYYY")
     }
   } else {
-    if (EndDate == "present") {
+    if (EndDate === "present") {
       return moment(StartDate).format("MMM. YYYY") + " to present"
     } else {
       return moment(StartDate).format("MMM. YYYY") + " to " + moment(EndDate).format("MMM. YYYY")
@@ -43,7 +43,7 @@ export default function Resume() {
         <h1 className="font-semibold text-3xl text-center text-primary-800">{JSONData.basics.name}</h1>
         <h2 className="font-light text-lg mt-3 text-center text-primary-800">{JSONData.basics.label}</h2>
       </header>
-      <main className="font-normal text-[14px]">
+      <main className="font-normal text-base md:text-sm">
         <ResumeSection title="Education">
           {JSONData.education.map((data) => (
             <ResumeEntry

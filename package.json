@@ -9,7 +9,7 @@
     "build": "gatsby build",
     "postbuild": "rm -rf docs && mkdir docs && touch docs/CNAME && printf 'sinaatalay.com' > docs/CNAME && mv -v public/* docs && rm -d public",
     "prettier": "prettier --write .",
-    "develop": "gatsby develop"
+    "develop": "gatsby develop -H 0.0.0.0"
   },
   "repository": {
     "type": "git",
