@@ -4,7 +4,7 @@ title: Home
 
 I'm a senior mechanical engineering student at Bogazici University.
 
-As a fun exercise, I decided to build this webpage with [Tailwindcss](https://tailwindcss.com/) and [Gatsby](https://www.gatsbyjs.com/).
+As a fun exercise, I decided to build this webpage with _Tailwindcss_ and _Gatsby_.
 
 In the [Projects](/projects) section, you can find brief reports of projects I have been involved in.
 
@@ -16,7 +16,7 @@ In the spring of 2022, I started to work on an ion truster simulation program (*
 
 It's a tricky simulation because the applicability of the continuum assumption is questionable since the operating pressures are pretty low. Therefore, the molecular theory has to be employed.
 
-Ionizer is being written in C++, and its goal is to solve the 3D [Poisson's equation](https://en.wikipedia.org/wiki/Poisson%27s_equation) to calculate the electrostatic field inside the thruster and move the ions accordingly with the well-established molecular approach, PIC-DSMC.
+Ionizer is being written in C++, and its goal is to solve the 3D Poisson's equation to calculate the electrostatic field inside the thruster and move the ions accordingly with the well-established molecular approach, PIC-DSMC.
 
 To check out the repository and contribute on Github, click [here](https://github.com/sinaatalay/Ionizer).
 

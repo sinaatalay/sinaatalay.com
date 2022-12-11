@@ -7,10 +7,9 @@ export default function Home({ data }) {
 
   return (
     <Layout Title="Home">
-      <header>
-        <p className="h1Pages">Hello!</p>
-        <h1 className="pPages">
-          I'm <strong>Sina Atalay</strong>.
+      <header className="my-5">
+        <h1 className="h3Pages text-base">
+          Hello! I'm <strong>Sina Atalay</strong>.
         </h1>
       </header>
       <main className="markdownPages" dangerouslySetInnerHTML={{ __html: html }} />

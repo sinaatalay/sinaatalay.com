@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Ubuntu:ital,wght@0,300;0,400;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -23,12 +23,17 @@ hr {
 
 .markdownPages h1,
 .h1Pages {
-  @apply text-left text-6xl  ml-[-4px] text-neutral-900 my-4 print:text-black;
+  @apply text-left text-6xl ml-[-4px] text-primary-800 my-4 print:text-black font-medium;
 }
 
 .markdownPages h2,
 .h2Pages {
-  @apply my-0 text-left text-4xl  nocount text-neutral-900 print:text-black;
+  @apply my-0 text-left text-4xl text-primary-800 print:text-black font-medium;
+}
+
+.markdownPages h3,
+.h3Pages {
+  @apply my-0 text-left text-3xl text-primary-800 print:text-black font-medium;
 }
 
 .iframeDiv {

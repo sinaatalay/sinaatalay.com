@@ -4,8 +4,8 @@ import Layout from "../components/Layout"
 import ResumeEntry from "../components/ResumeEntry"
 import ResumeSection from "../components/ResumeSection"
 import ResumeHighlight from "../components/ResumeHighlight"
+import ExternalLink from "../components/ExternalLink"
 import JSONData from "../contents/resume/resume.json"
-import { OutboundLink } from "gatsby-plugin-google-gtag"
 import moment from "moment"
 
 function DateDataToText(StartDate, EndDate, Date) {
@@ -29,7 +29,7 @@ function UrlToLink(Url) {
   if (Url.includes("https://sinaatalay.com")) {
     return <Link to={Url.replace("https://sinaatalay.com", "")}>{Url.replace("https://", "")}</Link>
   } else {
-    return <OutboundLink href={Url}>{Url.replace("https://", "")}</OutboundLink>
+    return <ExternalLink href={Url}>{Url.replace("https://", "")}</ExternalLink>
   }
 }
 
