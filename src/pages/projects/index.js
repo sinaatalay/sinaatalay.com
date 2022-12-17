@@ -20,7 +20,7 @@ export default function Projects({ data }) {
                 <div className="flex-grow">
                   <h2 className=" text-left text-xl text-primary-500">
                     <Link to={"/projects/" + project.frontmatter.slug} key={project.id}>
-                      {project.frontmatter.title}{" "}
+                      {project.frontmatter.title}
                     </Link>
                   </h2>
                 </div>

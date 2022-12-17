@@ -8,7 +8,7 @@ export default function Home({ data }) {
   return (
     <Layout Title="Home">
       <header className="my-5">
-        <h1 className="h3Pages text-base">
+        <h1 className="pPages">
           Hello! I'm <strong>Sina Atalay</strong>.
         </h1>
       </header>
