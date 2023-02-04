@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Sina Atalay",
-    "label": "Mechanical Engineering Student at Bogazici University",
+    "label": "Technical Student at CERN",
     "image": "",
     "email": "",
     "phone": "",
@@ -11,7 +11,7 @@
     "profiles": [
       {
         "network": "LinkedIn",
-        "url": "https://linkedin.com/in/sina-atalay/"
+        "url": "https://www.linkedin.com/in/sinaatalay"
       },
       {
         "network": "Github",
@@ -21,32 +21,47 @@
   },
   "education": [
     {
-      "institution": "Bogazici University",
-      "url": "https://boun.edu.tr/",
+      "institution": "Boğaziçi University",
+      "url": "https://boun.edu.tr",
       "area": "Mechanical Engineering",
       "studyType": "BS",
       "location": "Istanbul, Turkey",
       "startDate": "2017-09-01",
-      "endDate": "present",
-      "highlights": ["GPA: 3.86/4.00", "Captain of Bogazici University Ski Team (2022-2023)"]
+      "endDate": "2023-01-01",
+      "transcriptUrl": "https://registration.boun.edu.tr/buis/Validate.aspx?code=09083BE4937D",
+      "gpa": "3.80/4.00",
+      "highlights": ["Class rank: 3 of 62"]
     },
     {
       "institution": "The University of Texas at Austin",
-      "url": "https://utexas.edu/",
+      "url": "https://utexas.edu",
       "area": "Mechanical Engineering, Student Exchange Program",
       "studyType": "",
       "location": "Austin, TX, USA",
-      "startDate": "2021-08-24",
-      "endDate": "2022-01-15",
-      "highlights": ["GPA: 4.00/4.00"]
+      "startDate": "2021-08-01",
+      "endDate": "2021-12-01",
+      "transcriptUrl": "",
+      "gpa": "4.00/4.00",
+      "highlights": []
     }
   ],
   "workExperience": [
     {
+      "company": "CERN",
+      "position": "Mechanical Engineer (Technical Student)",
+      "location": "Geneva, Switzerland",
+      "url": "https://home.cern",
+      "startDate": "2023-02-01",
+      "endDate": "present",
+      "highlights": [
+        "CERN is a research organization that provides the world's largest and most complex scientific instruments for high-energy physics research."
+      ]
+    },
+    {
       "company": "Turkish Aerospace Industries",
       "position": "Mechanical Engineering Intern",
       "location": "Ankara, Turkey",
-      "url": "https://tusas.com/",
+      "url": "https://tusas.com",
       "startDate": "2022-08-01",
       "endDate": "2022-09-01",
       "highlights": [
@@ -58,19 +73,19 @@
       "company": "Simularge",
       "position": "Mechanical Engineering Intern",
       "location": "Istanbul, Turkey",
-      "url": "https://simularge.com/",
+      "url": "https://simularge.com",
       "startDate": "2022-06-15",
       "endDate": "2022-08-01",
       "highlights": [
         "Simularge is a technology company that provides web-based engineering applications to simulate and optimize products and manufacturing tools.",
-        "Modeled and simulated a metal-forming process deep drawing using finite element analysis with CalculiX."
+        "Modeled and simulated a metal-forming process deep drawing using finite element analysis using an open-source software CalculiX."
       ]
     },
     {
       "company": "Aselsan",
       "position": "Mechanical Engineering Intern",
       "location": "Ankara, Turkey",
-      "url": "https://aselsan.com.tr/",
+      "url": "https://aselsan.com.tr",
       "startDate": "2021-07-26",
       "endDate": "2021-08-20",
       "highlights": [
@@ -86,7 +101,7 @@
       "startDate": "2022-04-08",
       "endDate": "present",
       "highlights": [
-        "Write an ion thruster simulation program using C++ that solves the electrostatic field inside and moves the ions with the molecular PIC-DSMC approach under the supervision of Professor Murat Çelik."
+        "Write an ion thruster simulation program using C++ that solves the electrostatic field inside the thruster using the finite-difference method and moves the ions with the molecular PIC-DSMC approach under the supervision of Professor Murat Çelik."
       ],
       "url": "https://github.com/sinaatalay/Ionizer"
     },
@@ -95,22 +110,24 @@
       "location": "Istanbul, Turkey",
       "date": "Fall 2022",
       "highlights": [
-        "Designed and constructed a dynamometer for small DC motors that is currently being used at Bogazici University's laboratories."
+        "Designed and constructed a controllable dynamometer that measures the torque and power of an electric motor at different speeds."
       ],
-      "url": "https://sinaatalay.com/projects/design-of-a-dynamometer"
+      "url": "https://sinaatalay.com/projects/design-of-a-dynamometer",
+      "localurl": "/projects/design-of-a-dynamometer"
     },
     {
       "name": "Design and Construction of an Automatic Guitar Tuner",
       "location": "Istanbul, Turkey",
       "date": "Fall 2020",
       "highlights": ["Designed, built, and programmed a microcontroller-based device that tunes a guitar with DC motors."],
-      "url": "https://sinaatalay.com/projects/automatic-guitar-tuner"
+      "url": "https://sinaatalay.com/projects/automatic-guitar-tuner",
+      "localurl": "/projects/automatic-guitar-tuner"
     },
     {
       "name": "Teaching Videos",
       "location": "Istanbul, Turkey",
       "date": "Summer 2020",
-      "highlights": ["Instructed the entire \"Engineering Mechanics: Dynamics\" course on YouTube (200,000+ views)."],
+      "highlights": ["Instructed the entire \"Engineering Mechanics: Dynamics\" course on YouTube (300,000+ views)."],
       "url": "https://youtube.com/c/SinaAtalay"
     }
   ],
@@ -133,7 +150,7 @@
     },
     {
       "name": "CAD",
-      "details": "Solidworks"
+      "details": "Solidworks, Siemens NX"
     },
     {
       "name": "OS",
@@ -145,10 +162,25 @@
     },
     {
       "name": "Languages",
-      "details": "English (Advanced, TOEFL IBT: 113/120), Turkish (Native)"
+      "details": "English (Advanced), Turkish (Native)"
     }
   ],
-  "extracurricular": [
+  "testScores": [
+    {
+      "name": "TOEFL",
+      "details": "113/120 — Reading: 29/30, Listening: 30/30, Speaking: 27/30, Writing: 27/30",
+      "url": ""
+    }
+  ],
+  "extracurricularActivities": [
+    {
+      "company": "Boğaziçi University Ski Team",
+      "position": "Captain",
+      "location": "Istanbul, Turkey",
+      "startDate": "2022-09-01",
+      "endDate": "present",
+      "highlights": ["Lead and train members for alpine ski races between universities from Turkey and organize skiing events."]
+    },
     {
       "company": "Alacati Surf Paradise Club (ASPC)",
       "position": "Windsurfing Instructor",

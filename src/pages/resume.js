@@ -38,7 +38,7 @@ export default function Resume() {
     <Layout Title="Resume">
       <header className="relative my-8">
         <p className="absolute text-xs text-right top-0 -mt-7 w-full italic text-neutral-700">
-          Last updated in {moment(Date.now()).format("MMM. YYYY")}
+          Last updated in {moment(1675553324742).format("MMM. YYYY")}
         </p>
         <h1 className="font-semibold text-3xl text-center text-primary-800">{JSONData.basics.name}</h1>
         <h2 className="font-light text-lg mt-3 text-center text-primary-800">{JSONData.basics.label}</h2>
@@ -53,6 +53,7 @@ export default function Resume() {
               Date={DateDataToText(data.startDate, data.endDate, data.date)}
               Location={data.location}
             >
+              <ResumeHighlight>GPA: {data.gpa}</ResumeHighlight>
               {data.highlights.map((highlights) => (
                 <ResumeHighlight>{highlights}</ResumeHighlight>
               ))}
@@ -109,8 +110,20 @@ export default function Resume() {
           </ResumeEntry>
         </ResumeSection>
 
+        <ResumeSection title="Test Scores">
+          <ResumeEntry>
+            <div className="flex-grow">
+              {JSONData.testScores.map((data) => (
+                <p>
+                  <strong>{data.name}:</strong> {data.details}
+                </p>
+              ))}
+            </div>
+          </ResumeEntry>
+        </ResumeSection>
+
         <ResumeSection title="Extracurricular Activities">
-          {JSONData.extracurricular.map((data) => (
+          {JSONData.extracurricularActivities.map((data) => (
             <ResumeEntry
               TitleBoldPart={data.company}
               TitleNormalPart={data.position}
