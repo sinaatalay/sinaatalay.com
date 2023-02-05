@@ -2,9 +2,7 @@
 title: Home
 ---
 
-I'm a senior mechanical engineering student at Bogazici University.
-
-As a fun exercise, I decided to build this webpage with _Tailwindcss_ and _Gatsby_.
+I am a mechanical engineer currently working as a technical student at CERN.
 
 In the [Projects](/projects) section, you can find brief reports of projects I have been involved in.
 
