@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Sina Atalay">
+<meta name="dcterms.date" content="2023-01-10">
+
+<title>Sina Atalay - Design and Construction of a Dynamometer</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HH8XZL6SQK"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-HH8XZL6SQK', { 'anonymize_ip': true});
+</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Sina Atalay - Design and Construction of a Dynamometer">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://sinaatalay.com/posts/design_and_construction_of_a_dynamometer/figures/PronyBrake.svg">
+<meta property="og:site-name" content="Sina Atalay">
+<meta property="og:locale" content="en_US">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand navbar-dark ">
+      <div class="navbar-container container-fluid">
+          <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../posts.html" rel="" target="">
+ <span class="menu-text">Posts</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sinaatalay" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/sinaatalay/" rel="" target=""><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+          <div class="quarto-navbar-tools ms-auto">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+            <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="99">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a>
+  <ul class="collapse">
+  <li><a href="#sec-generalSpecifications" id="toc-sec-generalSpecifications" class="nav-link" data-scroll-target="#sec-generalSpecifications"><span class="header-section-number">1.1</span> General Specifications</a></li>
+  <li><a href="#absorption-unit-selection" id="toc-absorption-unit-selection" class="nav-link" data-scroll-target="#absorption-unit-selection"><span class="header-section-number">1.2</span> Absorption Unit Selection</a></li>
+  </ul></li>
+  <li><a href="#sec-theory" id="toc-sec-theory" class="nav-link" data-scroll-target="#sec-theory"><span class="header-section-number">2</span> Theory</a>
+  <ul class="collapse">
+  <li><a href="#sec-theBasicsOfADCMotor" id="toc-sec-theBasicsOfADCMotor" class="nav-link" data-scroll-target="#sec-theBasicsOfADCMotor"><span class="header-section-number">2.1</span> The Basics of a DC Motor</a></li>
+  <li><a href="#formulation-and-design-variables" id="toc-formulation-and-design-variables" class="nav-link" data-scroll-target="#formulation-and-design-variables"><span class="header-section-number">2.2</span> Formulation and Design Variables</a></li>
+  <li><a href="#sec-steadyStateAnalysisAndMeasurementRange" id="toc-sec-steadyStateAnalysisAndMeasurementRange" class="nav-link" data-scroll-target="#sec-steadyStateAnalysisAndMeasurementRange"><span class="header-section-number">2.3</span> Steady State Analysis and Measurement Range</a></li>
+  <li><a href="#transient-state-analysis" id="toc-transient-state-analysis" class="nav-link" data-scroll-target="#transient-state-analysis"><span class="header-section-number">2.4</span> Transient State Analysis</a></li>
+  </ul></li>
+  <li><a href="#sec-loadMotorSelection" id="toc-sec-loadMotorSelection" class="nav-link" data-scroll-target="#sec-loadMotorSelection"><span class="header-section-number">3</span> Load Motor Selection</a>
+  <ul class="collapse">
+  <li><a href="#emf-constant-measurement" id="toc-emf-constant-measurement" class="nav-link" data-scroll-target="#emf-constant-measurement"><span class="header-section-number">3.1</span> Emf Constant Measurement</a></li>
+  <li><a href="#torque-constant-measurement" id="toc-torque-constant-measurement" class="nav-link" data-scroll-target="#torque-constant-measurement"><span class="header-section-number">3.2</span> Torque Constant Measurement</a></li>
+  <li><a href="#internal-resistance-measurement" id="toc-internal-resistance-measurement" class="nav-link" data-scroll-target="#internal-resistance-measurement"><span class="header-section-number">3.3</span> Internal Resistance Measurement</a></li>
+  <li><a href="#measurement-range" id="toc-measurement-range" class="nav-link" data-scroll-target="#measurement-range"><span class="header-section-number">3.4</span> Measurement Range</a></li>
+  <li><a href="#uncertainty-analysis" id="toc-uncertainty-analysis" class="nav-link" data-scroll-target="#uncertainty-analysis"><span class="header-section-number">3.5</span> Uncertainty Analysis</a></li>
+  </ul></li>
+  <li><a href="#building-the-dynamometer" id="toc-building-the-dynamometer" class="nav-link" data-scroll-target="#building-the-dynamometer"><span class="header-section-number">4</span> Building the Dynamometer</a>
+  <ul class="collapse">
+  <li><a href="#working-mechanism-and-flowchart" id="toc-working-mechanism-and-flowchart" class="nav-link" data-scroll-target="#working-mechanism-and-flowchart"><span class="header-section-number">4.1</span> Working Mechanism and Flowchart</a></li>
+  <li><a href="#mechanical-design-and-components" id="toc-mechanical-design-and-components" class="nav-link" data-scroll-target="#mechanical-design-and-components"><span class="header-section-number">4.2</span> Mechanical Design and Components</a></li>
+  <li><a href="#electronic-design-and-components" id="toc-electronic-design-and-components" class="nav-link" data-scroll-target="#electronic-design-and-components"><span class="header-section-number">4.3</span> Electronic Design and Components</a></li>
+  </ul></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results"><span class="header-section-number">5</span> Results</a></li>
+  <li><a href="#conclusions" id="toc-conclusions" class="nav-link" data-scroll-target="#conclusions"><span class="header-section-number">6</span> Conclusions</a>
+  <ul class="collapse">
+  <li><a href="#possible-future-improvements" id="toc-possible-future-improvements" class="nav-link" data-scroll-target="#possible-future-improvements"><span class="header-section-number">6.1</span> Possible Future Improvements</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Design and Construction of a Dynamometer</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Sina Atalay </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 10, 2023</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">November 20, 2023</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<p>This post covers the senior project of three mechanical engineering students at Boğaziçi University, Sina Atalay, Arda Gençgel, and Hümeyra Kayadibi. The project was successfully completed at the end of the Fall 2023 semester and received the top grade.</p>
+<p>The project was to design and construct an absorption dynamometer for small, high-speed, low-torque motors. After consideration of the constraints and targets, a controllable dynamometer with a dynamic braking system is successfully built. Dynamometers and their use cases are summarized. General specifications of the project are given. The available absorption unit designs are discussed, and the decision behind the dynamic braking system is explained. Then, the system is modeled with the state-space method, and the design variables are adjusted to achieve our targets bound to our constraints. The system is simulated with MATLAB, and the code is <a href="https://github.com/sinaatalay/DynamometerSimulation">published on GitHub</a>. The final assembly of the dynamometer is shown along with measurement examples.</p>
+<section id="introduction" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">1</span> Introduction</h2>
+<p>There are two types of dynamometers.</p>
+<dl>
+<dt>Absorption Dynamometer</dt>
+<dd>
+An absorption dynamometer is a device that measures the instantaneous rotational speed and torque of an engine, motor, or any rotating prime mover while acting as a load.
+</dd>
+<dt>Motoring Dynamometer</dt>
+<dd>
+A motoring dynamometer is a device that measures the required rotational speed and torque to operate a driven device (such as a pump) while acting as a prime mover.
+</dd>
+</dl>
+<p>This post covers an absorption dynamometer design, which is referred to as the dynamometer throughout the post.</p>
+<p>Before using a motor in real systems, it is essential to analyze its characteristics. A dynamometer is a helpful tool that enables accurate comparison of a motor’s performance with other options. Motor suppliers typically provide torque vs.&nbsp;speed, power, and current curves, but they may not always be reliable. Moreover, the specifications of old motors may be unknown. With a dynamometer, however, the necessary measurements can be made to determine any motor’s characteristics.</p>
+<section id="sec-generalSpecifications" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="sec-generalSpecifications"><span class="header-section-number">1.1</span> General Specifications</h3>
+<p>A low-cost small dynamometer was needed in the engineering labs of Boğaziçi University. The dynamometer was expected to operate for electric motors without reduction drives (high-speed, low-torque motors).</p>
+<p>The general specifications given by our advisor were as follows:</p>
+<ul>
+<li>The dynamometer should be able to operate at speed and power up to 20000 RPM and 80 W.</li>
+<li>The dynamometer’s maximum torque measurement capability for a given input speed should be specified.</li>
+</ul>
+<p>In general, four questions were answered to design the dynamometer.</p>
+<ol type="1">
+<li><p>What type of absorption unit will be used?</p>
+<p>Measuring power implies the dissipation of energy. Therefore, the test motor’s <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> energy output should be somehow absorbed in the dynamometer for measurement.</p></li>
+<li><p>What device will be used for torque measurement?</p></li>
+<li><p>What device will be used for rotation speed measurement?</p></li>
+<li><p>Will the speed, torque, or both be controlled?</p>
+<p>Generally, dynamometers are used to learn about a motor’s performance at different speeds. Thus, the user may need to control the speed, the torque, or both.</p></li>
+</ol>
+</section>
+<section id="absorption-unit-selection" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="absorption-unit-selection"><span class="header-section-number">1.2</span> Absorption Unit Selection</h3>
+<p>Dynamometers operate by applying a load (braking) to the test motor. Applying a load to a rotating device results in energy dissipation, as shown in <a href="#eq-heatDissipation">Equation&nbsp;1</a>.</p>
+<p><span id="eq-heatDissipation"><span class="math display">
+\text{Power} = (\text{Torque}) \cdot (\text{Rotation Speed})
+\tag{1}</span></span></p>
+<p>Dynamometers accomplish braking by using various methods to absorb the energy output. The energy can be absorbed with mechanical friction brakes, hydraulic brakes, eddy current brakes, etc. Another method is to use a second DC motor, the load motor<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>, and couple it with the test motor so that dynamic brake (see <a href="#sec-dynamicBrake">Section&nbsp;1.2.3</a>) can be applied and energy can be absorbed.</p>
+<p>This type of dynamometer is generally called an electric dynamometer <span class="citation" data-cites="Pulkrabek1997"><a href="#ref-Pulkrabek1997" role="doc-biblioref">[1]</a></span>, and this post covers its design.</p>
+<p>Before the decision, the available methods are researched and discussed. Then, the decision is made considering the limitations of our time, money, technology, and design criteria. This section briefly explains some types of absorption units and the reasoning behind the decision to use an electric dynamometer.</p>
+<section id="mechanical-friction-brake" class="level4" data-number="1.2.1">
+<h4 data-number="1.2.1" class="anchored" data-anchor-id="mechanical-friction-brake"><span class="header-section-number">1.2.1</span> Mechanical Friction Brake</h4>
+<p>Some dynamometers absorb energy in a mechanical friction brake. The easiest way to build a dynamometer with this method is to use a prony brake<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>, as illustrated in <a href="#fig-pronyBrake">Figure&nbsp;1</a>. A prony brake can both absorb the test motor’s energy output and measure the generated torque. Moreover, it is a very simple device to build.</p>
+<div id="fig-pronyBrake" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figures/PronyBrake.svg" class="img-fluid figure-img" style="width:60.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;1: A schematic diagram of a prony brake <span class="citation" data-cites="PronyBrakeSchematic"><a href="#ref-PronyBrakeSchematic" role="doc-biblioref">[3]</a></span>.</figcaption>
+</figure>
+</div>
+<p>As shown in <a href="#fig-pronyBrake">Figure&nbsp;1</a>, a lever is clamped to the shaft, and the load F is measured. The load F is only carried by the frictional force between the shaft and the lever since the lever is only supported by the shaft and the load F. Then, the generated torque can be found using statics, as shown in <a href="#eq-torque">Equation&nbsp;2</a>.</p>
+<p><span id="eq-torque"><span class="math display">
+\text{Torque} = Fl
+\tag{2}</span></span></p>
+<p>where <span class="math inline">l</span> is the distance between the point where load <span class="math inline">F</span> is applied and the center of the motor’s shaft.</p>
+<p>There are two primary methods to measure <span class="math inline">F</span>, using a weight or a load cell. An implementation of a prony brake dynamometer with a load cell is shown in <a href="#fig-pronyBrakeOnYoutube">Figure&nbsp;2</a>.</p>
+<div id="fig-pronyBrakeOnYoutube" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figures/PronyBrakeYoutube.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;2: A small prony brake dynamometer <span class="citation" data-cites="PronyBrakeYoutube"><a href="#ref-PronyBrakeYoutube" role="doc-biblioref">[4]</a></span></figcaption>
+</figure>
+</div>
+<p>Even though a prony brake is an affordable and fast-to-build device, it is hard to control the load or the speed. Either the weights or the clamping force must be changed to control the load, and both are very hard to control electronically. Another disadvantage is that frictional braking causes brake pad wear, so a regular replacement might be required.</p>
+</section>
+<section id="eddy-current-brake" class="level4" data-number="1.2.2">
+<h4 data-number="1.2.2" class="anchored" data-anchor-id="eddy-current-brake"><span class="header-section-number">1.2.2</span> Eddy Current Brake</h4>
+<p>When a piece of metal moves through a magnetic field, circulating currents called eddy currents are generated in the metal. According to Lenz’s law, the generated eddy currents create opposing magnetic fields, which gives rise to a repulsive force that resists the motion of the metal <span class="citation" data-cites="Serway2014"><a href="#ref-Serway2014" role="doc-biblioref">[5]</a></span>. Many braking systems make use of this phenomenon.</p>
+<p>In its simplest form, an eddy current dynamometer uses a metal disk attached to a shaft and a magnetic field of controlled strength, as shown in <a href="#fig-eddyCurrentDiagram">Figure&nbsp;3</a>. Eddy currents are induced in the rotating disk, which results in braking. The strength of braking depends on the magnitude of the magnetic field. The magnetic field’s magnitude can be adjusted by moving magnets or increasing the current passing through electromagnets. The energy generated by the test motor is dissipated as heat since the eddy currents flow through an electrical resistance (disk).</p>
+<div id="fig-eddyCurrentDiagram" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figures/EddyCurrentBrake.svg" class="img-fluid figure-img" style="width:60.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;3: A schematic diagram of a eddy current brake <span class="citation" data-cites="EddyCurrentBrakeSchematic"><a href="#ref-EddyCurrentBrakeSchematic" role="doc-biblioref">[6]</a></span>.</figcaption>
+</figure>
+</div>
+<p>Although eddy current braking allows for controllable braking, accurately measuring torque is difficult. Additionally, designing a well-balanced disk to couple with a high-speed rotating shaft has mechanical challenges.</p>
+</section>
+<section id="sec-dynamicBrake" class="level4" data-number="1.2.3">
+<h4 data-number="1.2.3" class="anchored" data-anchor-id="sec-dynamicBrake"><span class="header-section-number">1.2.3</span> Dynamic Brake</h4>
+<p>When an electric motor is used as a generator to produce opposing torque that resists the motion, it is called dynamic braking. Electric dynamometers use dynamic braking to apply load to the load motors. In an electric dynamometer, the test motor’s shaft is coupled to a generator so that the test motor’s energy is absorbed with electrical output from the generator. The generated electrical power can be dissipated as heat with a resistor or returned to the supply line. One of the most used types of dynamometers is an electric dynamometer.</p>
+<p>This type of dynamometer offers many advantages, like</p>
+<ul>
+<li>A DC motor is a very accessible device and is ready to operate as a generator.</li>
+<li>A dynamic braking system’s lifespan is longer than a frictional braking system’s since there is no wear problem.</li>
+<li>Suppose a DC motor is used as a generator. In that case, the torque can be easily calculated by measuring the current flows through the generator since DC motors exhibit a linear relationship between torque and current.</li>
+<li>The load can be easily changed by adjusting the electrical resistance connected to the generator’s output.</li>
+<li>The dynamometer could be further improved to turn the absorbed energy into useful work that would otherwise be lost as heat.</li>
+<li>The absorber dynamometer might be modified to operate in reverse as a motoring dynamometer.</li>
+</ul>
+<p>The main disadvantage of dynamic braking is that the braking torque is linearly proportional to the rotation speed. Therefore, it is not possible to brake the test motor at low speeds. The details will be discussed in <a href="#sec-theory">Section&nbsp;2</a>.</p>
+</section>
+<section id="the-decision" class="level4" data-number="1.2.4">
+<h4 data-number="1.2.4" class="anchored" data-anchor-id="the-decision"><span class="header-section-number">1.2.4</span> The Decision</h4>
+<p>Considering our time and equipment limitations, the eddy current brake option was rejected. It was the hardest one to build and maintain among our choices, and it did not offer advantages that the others could not.</p>
+<p>We collected more detailed information about prony brakes and dynamic brakes. Then, we found and reviewed their implementations on the internet. Ultimately, we chose the dynamic brake and constructed an electric dynamometer. Its advantages, like being very easy to use, electronically controllable, and open to further modifications, made this option more beneficial than a prony brake dynamometer.</p>
+</section>
+</section>
+</section>
+<section id="sec-theory" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="sec-theory"><span class="header-section-number">2</span> Theory</h2>
+<p>In electric dynamometers, an electric motor (a load motor) is used as a generator to apply a load to the test motor. To understand how a load motor can generate a torque that resists the rotating motion, we should look into the basics of a DC motor.</p>
+<section id="sec-theBasicsOfADCMotor" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="sec-theBasicsOfADCMotor"><span class="header-section-number">2.1</span> The Basics of a DC Motor</h3>
+<p>A basic DC motor model is shown in <a href="#fig-DCMotor">Figure&nbsp;4</a>. There are two fundamental principles of a DC motor.</p>
+<div id="fig-DCMotor" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figures/DCMotor.svg" class="img-fluid figure-img" style="width:40.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;4: A schematic diagram of a DC Motor <span class="citation" data-cites="DCMotorSchematic"><a href="#ref-DCMotorSchematic" role="doc-biblioref">[7]</a></span>.</figcaption>
+</figure>
+</div>
+<p><strong>The first principle:</strong> Faraday’s law of induction states that as the coil rotates, the changing magnetic flux induces a voltage difference between terminals <span class="citation" data-cites="Serway2014"><a href="#ref-Serway2014" role="doc-biblioref">[5]</a></span>. This voltage difference is called the electromotive force (emf) and is shown in <a href="#eq-emf">Equation&nbsp;3</a>.</p>
+<p><span id="eq-emf"><span class="math display">
+V=K_V\omega
+\tag{3}</span></span></p>
+<p>where <span class="math inline">K_V</span> is the emf constant of the motor, <span class="math inline">\omega</span> is the angular speed of the shaft, and <span class="math inline">V</span> is the induced voltage difference between terminals <span class="citation" data-cites="Nise2019"><a href="#ref-Nise2019" role="doc-biblioref">[8]</a></span>.</p>
+<p><strong>The second principle:</strong> When a current is run through the coil, a magnetic torque is exerted on the rotor. The generated torque can be shown as</p>
+<p><span id="eq-torquevsi"><span class="math display">
+T=K_T i
+\tag{4}</span></span></p>
+<p>where <span class="math inline">K_T</span> is the torque constant of the motor, <span class="math inline">i</span> is the coil current, and <span class="math inline">T</span> is the generated torque <span class="citation" data-cites="Nise2019"><a href="#ref-Nise2019" role="doc-biblioref">[8]</a></span>.</p>
+<p><strong>The result:</strong> When a DC motor’s rotor starts being rotated, it generates emf, and when the motor’s terminals are connected, this emf causes a current to flow. This current, in turn, generates a torque that resists motion according to Lenz’s Law <span class="citation" data-cites="Serway2014"><a href="#ref-Serway2014" role="doc-biblioref">[5]</a></span>. The dynamometer’s load motor will operate on this fundamental principle.</p>
+</section>
+<section id="formulation-and-design-variables" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="formulation-and-design-variables"><span class="header-section-number">2.2</span> Formulation and Design Variables</h3>
+<p>To further analyze and optimize the dynamometer’s design, the dynamometer is modeled, and its schematic is shown in <a href="#fig-schematic">Figure&nbsp;5</a>.</p>
+<div id="fig-schematic" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figures/theSchematic.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;5: The graphical representation of the dynamometer.</figcaption>
+</figure>
+</div>
+<p>When the test motor starts to rotate, the load motor will rotate. This rotation will generate a voltage difference between the load motor’s terminals according to <a href="#eq-emf">Equation&nbsp;3</a>, and current <span class="math inline">i_l</span> will start to flow according to <a href="#eq-torquevsi">Equation&nbsp;4</a>. The current <span class="math inline">i_l</span> will cause braking.</p>
+<p>A voltmeter and amperemeter will be used for the speed and torque measurements, as shown in <a href="#fig-schematic">Figure&nbsp;5</a>. The torque and speed can be calculated using <a href="#eq-emf">Equation&nbsp;3</a> and <a href="#eq-torquevsi">Equation&nbsp;4</a>. However, <span class="math inline">K_{V,l}</span> and <span class="math inline">K_{T,l}</span> need to be known for the calculations. Acquiring <span class="math inline">K_{V,l}</span> and <span class="math inline">K_{T,l}</span> is discussed in <a href="#sec-loadMotorSelection">Section&nbsp;3</a>.</p>
+<p>All the symbols shown in <a href="#fig-schematic">Figure&nbsp;5</a> are described in <a href="#tbl-symbols">Table&nbsp;1</a>.</p>
+<div id="tbl-symbols" class="anchored">
+<table class="table">
+<caption>Table&nbsp;1: The descriptions of the symbols.</caption>
+<thead>
+<tr class="header">
+<th>Symbol</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">V</span></td>
+<td>Measurement of the voltage sensor</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">i_l</span></td>
+<td>Measurement of the current sensor</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\omega</span></td>
+<td>Anguar velocity</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">T</span></td>
+<td>Torque</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">R</span></td>
+<td>The potentiometer’s resistance</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">V_\text{in}</span></td>
+<td>The test motor’s voltage input</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">R_t</span></td>
+<td>Internal resistance of the test motor</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">L_t</span></td>
+<td>Internal inductance of the test motor</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">K_{V,t}</span></td>
+<td>Back emf constant of the test motor</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">K_{T,t}</span></td>
+<td>Torque constant of the test motor</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">i_t</span></td>
+<td>Current that flows through the test motor</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">R_l</span></td>
+<td>Internal resistance of the load motor</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">L_l</span></td>
+<td>Internal inductance of the load motor</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">K_{V,l}</span></td>
+<td>Back emf constant of the load motor</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">K_{T,l}</span></td>
+<td>Torque constant of the load motor</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">i_l</span></td>
+<td>Current that flows through the load motor</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The fundamental independent <strong>design variables</strong> are</p>
+<ul>
+<li><span class="math inline">K_{V,l}</span>, <span class="math inline">K_\text{T,l}</span>, <span class="math inline">L_l</span>, <span class="math inline">L_l</span>: the load motor selection</li>
+<li><span class="math inline">R</span>: the potentiometer selection</li>
+</ul>
+<p>We will analyze the system to choose the best design variables to achieve the design targets.</p>
+</section>
+<section id="sec-steadyStateAnalysisAndMeasurementRange" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="sec-steadyStateAnalysisAndMeasurementRange"><span class="header-section-number">2.3</span> Steady State Analysis and Measurement Range</h3>
+<p>The selected load motor and the potentiometer range will determine the dynamometer’s measurement range. To find the range, we will assume that the system is in a steady state (<span class="math inline">\dot{i}_l=0</span>) so that inductances will not affect the equations. Using Kirchhoff’s voltage law <span class="citation" data-cites="Nilsson2014"><a href="#ref-Nilsson2014" role="doc-biblioref">[9]</a></span> and <a href="#eq-emf">Equation&nbsp;3</a>, it can be shown that</p>
+<p><span id="eq-selectionOne"><span class="math display">
+i_l(R_l+R)-K_{V,l}\omega=0
+\tag{5}</span></span></p>
+<p>Next, using <a href="#eq-torquevsi">Equation&nbsp;4</a> for the load motor yields</p>
+<p><span id="eq-selectionTwo"><span class="math display">
+i_l=\frac{T}{K_{T,l}}
+\tag{6}</span></span></p>
+<p>Combining <a href="#eq-selectionOne">Equation&nbsp;5</a> and <a href="#eq-selectionTwo">Equation&nbsp;6</a> yields</p>
+<p><span id="eq-selectionThree"><span class="math display">
+T(R,\, \omega)=\frac{\omega K_{T,l} K_{V,l}}{R+R_l}
+\tag{7}</span></span></p>
+<p>Moreover, combining <span class="math inline">\text{Power}=\text{(Torque)}\cdot\text{(Rotation Speed)}</span> and <a href="#eq-selectionThree">Equation&nbsp;7</a> yields</p>
+<p><span id="eq-selectionFour"><span class="math display">
+P(R,\, \omega)=\frac{\omega^2 K_{T,l} K_{V,l}}{R+R_l}
+\tag{8}</span></span></p>
+<p>where P is the power.</p>
+<p><a href="#eq-selectionThree">Equation&nbsp;7</a> and <a href="#eq-selectionFour">Equation&nbsp;8</a> show two essential points about electric dynamometers:</p>
+<ol type="1">
+<li>As <span class="math inline">R+R_l</span> approaches 0, <span class="math inline">T</span> approaches to <span class="math inline">\infty</span>. This practically means it would be impossible to rotate the load motor’s shaft if <span class="math inline">R+R_l</span> was equal to 0. However, <span class="math inline">R+R_l\neq0</span> and its value will set the maximum braking torque for a given <span class="math inline">\omega</span> value.</li>
+<li>As <span class="math inline">\omega</span> decreases, <span class="math inline">T</span> and <span class="math inline">P</span> decreases. Therefore, measuring low-speed, high-torque motors with electric dynamometers is very difficult without using gear reducers.</li>
+</ol>
+<p>The other criterion that would limit the measurement range is the power absorption limit. In our design, the test motor’s power is dissipated as heat by resistances <span class="math inline">R</span> and <span class="math inline">R_l</span>, and it has a limit. This power dissipation limit will be denoted as <span class="math inline">P_\text{lim}</span>.</p>
+<p><span id="eq-selectionFive"><span class="math display">
+\frac{\omega^2 K_{T,l} K_{V,l}}{R+R_l}&lt;P_\text{lim}
+\tag{9}</span></span></p>
+<p><a href="#eq-selectionThree">Equation&nbsp;7</a>, <a href="#eq-selectionFour">Equation&nbsp;8</a>, and <a href="#eq-selectionFive">Equation&nbsp;9</a> will give us the measurement range of the dynamometer. The load motor should be selected so that the design criteria are satisfied.</p>
+</section>
+<section id="transient-state-analysis" class="level3" data-number="2.4">
+<h3 data-number="2.4" class="anchored" data-anchor-id="transient-state-analysis"><span class="header-section-number">2.4</span> Transient State Analysis</h3>
+<p>In <a href="#sec-steadyStateAnalysisAndMeasurementRange">Section&nbsp;2.3</a>, we assumed that the system is in a steady state so that the internal inductance of the motors will not affect the equations. However, the transient state is critical too, because the dynamometer’s response time to change in the potentiometer’s resistance may be consequential. The long response times might reduce the ease of use of the dynamometer.</p>
+<p><a href="#fig-schematic">Figure&nbsp;5</a> should be examined closely to model the dynamometer mathematically. The system’s mathematical model is constructed using fundamental principles to simulate the system.</p>
+<p>Using Kirchhoff’s voltage law and <a href="#eq-emf">Equation&nbsp;3</a>, it can be shown that</p>
+<p><span id="eq-testmotor"><span class="math display">
+V_\text{in}-R_ti_t-L_t\dot{i}_t-\omega K_{V,t}=0
+\tag{10}</span></span></p>
+<p><span id="eq-loadmotor"><span class="math display">
+(R+R_l)i_l-L_l\dot{i}_l-\omega K_{V,l}=0
+\tag{11}</span></span></p>
+<p>Then, assuming both of the motors have effective rotational inertia of <span class="math inline">I</span> and viscous damping of <span class="math inline">c</span>, the torque balance equation with <a href="#eq-torquevsi">Equation&nbsp;4</a> yields</p>
+<p><span id="eq-force"><span class="math display">
+i_tK_\text{T,t}-I\dot{\omega}-c\omega-i_l K_\text{T,l}=0
+\tag{12}</span></span></p>
+<p>Combining <a href="#eq-testmotor">Equation&nbsp;10</a>, <a href="#eq-loadmotor">Equation&nbsp;11</a>, and <a href="#eq-force">Equation&nbsp;12</a> and representing them in state-space formulation results</p>
+<p><span id="eq-model"><span class="math display">
+\left\lbrack \begin{matrix} \dot{i_t } \\ \dot{\omega} \\ \dot{i_l }  \end{matrix}\right\rbrack =\left\lbrack \begin{matrix} {-R}_t/L_t &amp; {-K}_{V,t}/L_t &amp; 0\\ K_{T,t} /I &amp; -c/I &amp; -{nK}_{T,l} /I\\ 0 &amp; {nK}_{V,l} /L_l &amp; (-R(t)-R_l)/L_l \end{matrix}\right\rbrack \left\lbrack \begin{matrix} i_t \\ \omega \\ i_l  \end{matrix}\right\rbrack +\left\lbrack \begin{matrix} 1/L_t \\ 0\\ 0 \end{matrix}\right\rbrack \left\lbrack \begin{matrix} V_{\text{in}}  \end{matrix}\right\rbrack
+\tag{13}</span></span></p>
+<p>The dynamometer can be simulated with a computational tool by solving <a href="#eq-model">Equation&nbsp;13</a>. A MATLAB code is written to solve <a href="#eq-model">Equation&nbsp;13</a> and simulate the dynamometer. The code is published on GitHub and can be found <a href="https://github.com/sinaatalay/DynamometerSimulation">here</a>.</p>
+</section>
+</section>
+<section id="sec-loadMotorSelection" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="sec-loadMotorSelection"><span class="header-section-number">3</span> Load Motor Selection</h2>
+<p>The most crucial part of an electric dynamometer design is selecting the load motor. The load motor will determine <span class="math inline">K_{V,l}</span>, <span class="math inline">K_{T,l}</span>, and <span class="math inline">R_{l}</span>, which determines the measurement range of the dynamometer as demonstrated in <a href="#eq-selectionThree">Equation&nbsp;7</a>, <a href="#eq-selectionFour">Equation&nbsp;8</a>, and <a href="#eq-selectionFive">Equation&nbsp;9</a>.</p>
+<p>Considering our operation limitations discussed in <a href="#sec-generalSpecifications">Section&nbsp;1.1</a> (maximum speed of 20000 RPM and power of 80 W), we looked for a DC motor in local shops. We specifically searched for DC motors with cooling fans, as the energy output of the test motor will be dissipated as heat in the load motor circuit. In the end, we found and bought an old motor without any specifications, shown in <a href="#fig-loadMotor">Figure&nbsp;6</a>.</p>
+<div id="fig-loadMotor" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figures/loadMotor.jpeg" class="img-fluid figure-img" style="width:60.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;6: The load motor.</figcaption>
+</figure>
+</div>
+<p>The only way to find out if this motor was suitable to our design was to measure <span class="math inline">K_{V,l}</span>, <span class="math inline">K_{T,l}</span>, and <span class="math inline">R_{l}</span> and use the relevant equations to calculate the measurement range. The selected load motor turned out to be a good choice for our design, and the way the measurements were made and the results are explained in the following sections.</p>
+<section id="emf-constant-measurement" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="emf-constant-measurement"><span class="header-section-number">3.1</span> Emf Constant Measurement</h3>
+<p>As explained in <a href="#sec-theBasicsOfADCMotor">Section&nbsp;2.1</a> and <a href="#eq-emf">Equation&nbsp;3</a>, the voltage difference between a DC motor’s terminals is linearly proportional to its speed by emf constant, <span class="math inline">K_{V,l}</span>.</p>
+<p>To find <span class="math inline">K_{V,l}</span>, we supplied different voltages to the motor and measured the corresponding rotation speed, as shown in <a href="#fig-kvlMeasurement">Figure&nbsp;7</a>. <a href="#tbl-emfTest">Table&nbsp;2</a> shows the values obtained from the measurements.</p>
+<div id="fig-kvlMeasurement" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figures/kvlMeasurement.jpeg" class="img-fluid figure-img" style="width:60.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;7: Rotation speed measurement for different voltage inputs.</figcaption>
+</figure>
+</div>
+<div id="tbl-emfTest" class="anchored">
+<table class="table">
+<caption>Table&nbsp;2: Data table for <span class="math inline">K_{V,l}</span> measurement.</caption>
+<thead>
+<tr class="header">
+<th>Voltage (V)</th>
+<th><span class="math inline">\omega</span> (RPM)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2.46</td>
+<td>2210</td>
+</tr>
+<tr class="even">
+<td>2.83</td>
+<td>2548</td>
+</tr>
+<tr class="odd">
+<td>2.92</td>
+<td>2642</td>
+</tr>
+<tr class="even">
+<td>3.21</td>
+<td>2912</td>
+</tr>
+<tr class="odd">
+<td>3.41</td>
+<td>3095</td>
+</tr>
+<tr class="even">
+<td>5.21</td>
+<td>4781</td>
+</tr>
+<tr class="odd">
+<td>7.48</td>
+<td>6960</td>
+</tr>
+<tr class="even">
+<td>9.17</td>
+<td>8529</td>
+</tr>
+<tr class="odd">
+<td>11.06</td>
+<td>10350</td>
+</tr>
+<tr class="even">
+<td>11.90</td>
+<td>11091</td>
+</tr>
+<tr class="odd">
+<td>13.18</td>
+<td>12253</td>
+</tr>
+<tr class="even">
+<td>15.60</td>
+<td>14380</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Then, the data fitted with <a href="#eq-emf">Equation&nbsp;3</a>. The data points and regression line are plotted in <a href="#fig-emfTest">Figure&nbsp;8</a>. <span class="math inline">K_{V,l}</span> turned out to be 0.0103 (V·s)/rad.</p>
+<div id="fig-emfTest" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figures/emfTest.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;8: The load motor’s speed vs.&nbsp;voltage plot.</figcaption>
+</figure>
+</div>
+</section>
+<section id="torque-constant-measurement" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="torque-constant-measurement"><span class="header-section-number">3.2</span> Torque Constant Measurement</h3>
+<p>Similarly, the current that flows through a DC motor is linearly proportional to the torque it applies by torque constant, <span class="math inline">K_{T,l}</span>, as shown in <a href="#eq-torquevsi">Equation&nbsp;4</a>.</p>
+<p>We supplied different currents to the motor and measured the corresponding torque. However, measuring the torque was more complex than measuring the speed. First, we attached a lightweight tool to the shaft and then powered the motor. We picked the tool so that the motor could not lift it all the way up but could displace it at a measurable angle. Then, for each current supply, we measured the angular displacement of the tool, as seen in <a href="#fig-angularDisplacement">Figure&nbsp;9</a>. Next, we located the center of mass of the tool and weighed it with a precision scale. Finally, we calculated the torque with the angle data using statics.</p>
+<div id="fig-angularDisplacement" class="quarto-layout-panel">
+<figure class="figure">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 33.3%;justify-content: center;">
+<div id="fig-angularDisplacementOne" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figures/angular1.png" class="img-fluid figure-img" data-ref-parent="fig-angularDisplacement"></p>
+<figcaption class="figure-caption">(a) Measurement with 0 A.</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 33.3%;justify-content: center;">
+<div id="fig-angularDisplacementTwo" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figures/angular2.png" class="img-fluid figure-img" data-ref-parent="fig-angularDisplacement"></p>
+<figcaption class="figure-caption">(b) Measurement with 3.26 A.</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 33.3%;justify-content: center;">
+<div id="fig-angularDisplacementThree" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figures/angular3.png" class="img-fluid figure-img" data-ref-parent="fig-angularDisplacement"></p>
+<figcaption class="figure-caption">(c) Measurement with 6.35 A.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p></p><figcaption class="figure-caption">Figure&nbsp;9: Torque measurements for different current inputs.</figcaption><p></p>
+</figure>
+</div>
+<p><a href="#tbl-torqueTest">Table&nbsp;3</a> shows the values obtained from the measurements and calculated torque values. The data fitted with <a href="#eq-torquevsi">Equation&nbsp;4</a>. The data points and regression line are plotted in <a href="#fig-torqueTest">Figure&nbsp;10</a>. <span class="math inline">K_{T,l}</span> turned out to be 0.0084 (N·m)/A.</p>
+<div id="tbl-torqueTest" class="anchored">
+<table class="table">
+<caption>Table&nbsp;3: Data table for <span class="math inline">K_{T,l}</span> measurement.</caption>
+<thead>
+<tr class="header">
+<th>Current (A)</th>
+<th>Torque (Nmm)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>3.73</td>
+<td>33.9</td>
+</tr>
+<tr class="even">
+<td>5.95</td>
+<td>49.9</td>
+</tr>
+<tr class="odd">
+<td>6.09</td>
+<td>48.7</td>
+</tr>
+<tr class="even">
+<td>6.15</td>
+<td>48.8</td>
+</tr>
+<tr class="odd">
+<td>1.11</td>
+<td>8.4</td>
+</tr>
+<tr class="even">
+<td>1.32</td>
+<td>9.9</td>
+</tr>
+<tr class="odd">
+<td>3.49</td>
+<td>31.5</td>
+</tr>
+<tr class="even">
+<td>3.43</td>
+<td>30.9</td>
+</tr>
+<tr class="odd">
+<td>4.24</td>
+<td>31.2</td>
+</tr>
+<tr class="even">
+<td>4.31</td>
+<td>31.3</td>
+</tr>
+<tr class="odd">
+<td>4.59</td>
+<td>42.1</td>
+</tr>
+<tr class="even">
+<td>5.49</td>
+<td>49.8</td>
+</tr>
+<tr class="odd">
+<td>6.15</td>
+<td>52.2</td>
+</tr>
+<tr class="even">
+<td>6.35</td>
+<td>54.1</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="fig-torqueTest" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figures/torqueTest.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;10: The load motor’s current vs.&nbsp;torque plot.</figcaption>
+</figure>
+</div>
+</section>
+<section id="internal-resistance-measurement" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="internal-resistance-measurement"><span class="header-section-number">3.3</span> Internal Resistance Measurement</h3>
+<p>Measuring the internal resistance of a DC motor is an effortless task. The only thing to do is power up the motor, stop the shaft with an external tool, and divide the voltage difference between its terminals by the current flows. That would give the motor’s internal resistance because the armature won’t contribute the voltage difference between its terminals since <span class="math inline">\omega=0</span>. So, the only contribution comes from internal resistance. The result turned out to be <span class="math inline">R_l=8.75\, \mathrm{V}/2.13 \, \mathrm{A}=4.1080 \,\Omega</span>.</p>
+</section>
+<section id="measurement-range" class="level3" data-number="3.4">
+<h3 data-number="3.4" class="anchored" data-anchor-id="measurement-range"><span class="header-section-number">3.4</span> Measurement Range</h3>
+<p>Since all the required parameters are calculated for the load motor, the dynamometer’s measurement range can be calculated (i.e., operation range).</p>
+<p>As shown in <a href="#eq-selectionThree">Equation&nbsp;7</a> and <a href="#eq-selectionFour">Equation&nbsp;8</a>, the power and torque are functions of <span class="math inline">R</span> and <span class="math inline">\omega</span>.</p>
+<p>These equations will set the maximum torque and power measurement for a given rotation speed. The maximum torque and power measurement are achieved when <span class="math inline">R=0</span>. Note that <span class="math inline">R</span> can be increased up to <span class="math inline">\infty</span>, which corresponds to disconnecting the terminals of the load motor.</p>
+<p><span id="eq-maxTorque"><span class="math display">
+T_{\text{max}}(\omega)=\frac{\omega K_{T,l} K_{V,l}}{R_l}
+\tag{14}</span></span></p>
+<p><span id="eq-maxPower"><span class="math display">
+P_{\text{max}}(\omega)=\frac{\omega^2 K_{T,l} K_{V,l}}{R_l}
+\tag{15}</span></span></p>
+<p><a href="#eq-maxTorque">Equation&nbsp;14</a>, <a href="#eq-maxPower">Equation&nbsp;15</a>, and power limit <span class="math inline">P_\text{lim}=100\, \mathrm{W}</span> are graphed in <a href="#fig-measurementRange">Figure&nbsp;11</a>. The blue region shows the dynamometer’s measurement range (i.e., operation range).</p>
+<div id="fig-measurementRange" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figures/measurementRange.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;11: The measurement range (i.e., operation range) of the dynamometer.</figcaption>
+</figure>
+</div>
+<p>The results show that the dynamometer can operate at speed and power up to 20000 RPM and 80 W. So, this load motor is suitable for the design and selection. However, it should be noted that the maximum braking torque will get lower as the rotation speed decreases. Consequently, this design is only suitable for high-speed, low-torque motors. However, a gear reducer may be used to reduce the torque and increase the speed of any motor so that the dynamometer can be used.</p>
+</section>
+<section id="uncertainty-analysis" class="level3" data-number="3.5">
+<h3 data-number="3.5" class="anchored" data-anchor-id="uncertainty-analysis"><span class="header-section-number">3.5</span> Uncertainty Analysis</h3>
+<p>Uncertainty of the dynamometer’s measurements depends on the accuracy of the voltage sensor, current sensor, <span class="math inline">K_{V,l}</span>, <span class="math inline">K_{V,t}</span>, and <span class="math inline">R_{l}</span>. The torque and rotation speed can be calculated from the voltage and current sensor values with the equations below.</p>
+<p><span id="eq-speedCalculation"><span class="math display">
+\omega=\frac{V+i_lR_l}{K_{V,l}}
+\tag{16}</span></span></p>
+<p><span id="eq-torqueCalculation"><span class="math display">
+T=K_{T,l}i_l
+\tag{17}</span></span></p>
+<p>The uncertainties of <span class="math inline">K_{V,l}</span>, <span class="math inline">K_{V,t}</span>, <span class="math inline">R_{l}</span>, <span class="math inline">V</span>, and <span class="math inline">i_l</span> will contribute the combined uncertainty of <span class="math inline">\omega</span> and <span class="math inline">T</span>. Recall that the most probable estimate of the combined certainty of a quantity <span class="math inline">A</span> that depends on <span class="math inline">x_1, \cdots, x_n</span> is given as</p>
+<p><span id="eq-uncertainty"><span class="math display">
+U_A=\sqrt{\left(\left.\frac{\partial A}{\partial x_1}\right|_{x=\overline{x}} U_{x_1}\right)^2 + \left(\left.\frac{\partial A}{\partial x_2}\right|_{x=\overline{x}} U_{x_2}\right)^2 + \cdots + \left(\left.\frac{\partial A}{\partial x_n}\right|_{x_n=\overline{x}} U_{x_n}\right)^2 }
+\tag{18}</span></span></p>
+<p>where <span class="math inline">\overline{x}</span> and <span class="math inline">U_{x_i}</span> are the average values of <span class="math inline">x_i</span>s and the uncertainty of <span class="math inline">x_i</span> respectively <span class="citation" data-cites="Leito2020"><a href="#ref-Leito2020" role="doc-biblioref">[10]</a></span>.</p>
+<p>Using <a href="#eq-uncertainty">Equation&nbsp;18</a> for <span class="math inline">T</span> and <span class="math inline">\omega</span> measuremets yields</p>
+<p><span id="eq-omegaUncertainty"><span class="math display">
+    \begin{split}
+        U_\omega&amp;=\sqrt{\left(\frac{1}{K_{V,l}}U_V\right)^2+\left(\frac{R_l}{K_{V,l}}U_{i_l}\right)^2+\left(\frac{\overline{i_l}}{K_{V,l}}U_{R_l}\right)^2+\left(\frac{\overline{V}+\overline{i_l}R_l}{K_{V,l}^2}U_{K_{V,l}}\right)^2} \\
+        &amp;=206.13\,\text{RPM}
+    \end{split}
+\tag{19}</span></span></p>
+<p><span id="eq-TUncertainty"><span class="math display">
+    \begin{split}
+        U_T&amp;=\sqrt{\left(K_{T,l} U_{i_l}\right)^2+\left(\overline{i_l} U_{K_{T,l}}\right)^2} \\
+        &amp;=1.5071\,\mathrm{N}\cdot\mathrm{mm}
+    \end{split}
+\tag{20}</span></span></p>
+<p>where <span class="math inline">\overline{i_l}</span> and <span class="math inline">\overline{V}</span> are assumed to be equal to 2.5 A and 5 V respectively. Uncertainties of <span class="math inline">K_{V,l}</span> and <span class="math inline">K_{V,t}</span> values are calculated with the equations below.</p>
+<p><span id="eq-kvlUncertainty"><span class="math display">
+    \begin{split}
+        U_{K_{V,l}}&amp;=\frac{\sum\limits^{n}_{n=1} \left|V_n/\omega_n-K_{V,l}\right|}{n}\\
+        &amp;=0.0001\,\mathrm{V}\cdot\mathrm{s}/\mathrm{rad}
+    \end{split}
+\tag{21}</span></span></p>
+<p><span id="eq-ktlUncertainty"><span class="math display">
+    \begin{split}
+        U_{K_{T,l}}&amp;=\frac{\sum\limits^{n}_{n=1} \left|T_n/i_n-K_{T,l}\right|}{n} \\
+        &amp;=0.00006\,\mathrm{N}\cdot\mathrm{m}/\mathrm{A}
+    \end{split}
+\tag{22}</span></span></p>
+<p>The other uncertainties are taken from the measurement devices’ uncertainty values and given in <a href="#tbl-uncertanties">Table&nbsp;4</a>.</p>
+<div id="tbl-uncertanties" class="anchored">
+<table class="table">
+<caption>Table&nbsp;4: Uncertainties of the voltage sensor, current sensor, and the internal resistance of the load motor.</caption>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Uncertainty</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">V</span></td>
+<td>0.01 V</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">i_l</span></td>
+<td>0.01 A</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">R_l</span></td>
+<td>0.01 Ω</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The uncertainties found in <a href="#eq-omegaUncertainty">Equation&nbsp;19</a> and <a href="#eq-TUncertainty">Equation&nbsp;20</a> will be the precision of the dynamometer.</p>
+</section>
+</section>
+<section id="building-the-dynamometer" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="building-the-dynamometer"><span class="header-section-number">4</span> Building the Dynamometer</h2>
+<p>After the load motor selection, the theoretical measurement range is found. The next step is building the dynamometer with an electronic circuit that measures the voltages and currents in the load motor so that the torque and rotation speed can be calculated. This section summarizes the general working mechanism of the dynamometer, as well as the mechanical and electronic designs.</p>
+<section id="working-mechanism-and-flowchart" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="working-mechanism-and-flowchart"><span class="header-section-number">4.1</span> Working Mechanism and Flowchart</h3>
+<p>The dynamometer is shown in block diagram form in <a href="#fig-blockDiagram">Figure&nbsp;12</a>.</p>
+<div id="fig-blockDiagram" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figures/blockDiagram.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;12: The dynamometer in block diagram form.</figcaption>
+</figure>
+</div>
+<p>The load and speed will be controlled by changing the resistance of the potentiometer (<span class="math inline">R</span>). The user can easily adjust the potentiometer’s resistance. The resistance value will change the braking load and speed of the motor, as shown in <a href="#eq-selectionThree">Equation&nbsp;7</a> and <a href="#eq-selectionFour">Equation&nbsp;8</a>. While the user changes the resistance, the electronic circuit will collect the measurement data continuously.</p>
+<p>A potentiometer is a very accessible tool, and we bought one from a local shop that can resist up to 100 W with a resistance range from 0 to 80 Ω. It was a suitable choice considering the power limit set by the design criteria.</p>
+</section>
+<section id="mechanical-design-and-components" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="mechanical-design-and-components"><span class="header-section-number">4.2</span> Mechanical Design and Components</h3>
+<p>Before the electronic measurement circuit, a mechanical design is made, and the dynamometer with two DC motors (a test and a load motor) is assembled. The final product and its 3D CAD model are shown in <a href="#fig-finalRealDyno">Figure&nbsp;13</a> and <a href="#fig-dynamometerCAD">Figure&nbsp;14</a>.</p>
+<div id="fig-finalRealDyno" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figures/finalAssembly.jpeg" class="img-fluid figure-img" style="width:60.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;13: Final mechanical assembly of the dynamometer.</figcaption>
+</figure>
+</div>
+<div id="fig-dynamometerCAD" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figures/dynamometerWithBothMotors.jpeg" class="img-fluid figure-img" style="width:60.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;14: Final computer-aided design of the dynamometer.</figcaption>
+</figure>
+</div>
+<p>The assembly consists of the following components:</p>
+<ul>
+<li>A wooden block acts as a base on which the mechanical system is placed.</li>
+<li>Two DC motor mounts for the load and test motors.</li>
+<li>A flexible coupling to connect the shaft of the test motor to the load motor.</li>
+<li>A potentiometer to control the braking torque.</li>
+</ul>
+<p>The mechanical assembly of the dynamometer was straightforward, and the process is explained below.</p>
+<ol type="1">
+<li><p>The motor mounts are placed on the wooden base and fastened using screws.</p></li>
+<li><p>Motors are fastened to the mounts and coupled together.</p></li>
+<li><p>The potentiometer is attached to the load motor.</p></li>
+<li><p>The electronic system is connected to the load motor and the potentiometer.</p></li>
+</ol>
+</section>
+<section id="electronic-design-and-components" class="level3" data-number="4.3">
+<h3 data-number="4.3" class="anchored" data-anchor-id="electronic-design-and-components"><span class="header-section-number">4.3</span> Electronic Design and Components</h3>
+<p>After the mechanical assembly, the next step was to design the electronic circuit and program a microcontroller to make and collect the measurements. The schematic of the final design is given in <a href="#fig-electronicDesign">Figure&nbsp;15</a>. The main points that were considered are given below.</p>
+<ul>
+<li>A current sensor is needed.</li>
+<li>A voltage sensor is needed.</li>
+<li>An LCD screen needs to be available for users without computers.</li>
+<li>Integration with MATLAB should be possible.</li>
+<li>The results should be as accurate as possible.</li>
+</ul>
+<div id="fig-electronicDesign" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><embed src="figures/electronicDesign.pdf" style="width:100.0%;height:6.5in"></p>
+<figcaption class="figure-caption">Figure&nbsp;15: The schematic of the electronic circuit of the dynamometer.</figcaption>
+</figure>
+</div>
+<p>We used a basic Arduino-like microcontroller, Teensy 3.2 <span class="citation" data-cites="teensy"><a href="#ref-teensy" role="doc-biblioref">[11]</a></span>. The programming part consisted of 2 main concerns.</p>
+<ol type="1">
+<li>How to reduce the noise of the sensors?</li>
+<li>How to integrate with MATLAB?</li>
+</ol>
+<p>Both sensors’ outputs are sampled 20 times in a second, and then the mean values of the samples are used as measurements to reduce the noise of the sensors. Therefore, the dynamometer collects 1 data per second.</p>
+<p>The integration with MATLAB can be made via a USB cable. However, it is not necessary to connect the dynamometer to a computer to use it since there is an LCD screen.</p>
+</section>
+</section>
+<section id="results" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="results"><span class="header-section-number">5</span> Results</h2>
+<p>Eventually, we tested the dynamometer with another DC motor we bought from a local shop. We connected the dynamometer to a computer so the results could be plotted in real-time. The measurement results are shown in <a href="#fig-results">Figure&nbsp;16</a>.</p>
+<div id="fig-results" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figures/results.png" class="img-fluid figure-img" style="width:40.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;16: Measurements of the dynamometer.</figcaption>
+</figure>
+</div>
+</section>
+<section id="conclusions" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="conclusions"><span class="header-section-number">6</span> Conclusions</h2>
+<p>In this project, an electric absorption dynamometer is designed, modeled, and built. In the end, it successfully measured a motor’s power at different speeds.</p>
+<p>Firstly, the dynamometers are researched, and their fundamental working principle is analyzed. Then, an absorption unit is selected to be a DC generator. After the absorption unit selection, the dynamometer is formulated carefully, and the necessary components are found and designed to achieve our targets. Next, the system is modeled mathematically to ensure that the components satisfy the design criteria. A MATLAB code was written for the simulation of the dynamometer and made available on GitHub. Finally, the dynamometer is assembled, and the electronic circuit is designed and programmed.</p>
+<section id="possible-future-improvements" class="level3" data-number="6.1">
+<h3 data-number="6.1" class="anchored" data-anchor-id="possible-future-improvements"><span class="header-section-number">6.1</span> Possible Future Improvements</h3>
+<p>The possible future improvement ideas are given below so that in the future, people can further improve the design and make use of it.</p>
+<ol type="1">
+<li>The load can be controlled electronically by substituting the potentiometer with a digital potentiometer or using another electric motor to control the potentiometer.</li>
+<li>Better sensors can be used to get more precise results.</li>
+<li>The torque and back emf constant measurements can be made with high-precision instruments to make the results more reliable.</li>
+<li>The generator’s output (load motor) can be used for useful work instead of heat dissipation with the potentiometer.</li>
+</ol>
+
+
+
+</section>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" role="list">
+<div id="ref-Pulkrabek1997" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">W. W. Pulkrabek, <em>Engineering fundamentals of the internal combustion engine</em>. USA: Prentice Hall, 1997.</div>
+</div>
+<div id="ref-PronyBrakeHistory" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">G. E. Magazine, <span>“The design, construction, and use of a small prony brake.”</span> Accessed: Dec. 19, 2022. [Online]. Available: <a href="https://www.gasenginemagazine.com/community/farm-shows/the-design-construction-and-use-of-a-small-prony-brake/">https://www.gasenginemagazine.com/community/farm-shows/the-design-construction-and-use-of-a-small-prony-brake/</a></div>
+</div>
+<div id="ref-PronyBrakeSchematic" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">MatthiasDD, <span>“Schematic of a prony brake.”</span> Accessed: May 07, 2022. [Online]. Available: <a href="https://commons.wikimedia.org/wiki/File:Prony_brake.svg">https://commons.wikimedia.org/wiki/File:Prony_brake.svg</a></div>
+</div>
+<div id="ref-PronyBrakeYoutube" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[4] </div><div class="csl-right-inline">JohnnyQ90, <span>“Simplest DYNO for RC engines! - prony brake dynamometer!”</span> Accessed: May 19, 2022. [Online]. Available: <a href="https://youtu.be/0ESOYhOh28c">https://youtu.be/0ESOYhOh28c</a></div>
+</div>
+<div id="ref-Serway2014" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[5] </div><div class="csl-right-inline">R. A. Serway and Jr. John W. Jewett, <em>Physics for scientists and engineers with modern physics</em>. USA: Cengage Learning, 2014.</div>
+</div>
+<div id="ref-EddyCurrentBrakeSchematic" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[6] </div><div class="csl-right-inline">Chetvorno, <span>“Eddy current brake diagram.”</span> Accessed: May 07, 2022. [Online]. Available: <a href="https://en.wikipedia.org/wiki/File:Eddy_current_brake_diagram.svg">https://en.wikipedia.org/wiki/File:Eddy_current_brake_diagram.svg</a></div>
+</div>
+<div id="ref-DCMotorSchematic" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[7] </div><div class="csl-right-inline">Nagwa, <em>Lesson explainer: Direct current motors</em>. Accessed: May 08, 2022. [Online]. Available: <a href="https://www.nagwa.com/en/explainers/246108560531">https://www.nagwa.com/en/explainers/246108560531</a></div>
+</div>
+<div id="ref-Nise2019" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[8] </div><div class="csl-right-inline">N. S. Nise, <em>Control systems engineering</em>. USA: Wiley, 2019.</div>
+</div>
+<div id="ref-Nilsson2014" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[9] </div><div class="csl-right-inline">J. W. Nilsson and S. A. Riedel, <em>Electric circuits</em>. USA: Pearson Education, 2014.</div>
+</div>
+<div id="ref-Leito2020" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[10] </div><div class="csl-right-inline">I. Leito, L. Jalukse, and I. Helm, <span>“Estimation of measurement uncertainty in chemical analysis (analytical chemistry) course.”</span> [Online]. Available: <a href="https://sisu.ut.ee/measurement/uncertainty">https://sisu.ut.ee/measurement/uncertainty</a></div>
+</div>
+<div id="ref-teensy" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[11] </div><div class="csl-right-inline">PJRC, <span>“Teensy 3.2 development board.”</span> Accessed: Jan. 08, 2023. [Online]. Available: <a href="https://www.pjrc.com/store/teensy32.html">https://www.pjrc.com/store/teensy32.html</a></div>
+</div>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>The motor that is being tested.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Another DC motor that is used as a generator in the dynamometer.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>The prony brake is a type of friction brake invented by Gaspard de Prony in 1821 <span class="citation" data-cites="PronyBrakeHistory"><a href="#ref-PronyBrakeHistory" role="doc-biblioref">[2]</a></span><a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp("https:\/\/sinaatalay\.com");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">Copyright © 2023 Sina Atalay</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
