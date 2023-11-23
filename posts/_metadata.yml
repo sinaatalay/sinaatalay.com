@@ -1,0 +1,24 @@
+# Options specified here will apply to all posts in this folder:
+
+# Use same bibliography and CSL style for all posts
+bibliography: references.bib
+csl: ieee.csl
+
+# Enable numbered sections
+number-sections: true
+
+# Use the same date format for all posts
+date-format: long
+
+# Formatting:
+format:
+  # pdf:
+  #   documentclass: scrartcl
+  #   papersize: letter
+  #   colorlinks: true
+  html:
+    toc: true
+    toc-expand: true
+    anchor-sections: true
+    smooth-scroll: true
+    fig-responsive: true
