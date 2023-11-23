@@ -49,7 +49,7 @@ I worked on the solution of Poisson's equation with the finite-difference method
 
 ### Design and Construction of a Dynamometer
 
-As our senior project at Boğaziçi University, my team and I designed and constructed a controllable dynamometer that measures an electric motor's instantaneous torque and power output. Moreover, we modeled the design mathematically and simulated the dynamometer in MATLAB. You can read the details [here](posts/design_and_construction_of_a_dynamometer_for_small_motors/index.qmd), and the mathematical model and simulation code can be found [here](https://github.com/sinaatalay/DynamometerSimulation).
+As our senior project at Boğaziçi University, my team and I designed and constructed a controllable dynamometer that measures an electric motor's instantaneous torque and power output. Moreover, we modeled the design mathematically and simulated the dynamometer in MATLAB. You can read the details [here](posts/design_and_construction_of_a_dynamometer/index.qmd), and the mathematical model and simulation code can be found [here](https://github.com/sinaatalay/DynamometerSimulation).
 
 ![](posts/design_and_construction_of_a_dynamometer/figures/finalAssembly.jpeg){width=80% fig-align="center"}
 
