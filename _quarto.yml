@@ -41,6 +41,7 @@ format:
     html-math-method: katex
 
 page-layout: article
-
+resources: 
+  - CNAME
 
 
