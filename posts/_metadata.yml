@@ -18,7 +18,6 @@ format:
     colorlinks: true
   html:
     toc: true
-    toc-expand: true
     anchor-sections: true
     smooth-scroll: true
     fig-responsive: true
