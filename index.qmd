@@ -14,7 +14,7 @@ As a part of the [STEAM Project](https://espace.cern.ch/steam/) at CERN, I am de
 
 Simulation of superconducting magnets is crucial because of the risk of *quench*. In the context of superconducting magnets, quench refers to an unexcepted loss of superconductivity at a point on the coil. When a superconducting magnet quenches, it may burn and destroy itself due to the sudden increase in resistivity, resulting in excessive local heat generation. Therefore, magneto-thermal transient analysis of quench behavior is very important for the development of superconducting magnet technology.
 
-The project resulted in two papers that are currently in review. The preprints of the papers can be found below:
+The project resulted in two papers. The preprints of the papers can be found below:
 
 -   *An Open-Source 3D FE Quench Simulation Tool for No-Insulation HTS Pancake Coils*
 
@@ -24,7 +24,7 @@ The project resulted in two papers that are currently in review. The preprints o
 -   *Magneto-Thermal Thin Shell Approximation for 3D Finite Element Analysis of No-Insulation Coils*
 
     E. Schnaubelt, **S. Atalay**, M. Wozniak, J. Dular, C. Geuzaine, B. Vanderheyden, N. Marsic, A. Verweij, S. Schöps
-    [10.48550/arXiv.2310.03138](https://doi.org/10.48550/arXiv.2310.03138) (submitted to IEEE Trans. Appl. Supercond.)
+    [10.48550/arXiv.2310.03138](https://doi.org/10.48550/arXiv.2310.03138) (accepted by IEEE Trans. Appl. Supercond.)
 
 ![](images/fiqus.gif){fig-align="center"}
 
