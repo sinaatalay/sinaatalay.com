@@ -13,35 +13,27 @@ website:
     locale: en_US
 
   search:
-    type: textbox
+    type: overlay
     location: navbar
-    
+
   navbar:
     title: false
     collapse: false
     left:
-      - text: Home
-        href: index.qmd
       - text: Posts
-        href: posts.qmd
+        href: index.qmd
       - icon: github
-        # text: GitHub
         href: https://github.com/sinaatalay
       - icon: linkedin
-        # text: LinkedIn
         href: https://www.linkedin.com/in/sinaatalay/
   page-footer: Copyright © 2023 Sina Atalay
 format:
   html:
-    theme:
-      light: flatly
-      dark: darkly
+    theme: default
     link-external-icon: true
     css: styles.css
     html-math-method: katex
 
 page-layout: article
-resources: 
+resources:
   - CNAME
-
-

@@ -1,83 +1,21 @@
 ---
-title: About Me
-resources:
-  - images/ionizer.mp4
+title: Posts
+listing:
+  id: posts
+  contents: posts
+  sort: "date desc"
+  type: table
+  sort-ui: false
+  filter-ui: false
+  fields:
+    - date
+    - title
+    - reading-time
+page-layout: article
 ---
 
-My name is Sina Atalay. I have a Bachelor of Science in Mechanical Engineering, and I am currently working on open-source finite-element simulation tools for superconducting magnets at [CERN](https://www.home.cern/).
+Posts about some of the projects I've worked on can be found below.
 
-## Projects
 
-### [FiQuS](https://gitlab.cern.ch/steam/fiqus)
-
-As a part of the [STEAM Project](https://espace.cern.ch/steam/) at CERN, I am developing a new module for an open-source finite-element superconducting magnet simulation Python tool, FiQuS, dedicated to the magneto-thermal transient analysis of no-insulation high-temperature superconducting (HTS) pancake coils.
-
-Simulation of superconducting magnets is crucial because of the risk of *quench*. In the context of superconducting magnets, quench refers to an unexcepted loss of superconductivity at a point on the coil. When a superconducting magnet quenches, it may burn and destroy itself due to the sudden increase in resistivity, resulting in excessive local heat generation. Therefore, magneto-thermal transient analysis of quench behavior is very important for the development of superconducting magnet technology.
-
-The project resulted in two papers. The preprints of the papers can be found below:
-
--   *An Open-Source 3D FE Quench Simulation Tool for No-Insulation HTS Pancake Coils*
-
-    **S. Atalay**, E. Schnaubelt, M. Wozniak, J. Dular, G. Zachou, S. Schöps, A. Verweij
-    [10.48550/arXiv.2311.09177](https://doi.org/10.48550/arXiv.2311.09177) (submitted to Supercond. Sci. Technol.)
-
--   *Magneto-Thermal Thin Shell Approximation for 3D Finite Element Analysis of No-Insulation Coils*
-
-    E. Schnaubelt, **S. Atalay**, M. Wozniak, J. Dular, C. Geuzaine, B. Vanderheyden, N. Marsic, A. Verweij, S. Schöps
-    [10.48550/arXiv.2310.03138](https://doi.org/10.48550/arXiv.2310.03138) (accepted by IEEE Trans. Appl. Supercond.)
-
-![](images/fiqus.gif){fig-align="center"}
-
-### Design and Construction of a Dynamometer
-
-As our senior project at Boğaziçi University, my team and I designed and constructed a controllable dynamometer that measures an electric motor's instantaneous torque and power output. Moreover, we modeled the design mathematically and simulated the dynamometer in MATLAB. You can read the details [here](posts/design_and_construction_of_a_dynamometer/index.qmd), and the mathematical model and simulation code can be found [here](https://github.com/sinaatalay/DynamometerSimulation).
-
-![](posts/design_and_construction_of_a_dynamometer/figures/finalAssembly.jpeg){width=80% fig-align="center"}
-
-### Ionizer: A Gridded Ion Thruster Simulation Program
-
-I worked on a 3D gridded ion thruster simulation program (**Ionizer**) at [Bogazici University Space Technologies Laboratory](http://bustlab.boun.edu.tr/).
-
-A gridded ion thruster is a type of reaction engine designed to be used in space. It accelerates ions by generating an electric field inside the thruster and discharges them to generate thrust.
-
-Simulating the behavior of ions and calculating the generated thrust is tricky because the continuum assumption is not valid in the operating conditions of the thruster (very low pressure). Therefore, the behavior of ions cannot be modeled with the classical fluid-mechanics equations. Instead, a molecular approach, PIC-DSMC, must be employed to simulate the movements and collisions of the ions.
-
-The basic algorithm is this:
-
-- Solve the 3D Poisson's equation for the electric potential field inside the thruster.
-- Accelerate and move the ions accordingly using the PIC-DSMC method.
-- Solve the 3D Poisson's equation again with the new positions of the particles.
-- And so on.
-
-I worked on the solution of Poisson's equation with the finite-difference method in 3D, and the source code of my part can be found [here](https://github.com/sinaatalay/Ionizer).
-
-![](images/ionizer.gif){width=80% fig-align="center"}
-
-### Ray Tracing in C++
-
-I coded a ray tracer in C++ that can render scenes with light sources, spheres, and planes with reflection and refraction properties for an elective" Introduction to Computer Graphics" course at Boğaziçi University.
-
-The code depends on standard libraries and consists of a single source file. After compiling and running, the program will create an image saved in the Bitmap (**BMP**) format, as shown below. The source code can be found [here](https://github.com/sinaatalay/RayTracing).
-
-![](images/rayTracer.png){width=80% fig-align="center"}
-
-### Design and Construction of an Automatic Guitar Tuner
-
-As a part of our mechatronics course term project, my team and I designed, built, and programmed a microcontroller-based device that tunes a guitar with DC motors. The details can be found [here](posts/design_and_construction_of_an_automatic_guitar_tuner/index.qmd).
-
-::: {layout="[-1, 8, 8, -1]"}
-![](images/guitarTuner1.png)
-
-![](images/guitarTuner2.jpg)
+::: {#posts}
 :::
-
-
-## Side Projects
-
-### RenderCV: A Python package
-
-I developed a Python package that renders a $\LaTeX$ CV as a PDF from a YAML input file and [published it on GitHub](https://github.com/sinaatalay/rendercv).
-
-### Teaching on YouTube
-
-I instructed the entire "Engineering Mechanics: Dynamics" course on YouTube, which has received more than 300,000 views and 30,000 hours of watch time. You can find them [here](https://www.youtube.com/playlist?list=PLPHOfgFm1PMj3jToOVBvMIg3Tej98IDVq).

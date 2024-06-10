@@ -12,10 +12,6 @@ date-format: long
 
 # Formatting:
 format:
-  pdf:
-    documentclass: scrartcl
-    papersize: letter
-    colorlinks: true
   html:
     toc: true
     anchor-sections: true
