@@ -15,8 +15,11 @@ website:
   search:
     type: overlay
     location: navbar
+    copy-button: true
 
   navbar:
+    background: rgb(255,255,255)
+    foreground: primary
     title: false
     collapse: false
     left:
