@@ -1,17 +1,21 @@
 site_name: Sina Atalay
 site_url: https://sinaatalay.com
+copyright: Copyright &copy; 2024 Sina Atalay
 theme:
   name: material
+  language: en
+  locale: en
+  custom_dir: docs/assets/overrides
   palette:
     # Palette toggle for light mode
     - scheme: default
-      primary: deep orange
+      primary: yellow
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     # Palette toggle for dark mode
     - scheme: slate
-      primary: deep orange
+      primary: yellow
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
