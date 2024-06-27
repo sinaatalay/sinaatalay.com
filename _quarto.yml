@@ -4,7 +4,7 @@ project:
 website:
   title: Sina Atalay
   description: "My personal website, which contains posts about the engineering projects I have worked on."
-  site-url: https://sinaatalay.com
+  site-url: https://sinaatalay.github.io/sinaatalay.com/
   google-analytics: G-HH8XZL6SQK
   favicon: images/favicon.png
 
