@@ -14,10 +14,7 @@ listing:
 page-layout: article
 ---
 
-Naber ates?
-
-Posts about some of the projects I've worked on can be found below.
-
+Ates Perk nasilsiniz beyefendi? Do you speak Turkish?
 
 ::: {#posts}
 :::
