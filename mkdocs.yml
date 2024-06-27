@@ -1,11 +1,15 @@
 site_name: Sina Atalay
 site_url: https://sinaatalay.com
+site_author: Sina Atalay
+site_description: Posts about engineering and some of the projects I've worked on
+docs_dir: src
 copyright: Copyright &copy; 2024 Sina Atalay
+
 theme:
   name: material
   language: en
   locale: en
-  custom_dir: docs/assets/overrides
+  custom_dir: src/assets/overrides
   palette:
     # Palette toggle for light mode
     - scheme: default
@@ -19,3 +23,22 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
+
+plugins:
+  - search
+  - bibtex:
+      bib_file: src/assets/bibliography.bib
+      bib_by_default: false
+  - caption
+
+markdown_extensions:
+  - footnotes
+  - attr_list
+
+extra_javascript:
+  - assets/javascripts/katex.js
+  - https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js
+  - https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js
+
+extra_css:
+  - https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css
