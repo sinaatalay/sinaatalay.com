@@ -1,3 +1,16 @@
 .md-typeset__scrollwrap {
     text-align: center;
 }
+
+/* If the screen size is smaller than 450px */
+@media (max-width: 450px) {
+    .katex {
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+
+    .katex-display>.katex>.katex-html>.tag {
+        position: relative;
+        right: -10px;
+    }
+}
