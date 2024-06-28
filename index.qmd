@@ -1,0 +1,20 @@
+---
+title: Posts
+listing:
+  id: posts
+  contents: posts
+  sort: "date desc"
+  type: table
+  sort-ui: false
+  filter-ui: false
+  fields:
+    - date
+    - title
+    - reading-time
+page-layout: article
+---
+
+Ates Perk nasilsiniz beyefendi? Do you speak Turkish?
+
+::: {#posts}
+:::
