@@ -1,10 +1,6 @@
----
-disable_comments: true
----
-
 # Posts
 
+Welcome to my website! Below are some posts about engineering and some of the projects I have worked on.
 
-## sdfsd 
-asdasdasd
+To access my publications, please click [here](publications.md).
 

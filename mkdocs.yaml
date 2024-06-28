@@ -44,7 +44,6 @@ theme:
 nav:
   - Posts: index.md
   - Publications: publications.md
-  - Contact: contact.md
 
 plugins:
   - search # mkdocs-material search plugin
