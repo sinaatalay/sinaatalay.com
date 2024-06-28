@@ -24,16 +24,45 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
 
+nav:
+  - Posts: index.md
+  - Publications: publications.md
+  - Contact: contact.md
+
 plugins:
-  - search
-  - bibtex:
+  - search # mkdocs-material search plugin
+
+  - blog:
+      blog_dir: .
+      post_dir: "{blog}/posts"
+      authors_file: "{blog}/assets/data/authors.yaml"
+      post_url_format: "posts/{slug}"
+      archive: false
+
+  - bibtex: # https://github.com/shyamd/mkdocs-bibtex
       bib_file: src/assets/bibliography.bib
       bib_by_default: false
-  - caption
 
+  - caption # https://github.com/tobiasah/mkdocs-caption
+
+  - rss: # https://github.com/Guts/mkdocs-rss-plugin/
+      match_path: posts/.*
+      date_from_meta:
+        as_creation: date
+      categories:
+        - categories
+        - tags
+      comments_path: "#__comments"
+
+  - macros: # https://github.com/fralau/mkdocs-macros-plugin
+      module_name: src/assets/data/data
+  
 markdown_extensions:
-  - footnotes
-  - attr_list
+  - footnotes # allows footnotes
+  - attr_list # allow assigning HTML attributes to elements
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 extra_javascript:
   - assets/javascripts/katex.js
