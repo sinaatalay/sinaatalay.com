@@ -194,7 +194,7 @@ Table: The descriptions of the symbols. { #tbl-symbols }
 
 The fundamental independent **design variables** are
 
-- $K_{V,l}$, $K_\text{T,l}$, $L_l$, $L_l$: the load motor selection
+- $K_{V,l}$, $K_\text{T,l}$, $L_l$, $R_l$: the load motor selection
 - $R$: the potentiometer selection
 
 We will analyze the system to choose the best design variables to achieve the design targets.
