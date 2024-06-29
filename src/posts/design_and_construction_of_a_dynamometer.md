@@ -101,7 +101,6 @@ In its simplest form, an eddy current dynamometer uses a metal disk attached to 
 
 ![A schematic diagram of a eddy current brake.](../assets/figures/dyno-EddyCurrentBrake.svg){width=60% #fig-eddyCurrentDiagram}
 
-
 Although eddy current braking allows for controllable braking, accurately measuring torque is difficult. Additionally, designing a well-balanced disk to couple with a high-speed rotating shaft has mechanical challenges.
 
 #### Dynamic Brake
@@ -161,15 +160,19 @@ where $K_T$ is the torque constant of the motor, $i$ is the coil current, and $T
 
 ### Formulation and Design Variables
 
-To further analyze and optimize the dynamometer's design, the dynamometer is modeled, and its schematic is shown in [](#fig-schematic).
+To further analyze and optimize the dynamometer's design, the dynamometer is modeled, and its schematic is shown in [Figure 5](#fig-schematic).
 
-![The graphical representation of the dynamometer.](../assets/figures/dyno-theSchematic.png){width=80% #fig-schematic}
+<figure markdown="span" id="fig-schematic">
+    ![The graphical representation of the dynamometer.](../assets/figures/dyno-theSchematic.png#only-light){ width=80% }
+    ![The graphical representation of the dynamometer.](../assets/figures/dyno-theSchematic-dark.png#only-dark){ width=80% }
+    <figcaption>Figure 5: The graphical representation of the dynamometer.</figcaption>
+</figure>
 
 When the test motor starts to rotate, the load motor will rotate. This rotation will generate a voltage difference between the load motor's terminals according to [Equation 3](#eq-EMF), and current $i_l$ will start to flow according to [Equation 4](#eq-torquevsi). The current $i_l$ will cause braking.
 
-A voltmeter and amperemeter will be used for the speed and torque measurements, as shown in [](#fig-schematic). The torque and speed can be calculated using [Equation 3](#eq-EMF) and [Equation 4](#eq-torquevsi). However, $K_{V,l}$ and $K_{T,l}$ need to be known for the calculations. Acquiring $K_{V,l}$ and $K_{T,l}$ is discussed in [Load Motor Selection Section](#load-motor-selection).
+A voltmeter and amperemeter will be used for the speed and torque measurements, as shown in [Figure 5](#fig-schematic). The torque and speed can be calculated using [Equation 3](#eq-EMF) and [Equation 4](#eq-torquevsi). However, $K_{V,l}$ and $K_{T,l}$ need to be known for the calculations. Acquiring $K_{V,l}$ and $K_{T,l}$ is discussed in [Load Motor Selection Section](#load-motor-selection).
 
-All the symbols shown in [](#fig-schematic) are described in [](#tbl-symbols).
+All the symbols shown in [Figure 5](#fig-schematic) are described in [](#tbl-symbols).
 
 Table: The descriptions of the symbols. { #tbl-symbols }
 
@@ -259,7 +262,7 @@ $$
 
 In [Steady State Analysis and Measurement Range Section](#steady-state-analysis-and-measurement-range), we assumed that the system is in a steady state so that the internal inductance of the motors will not affect the equations. However, the transient state is critical too, because the dynamometer's response time to change in the potentiometer's resistance may be consequential. The long response times might reduce the ease of use of the dynamometer.
 
-[](#fig-schematic) should be examined closely to model the dynamometer mathematically. The system's mathematical model is constructed using fundamental principles to simulate the system.
+[Figure 5](#fig-schematic) should be examined closely to model the dynamometer mathematically. The system's mathematical model is constructed using fundamental principles to simulate the system.
 
 Using Kirchhoff's voltage law and [Equation 3](#eq-EMF), it can be shown that
 
@@ -320,9 +323,12 @@ The dynamometer can be simulated with a computational tool by solving [Equation 
 
 The most crucial part of an electric dynamometer design is selecting the load motor. The load motor will determine $K_{V,l}$, $K_{T,l}$, and $R_{l}$, which determines the measurement range of the dynamometer as demonstrated in [Equation 7](#eq-selectionThree), [Equation 8](#eq-selectionFour), and [Equation 9](#eq-selectionFive).
 
-Considering our operation limitations discussed in [General Specifications Section](#general-specifications) (maximum speed of 20000 RPM and power of 80 W), we looked for a DC motor in local shops. We specifically searched for DC motors with cooling fans, as the energy output of the test motor will be dissipated as heat in the load motor circuit. In the end, we found and bought an old motor without any specifications, shown in [](#fig-loadMotor).
+Considering our operation limitations discussed in [General Specifications Section](#general-specifications) (maximum speed of 20000 RPM and power of 80 W), we looked for a DC motor in local shops. We specifically searched for DC motors with cooling fans, as the energy output of the test motor will be dissipated as heat in the load motor circuit. In the end, we found and bought an old motor without any specifications, shown in [Figure 6](#fig-loadMotor).
 
-![The load motor.](../assets/figures/dyno-loadMotor.jpeg){width=60% #fig-loadMotor}
+<figure markdown="span" id="fig-loadMotor">
+    ![The load motor.](../assets/figures/dyno-loadMotor.jpeg){ width=60% }
+    <figcaption>Figure 6: The load motor.</figcaption>
+</figure>
 
 The only way to find out if this motor was suitable to our design was to measure $K_{V,l}$, $K_{T,l}$, and $R_{l}$ and use the relevant equations to calculate the measurement range. The selected load motor turned out to be a good choice for our design, and the way the measurements were made and the results are explained in the following sections.
 
@@ -330,9 +336,13 @@ The only way to find out if this motor was suitable to our design was to measure
 
 As explained in [The Basics of a DC Motor Section](#the-basics-of-a-dc-motor) and [Equation 3](#eq-EMF), the voltage difference between a DC motor’s terminals is linearly proportional to its speed by EMF constant, $K_{V,l}$.
 
-To find $K_{V,l}$, we supplied different voltages to the motor and measured the corresponding rotation speed, as shown in [](#fig-kvlMeasurement). [](#tbl-EMFTest) shows the values obtained from the measurements.
+To find $K_{V,l}$, we supplied different voltages to the motor and measured the corresponding rotation speed, as shown in [Figure 7](#fig-kvlMeasurement). [](#tbl-EMFTest) shows the values obtained from the measurements.
 
-![Rotation speed measurement for different voltage inputs.](../assets/figures/dyno-kvlMeasurement.jpeg){width=60% #fig-kvlMeasurement}
+<figure markdown="span" id="fig-kvlMeasurement">
+    ![Rotation speed measurement for different voltage inputs.](../assets/figures/dyno-kvlMeasurement.jpeg){ width=60% }
+    <figcaption>Figure 7: Rotation speed measurement for different voltage inputs.</figcaption>
+</figure>
+
 
 Table: Data table for EMF constant measurement. { #tbl-EMFTest }
 
@@ -351,23 +361,37 @@ Table: Data table for EMF constant measurement. { #tbl-EMFTest }
 | 13.18       | 12253          |
 | 15.60       | 14380          |
 
-Then, the data fitted with [Equation 3](#eq-EMF). The data points and regression line are plotted in [](#fig-EMFTest). $K_{V,l}$ turned out to be 0.0103 (V·s)/rad.
+Then, the data fitted with [Equation 3](#eq-EMF). The data points and regression line are plotted in [Figure 8](#fig-EMFTest). $K_{V,l}$ turned out to be 0.0103 (V·s)/rad.
 
-![The load motor's speed vs. voltage plot.](../assets/figures/dyno-EMFTest.png){width=80% #fig-EMFTest}
+<figure markdown="span" id="fig-EMFTest">
+    ![The load motor's speed vs. voltage plot.](../assets/figures/dyno-EMFTest.png#only-light){ width=90% }
+    ![The load motor's speed vs. voltage plot.](../assets/figures/dyno-EMFTest-dark.png#only-dark){ width=90% }
+    <figcaption>Figure 8: The load motor's speed vs. voltage plot.</figcaption>
+</figure>
 
 ### Torque Constant Measurement
 
 Similarly, the current that flows through a DC motor is linearly proportional to the torque it applies by torque constant, $K_{T,l}$, as shown in [Equation 4](#eq-torquevsi).
 
-We supplied different currents to the motor and measured the corresponding torque. However, measuring the torque was more complex than measuring the speed. First, we attached a lightweight tool to the shaft and then powered the motor. We picked the tool so that the motor could not lift it all the way up but could displace it at a measurable angle. Then, for each current supply, we measured the angular displacement of the tool, as seen in [](#fig-angularDisplacementOne), [](#fig-angularDisplacementTwo), and [](#fig-angularDisplacementThree). Next, we located the center of mass of the tool and weighed it with a precision scale. Finally, we calculated the torque with the angle data using statics.
+We supplied different currents to the motor and measured the corresponding torque. However, measuring the torque was more complex than measuring the speed. First, we attached a lightweight tool to the shaft and then powered the motor. We picked the tool so that the motor could not lift it all the way up but could displace it at a measurable angle. Then, for each current supply, we measured the angular displacement of the tool, as seen in [Figure 9](#fig-angularDisplacementOne), [Figure 10](#fig-angularDisplacementTwo), and [Figure 11](#fig-angularDisplacementThree). Next, we located the center of mass of the tool and weighed it with a precision scale. Finally, we calculated the torque with the angle data using statics.
 
-![Measurement with 0 A.](../assets/figures/dyno-angular1.png){ width=50%  #fig-angularDisplacementOne }
+<figure markdown="span" id="fig-angularDisplacementOne">
+    ![Measurement with 0 A.](../assets/figures/dyno-angular1.png){ width=50% }
+    <figcaption>Figure 9: Measurement with 0 A.</figcaption>
+</figure>
 
-![Measurement with 3.26 A.](../assets/figures/dyno-angular2.png){ width=50% #fig-angularDisplacementTwo }
+<figure markdown="span" id="fig-angularDisplacementTwo">
+    ![Measurement with 3.26 A.](../assets/figures/dyno-angular2.png){ width=50% }
+    <figcaption>Figure 10: Measurement with 3.26 A.</figcaption>
+</figure>
 
-![Measurement with 6.35 A.](../assets/figures/dyno-angular3.png){ width=50% #fig-angularDisplacementThree }
+<figure markdown="span" id="fig-angularDisplacementThree">
+    ![Measurement with 6.35 A.](../assets/figures/dyno-angular3.png){ width=50% }
+    <figcaption>Figure 11: Measurement with 6.35 A.</figcaption>
+</figure>
 
-[](#tbl-torqueTest) shows the values obtained from the measurements and calculated torque values. The data fitted with [Equation 4](#eq-torquevsi). The data points and regression line are plotted in [](#fig-torqueTest). $K_{T,l}$ turned out to be 0.00840 (N·m)/A.
+
+[](#tbl-torqueTest) shows the values obtained from the measurements and calculated torque values. The data fitted with [Equation 4](#eq-torquevsi). The data points and regression line are plotted in [Figure 12](#fig-torqueTest). $K_{T,l}$ turned out to be 0.00840 (N·m)/A.
 
 Table: Data table for torque constant measurement. { #tbl-torqueTest }
 
@@ -389,7 +413,11 @@ Table: Data table for torque constant measurement. { #tbl-torqueTest }
 | 6.35        | 54.1         |
 
 
-![The load motor's current vs. torque plot.](../assets/figures/dyno-torqueTest.png){width=80% #fig-torqueTest}
+<figure markdown="span" id="fig-torqueTest">
+    ![The load motor's current vs. torque plot.](../assets/figures/dyno-torqueTest.png#only-light){ width=80% }
+    ![The load motor's current vs. torque plot.](../assets/figures/dyno-torqueTest-dark.png#only-dark){ width=80% }
+    <figcaption>Figure 12: The load motor's current vs. torque plot.</figcaption>
+</figure>
 
 ### Internal Resistance Measurement
 
@@ -417,9 +445,13 @@ P_{\text{max}}(\omega)=\frac{\omega^2 K_{T,l} K_{V,l}}{R_l}
 $$
 { #eq-maxPower }
 
-[Equation 14](#eq-maxTorque), [Equation 15](#eq-maxPower), and power limit $P_\text{lim}=100\, \mathrm{W}$ are graphed in [](#fig-measurementRange). The blue region shows the dynamometer's measurement range (i.e., operation range).
+[Equation 14](#eq-maxTorque), [Equation 15](#eq-maxPower), and power limit $P_\text{lim}=100\, \mathrm{W}$ are graphed in [Figure 13](#fig-measurementRange). The blue region shows the dynamometer's measurement range (i.e., operation range).
 
-![The measurement range (i.e., operation range) of the dynamometer.](../assets/figures/dyno-measurementRange.png){width=80% #fig-measurementRange}
+<figure markdown="span" id="fig-measurementRange">
+    ![The measurement range (i.e., operation range) of the dynamometer.](../assets/figures/dyno-measurementRange.png#only-light){ width=92% }
+    ![The measurement range (i.e., operation range) of the dynamometer.](../assets/figures/dyno-measurementRange-dark.png#only-dark){ width=92% }
+    <figcaption>Figure 13: The measurement range (i.e., operation range) of the dynamometer.</figcaption>
+</figure>
 
 The results show that the dynamometer can operate at speed and power up to 20000 RPM and 80 W. So, this load motor is suitable for the design and selection. However, it should be noted that the maximum braking torque will get lower as the rotation speed decreases. Consequently, this design is only suitable for high-speed, low-torque motors. However, a gear reducer may be used to reduce the torque and increase the speed of any motor so that the dynamometer can be used.
 
@@ -514,9 +546,13 @@ After the load motor selection, the theoretical measurement range is found. The 
 
 ### Working Mechanism and Flowchart
 
-The dynamometer is shown in block diagram form in [](#fig-blockDiagram).
+The dynamometer is shown in block diagram form in [Figure 14](#fig-blockDiagram).
 
-![The dynamometer in block diagram form.](../assets/figures/dyno-blockDiagram.png){width=85% #fig-blockDiagram}
+<figure markdown="span" id="fig-blockDiagram">
+    ![The dynamometer in block diagram form.](../assets/figures/dyno-blockDiagram.png#only-light){ width=85% }
+    ![The dynamometer in block diagram form.](../assets/figures/dyno-blockDiagram-dark.png#only-dark){ width=85% }
+    <figcaption>Figure 14: The dynamometer in block diagram form.</figcaption>
+</figure>
 
 The load and speed will be controlled by changing the resistance of the potentiometer ($R$). The user can easily adjust the potentiometer's resistance. The resistance value will change the braking load and speed of the motor, as shown in [Equation 7](#eq-selectionThree) and [Equation 8](#eq-selectionFour). While the user changes the resistance, the electronic circuit will collect the measurement data continuously.
 
@@ -524,11 +560,17 @@ A potentiometer is a very accessible tool, and we bought one from a local shop t
 
 ### Mechanical Design and Components
 
-Before the electronic measurement circuit, a mechanical design is made, and the dynamometer with two DC motors (a test and a load motor) is assembled. The final product and its 3D CAD model are shown in [](#fig-finalRealDyno) and [](#fig-dynamometerCAD).
+Before the electronic measurement circuit, a mechanical design is made, and the dynamometer with two DC motors (a test and a load motor) is assembled. The final product and its 3D CAD model are shown in [Figure 15](#fig-finalRealDyno) and [Figure 16](#fig-dynamometerCAD).
 
-![Final mechanical assembly of the dynamometer.](../assets/figures/dyno-finalAssembly.jpeg){width=60% #fig-finalRealDyno}
+<figure markdown="span" id="fig-finalRealDyno">
+    ![Final mechanical assembly of the dynamometer.](../assets/figures/dyno-finalAssembly.jpeg){width=60% #fig-finalRealDyno}
+    <figcaption>Figure 15: Final mechanical assembly of the dynamometer.</figcaption>
+</figure>
 
-![Final computer-aided design of the dynamometer.](../assets/figures/dyno-dynamometerWithBothMotors.jpeg){width=60% #fig-dynamometerCAD}
+<figure markdown="span" id="fig-dynamometerCAD">
+    ![Final computer-aided design of the dynamometer.](../assets/figures/dyno-dynamometerWithBothMotors.jpeg){width=60% #fig-dynamometerCAD}
+    <figcaption>Figure 16: Final computer-aided design of the dynamometer.</figcaption>
+</figure>
 
 The assembly consists of the following components:
 
@@ -549,7 +591,7 @@ The mechanical assembly of the dynamometer was straightforward, and the process 
 
 ### Electronic Design and Components
 
-After the mechanical assembly, the next step was to design the electronic circuit and program a microcontroller to make and collect the measurements. The schematic of the final design is given in [Figure 16](#fig-electronicschematic). The main points that were considered are given below.
+After the mechanical assembly, the next step was to design the electronic circuit and program a microcontroller to make and collect the measurements. The schematic of the final design is given in [Figure 17](#fig-electronicschematic). The main points that were considered are given below.
 
 - A current sensor is needed.
 - A voltage sensor is needed.
@@ -561,7 +603,7 @@ After the mechanical assembly, the next step was to design the electronic circui
   <object data="../../assets/figures/dyno-schematic.pdf" type="application/pdf" width="100%" height="600px">
       <embed src="../../assets/figures/dyno-schematic.pdf" type="application/pdf"/>
   </object>
-  <figcaption>Figure 16: The schematic of the electronic circuit of the dynamometer.</figcaption>
+  <figcaption>Figure 17: The schematic of the electronic circuit of the dynamometer.</figcaption>
 </figure>
 
 We used a basic Arduino-like microcontroller, Teensy 3.2[@teensy]. The programming part consisted of 2 main concerns.
@@ -575,11 +617,12 @@ The integration with MATLAB can be made via a USB cable. However, it is not nece
 
 ## Results
 
-Eventually, we tested the dynamometer with another DC motor we bought from a local shop. We connected the dynamometer to a computer so the results could be plotted in real-time. The measurement results are shown in [Figure 17](#fig-results).
+Eventually, we tested the dynamometer with another DC motor we bought from a local shop. We connected the dynamometer to a computer so the results could be plotted in real-time. The measurement results are shown in [Figure 18](#fig-results).
 
 <figure markdown="span" style="margin: 1em 0; width: 100%" id="fig-results" >
-  ![Measurements of the dynamometer.](../assets/figures/dyno-results.png){ width=50% }
-  <figcaption>Figure 17: Measurements of the dynamometer.</figcaption>
+  ![Measurements of the dynamometer.](../assets/figures/dyno-results.png#only-light){ width=80% }
+  ![Measurements of the dynamometer.](../assets/figures/dyno-results-dark.png#only-dark){ width=80% }
+  <figcaption>Figure 18: Measurements of the dynamometer.</figcaption>
 </figure>
 
 ## Conclusions
@@ -588,9 +631,9 @@ In this project, an electric absorption dynamometer is designed, modeled, and bu
 
 Firstly, the dynamometers are researched, and their fundamental working principle is analyzed. Then, an absorption unit is selected to be a DC generator. After the absorption unit selection, the dynamometer is formulated carefully, and the necessary components are found and designed to achieve our targets. Next, the system is modeled mathematically to ensure that the components satisfy the design criteria. A MATLAB code was written for the simulation of the dynamometer and made available on GitHub. Finally, the dynamometer is assembled, and the electronic circuit is designed and programmed.
 
-### Possible Future Improvements
+### Ideas for Future
 
-The possible future improvement ideas are given below so that in the future, people can further improve the design and make use of it.
+The potential improvement ideas are given below so that individuals can enhance the design and utilize it more effectively in the future.
 
 1.  The load can be controlled electronically by substituting the potentiometer with a digital potentiometer or using another electric motor to control the potentiometer.
 2.  Better sensors can be used to get more precise results.
