@@ -631,7 +631,7 @@ In this project, an electric absorption dynamometer is designed, modeled, and bu
 
 Firstly, the dynamometers are researched, and their fundamental working principle is analyzed. Then, an absorption unit is selected to be a DC generator. After the absorption unit selection, the dynamometer is formulated carefully, and the necessary components are found and designed to achieve our targets. Next, the system is modeled mathematically to ensure that the components satisfy the design criteria. A MATLAB code was written for the simulation of the dynamometer and made available on GitHub. Finally, the dynamometer is assembled, and the electronic circuit is designed and programmed.
 
-### Ideas for Future
+### Ideas for the Future
 
 The potential improvement ideas are given below so that individuals can enhance the design and utilize it more effectively in the future.
 
