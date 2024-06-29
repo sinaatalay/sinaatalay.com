@@ -334,7 +334,7 @@ To find $K_{V,l}$, we supplied different voltages to the motor and measured the 
 
 ![Rotation speed measurement for different voltage inputs.](../assets/figures/dyno-kvlMeasurement.jpeg){width=60% #fig-kvlMeasurement}
 
-Table: Data table of voltage vs. speed measurement. { #tbl-EMFTest }
+Table: Data table for EMF constant measurement. { #tbl-EMFTest }
 
 | Voltage (V) | $\omega$ (RPM) |
 | ----------- | -------------- |
@@ -369,7 +369,7 @@ We supplied different currents to the motor and measured the corresponding torqu
 
 [](#tbl-torqueTest) shows the values obtained from the measurements and calculated torque values. The data fitted with [Equation 4](#eq-torquevsi). The data points and regression line are plotted in [](#fig-torqueTest). $K_{T,l}$ turned out to be 0.0084 (N·m)/A.
 
-Table: Data table of current vs. torque measurement. { #tbl-torqueTest }
+Table: Data table for torque constant measurement. { #tbl-torqueTest }
 
 | Current (A) | Torque (Nmm) |
 | ----------- | ------------ |
