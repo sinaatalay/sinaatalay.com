@@ -64,7 +64,7 @@ plugins:
         position: top
 
   - rss: # https://github.com/Guts/mkdocs-rss-plugin/
-      match_path: posts/.*
+      match_path: .*
       date_from_meta:
         as_creation: date
       categories:
